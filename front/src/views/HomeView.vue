@@ -24,7 +24,8 @@ export default {
   .inside{
     background-color: white;
     width:1500px;
-    height: 700px;
-    border-radius: 90px 90px 90px 90px;
+    height: 750px;
+    margin-top: 50px;
+    border-radius: 100px 100px 100px 100px;
   }
 </style>
