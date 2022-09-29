@@ -11,11 +11,13 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
   {
     path: '/',
     name: 'testStart',
     component: Alltest
   }
+
 ]
 
 const router = new VueRouter({
