@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+      <div class="background">
+        <v-layout fill-height align-center justify-center>
+          <div class="inside">
+
+           <!--<v-btn>테스트 시작하기</v-btn>-->
+         </div>
+        </v-layout>
+        
+      </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
-  },
 };
 </script>
+<style scoped>
+  .background{
+    height: 100%;
+        background-color: #E6E6FA;
+  }
+  .inside{
+    background-color: white;
+    width:1500px;
+    height: 750px;
+    margin-top: 50px;
+    border-radius: 100px 100px 100px 100px;
+  }
+</style>
