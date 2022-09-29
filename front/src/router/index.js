@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Alltest from '../views/alltest.vue'
+import Alltest from '../views/Alltest.vue'
 
 Vue.use(VueRouter)
 
