@@ -1,14 +1,16 @@
 <template>
 <v-layout class="background" align-center justify-center>
 <v-layout class="inside" fill-height align-center justify-center>
-  요즘 인기있는 테스트
+  <div class="text">
     <v-text-field label="키워드 검색"
     placeholder="원하는 테스트의 키워드를 검색해보세요!"
     v-model="keyword"
     ></v-text-field>
     {{ keyword }}
-
+    <div  style="display: flex; justify-content: center;">
   <v-btn @click="testStart">테스트 시작하기</v-btn>
+    </div>
+</div>
 </v-layout>
 </v-layout>
 </template>
@@ -42,6 +44,12 @@
     height: 750px;
     margin-top: 50px;
     border-radius: 100px 100px 100px 100px;
+  }
+  .text{
+    width: 700px;
+  }
+  .v-btn{
+    margin-top: 500px;
   }
 
 </style>
