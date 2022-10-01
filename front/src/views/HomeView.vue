@@ -41,18 +41,18 @@
         testStart(){
           this.$router.push("/alltest");
         },
-    //     search(){
+    //   search(){
     //     this.$router.push(""); 
-    //   },
-    //     searchresult(keyword){
+    //   }, //검색버튼 클릭 시
+    //   searchresult(keyword){
     //     this.$router.push("/alltest");
-    //   },
+    //   }, //엔터 누를 시
     // // 검색 버튼 클릭 or 엔터 시 DB에서 검색 결과 받아와야함 
-    //   components: {
-    //     HelloWorld,
-    //   },
+      components: {
+        HelloWorld,
+      },
     },
-    }
+  }
   </script>
   <style scoped>
     .background{
@@ -72,7 +72,10 @@
     .image1, .image2, .image3, .image4{
       display: inline-block;
       padding: 20px;
+    }
+    .font{
       margin-top:50px;
+      margin-bottom: 40PX;
     }
   </style>
   
