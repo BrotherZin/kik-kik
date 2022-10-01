@@ -13,7 +13,7 @@ const routes = [
   },
 
   {
-    path: '/',
+    path: '/alltest',
     name: 'testStart',
     component: Alltest
   }

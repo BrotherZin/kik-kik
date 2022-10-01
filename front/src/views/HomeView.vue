@@ -4,14 +4,16 @@
     <div>
   <v-layout class="inside" fill-height align-center justify-center>
     <div class="text" style="text-align : center;">
-      <v-text-field label="키워드 검색"
-      placeholder="원하는 테스트의 키워드를 검색해보세요!"
-      v-model="keyword"
+      <v-text-field v-model="keyword"
+    dense outlined label="원하는 테스트의 키워드를 검색해보세요!"
+     @keyup.enter="searchresult(keyword)"
       ></v-text-field>
+      {{ keyword }}
       <div class="font" style="text-align : left;" >
       └요즘 유행하는 테스트!
       </div>
-      {{ keyword }}
+       <!--<v-btn type="submit" @click="search">검색</v-btn>
+        버튼 추가할거면 넣기-->
         <div class="image1">
           <img src="../..\src\assets\dd.png">
         </div>
@@ -41,7 +43,13 @@
           this.$router.push("/alltest");
         }
       },
-  
+      // search(){
+      //   this.$router.push(""); 
+      // }, 검색버튼 클릭 시
+      // searchresult(keyword){
+      //   this.$router.push("/alltest");
+      // }, 엔터 누를 시
+    // 검색 버튼 클릭 or 엔터 시 DB에서 검색 결과 받아와야함 
       components: {
         HelloWorld,
       },
