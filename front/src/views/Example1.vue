@@ -2,19 +2,8 @@
   <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
-        <div>
-          <v-text-field
-            label="키워드 검색"
-            placeholder="원하는 테스트의 키워드를 검색해보세요!"
-            v-model="keyword"
-          ></v-text-field>
-          {{ keyword }}
-        </div>
-        <div>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
-        </div>
+        <h1>아이돌 이상형 월드컵 8강</h1>
       </v-layout>
-      <a href="">#감자</a>
     </div>
   </v-layout>
 </template>
