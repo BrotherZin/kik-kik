@@ -2,7 +2,13 @@
   <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
-        <h1>아이돌 이상형 월드컵 8강</h1>
+        <div>
+          <h1>아이돌 이상형 월드컵 8강</h1>
+          <v-rayout align-center justify-center>
+            <img src="front\src\image\iu.jpg" class="image" />
+            <img src="src/image/iu.jpg" class="image" />
+          </v-rayout>
+        </div>
       </v-layout>
     </div>
   </v-layout>
@@ -37,6 +43,11 @@ export default {
   height: 750px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
     
