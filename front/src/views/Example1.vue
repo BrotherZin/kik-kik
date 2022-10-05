@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <h1>아이돌 이상형 월드컵 8강 1/4</h1>
+          <h1>아이돌 이상형 월드컵 [ 8강 1/4 ]</h1>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
@@ -26,7 +26,7 @@ export default {
   name: "Home",
   methods: {
     NextPage() {
-      this.$router.push("/");
+      this.$router.push("/exampleEnd");
     },
   },
 
