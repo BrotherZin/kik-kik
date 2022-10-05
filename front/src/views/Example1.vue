@@ -8,11 +8,11 @@
       </v-layout>
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="@/image/winter.png" class="image" />
+          <img src="@/image/winter.png" class="image" @click="NextPage" />
         </div>
         <div class="vs">vs</div>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="@/image/iu.png" class="image" />
+          <img src="@/image/iu2.png" class="image" @click="NextPage" />
         </div>
       </v-layout>
     </div>
@@ -25,8 +25,8 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
   methods: {
-    testStart() {
-      this.$router.push("/alltest");
+    NextPage() {
+      this.$router.push("/");
     },
   },
 
