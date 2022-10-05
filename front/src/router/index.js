@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Example1 from '../views/Example1.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,7 +15,10 @@ const routes = [
   },
 
   {
+
     path: '/Alltest',
+
+
     name: 'testStart',
     component: Alltest
   },
