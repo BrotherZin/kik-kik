@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Example1 from '../views/Example1.vue'
-
+import ExampleEnd from '../views/ExampleEnd.vue'
 
 Vue.use(VueRouter)
 
@@ -26,7 +26,13 @@ const routes = [
     path: '/Example1',
     name: 'Test1',
     component: Example1
+  },
+  {
+    path: '/ExampleEnd',
+    name: 'Test1end',
+    component: ExampleEnd
   }
+
 
 ]
 
