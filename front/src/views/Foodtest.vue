@@ -6,11 +6,17 @@
             <h1>쩝쩝박사 테스트</h1>
           </div>
         </v-layout>
-            <div class="image">
-            <img src="..\src\thumbnail\foodmain.jpg">
+        <v-layout align-center justify-center>
+          <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="..\src\thumbnail\foodtest.png" class="image">
           </div>
+          </v-layout>
+          <v-layout class="st_btn" align-center justify-center>
+          <v-btn @click="testStart">테스트 시작하기</v-btn>
+        </v-layout>
         </div>
     </v-layout>
+ 
       
   </template>
       
@@ -20,8 +26,8 @@
   export default {
     name: "Home",
     methods: {
-      NextPage() {
-        this.$router.push("/exampleEnd");
+      testStart() {
+        this.$router.push("/foodtestgo");
       },
     },
   
@@ -45,8 +51,14 @@
     border-radius: 100px 100px 100px 100px;
   }
   .image {
-    width: 50px;
-    height: 50px;
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  max-width: 1000px;
+  max-height: 900px;
+  }
+  .st_btn{
+    margin-top: 140px;
   }
   </style>
       

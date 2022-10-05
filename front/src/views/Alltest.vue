@@ -46,7 +46,6 @@
         <div class="image">
           <img src="../..\src\assets\dd.png">
         </div>
-    <v-btn @click="testStart">테스트 시작하기</v-btn>
       </div>
   </v-layout>
     </div>
@@ -59,9 +58,6 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
   methods: {
-    testStart() {
-      this.$router.push("/alltest");
-    },
     foodtest() {
       this.$router.push("/foodtest")
 

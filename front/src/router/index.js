@@ -5,6 +5,7 @@ import Alltest from '../views/Alltest.vue'
 import Example1 from '../views/Example1.vue'
 import ExampleEnd from '../views/ExampleEnd.vue'
 import Foodtest from '../views/Foodtest.vue'
+import Foodtestgo from '../test/Foodtestgo.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,11 @@ const routes = [
     path: '/Foodtest',
     name: 'foodtest',
     component: Foodtest
+  },
+  {
+    path: '/Foodtestgo',
+    name: 'foodtestgo',
+    component: Foodtestgo
   },
 
 
