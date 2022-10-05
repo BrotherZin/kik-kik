@@ -3,18 +3,18 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <v-text-field
-            label="키워드 검색"
-            placeholder="원하는 테스트의 키워드를 검색해보세요!"
-            v-model="keyword"
-          ></v-text-field>
-          {{ keyword }}
-        </div>
-        <div>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
+          <h1>아이돌 이상형 월드컵 8강 1/4</h1>
         </div>
       </v-layout>
-      <a href="">#감자</a>
+      <v-layout align-center justify-center>
+        <div style="display: block; margin: auto; width: auto; height: auto">
+          <img src="@/image/winter.png" class="image" @click="NextPage" />
+        </div>
+        <div class="vs">vs</div>
+        <div style="display: block; margin: auto; width: auto; height: auto">
+          <img src="@/image/iu2.png" class="image" @click="NextPage" />
+        </div>
+      </v-layout>
     </div>
   </v-layout>
 </template>
@@ -25,8 +25,8 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
   methods: {
-    testStart() {
-      this.$router.push("/alltest");
+    NextPage() {
+      this.$router.push("/");
     },
   },
 
@@ -48,6 +48,16 @@ export default {
   height: 750px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
+}
+.image {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+.vs {
+  font-size: 2.2em;
+  font-weight: bold;
 }
 </style>
     
