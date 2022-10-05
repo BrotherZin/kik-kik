@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'Dongle', sans-serif;
+    src: url('Dongle-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Dongle', sans-serif;
+    src: url('Dongle-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Dongle', sans-serif;
+    src: url('Dongle-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

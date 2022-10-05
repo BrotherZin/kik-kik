@@ -16,7 +16,10 @@ const routes = [
   },
 
   {
-    path: '/alltest',
+
+    path: '/Alltest',
+
+
     name: 'testStart',
     component: Alltest
   },
@@ -40,6 +43,7 @@ const routes = [
     name: 'foodtest',
     component: Foodtest
   },
+
 
 ]
 
