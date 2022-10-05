@@ -1,3 +1,4 @@
+<template>
 <v-layout class="background" align-center justify-center>
     <div>
   <v-layout class="inside" fill-height align-center justify-center>
