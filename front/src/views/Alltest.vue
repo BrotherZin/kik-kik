@@ -10,9 +10,9 @@
       {{ keyword }}
        <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-        <div class="image">
-          <img src="../..\src\assets\dd.png" @click="foodtest">
-        </div>
+        
+          <img class="image1" src="..\src\thumbnail\foodtest.png" @click="foodtest">
+        
         <div class="image">
           <img src="../..\src\assets\dd.png" @click="psychotest">
         </div>
@@ -97,5 +97,10 @@ export default {
   .font{
     margin-top:50px;
     margin-bottom: 40PX;
+  }
+  .image1{
+    width:135px;
+    height: 140px;
+    border: solid 1px black;
   }
 </style>
