@@ -93,5 +93,3 @@ export default {
     margin-bottom: 40PX;
   }
 </style>
->>>>>>> Stashed changes
-    
