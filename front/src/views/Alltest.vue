@@ -13,12 +13,12 @@
         
           <img class="image1" src="..\src\thumbnail\foodtest.png" @click="foodtest">
         
-        <div class="image">
-          <img src="../..\src\assets\dd.png" @click="psychotest">
-        </div>
-        <div class="image">
-          <img src="../..\src\assets\dd.png" @click="example1">
-        </div>
+       
+          <img class="image1" src="@/image/minji.png" @click="psychotest">
+        
+        
+          <img class=" image1" src="@/image/iu2.png" @click="example1">
+        
         <div class="image">
           <img src="../..\src\assets\dd.png">
         </div>
