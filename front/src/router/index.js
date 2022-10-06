@@ -7,7 +7,7 @@ import ExampleEnd from '../test/idealtype/ExampleEnd.vue'
 import Foodtest from '../test/food/Foodtest.vue'
 import Foodtestgo from '../test/food/Foodtestgo.vue'
 import PsychoTest from '../test/psycho/PsychoTest.vue'
-
+import test from '../views/test.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,6 +15,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/test',
+
+    component:test
   },
 
   {
