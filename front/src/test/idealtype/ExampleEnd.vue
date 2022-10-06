@@ -36,7 +36,6 @@
 </template>
     
     <script>
-import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
@@ -50,10 +49,6 @@ export default {
     Rank() {
       this.$router.push("/");
     },
-  },
-
-  components: {
-    HelloWorld,
   },
 };
 </script>
