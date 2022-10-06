@@ -14,10 +14,10 @@
           <img src="../..\src\assets\dd.png" @click="foodtest">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="../..\src\assets\dd.png" @click="psychotest">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="../..\src\assets\dd.png" @click="example1">
         </div>
         <div class="image">
           <img src="../..\src\assets\dd.png">
@@ -62,6 +62,12 @@ export default {
       this.$router.push("/foodtest")
 
     },
+    psychotest(){
+      this.$router.push("/psychotest")
+    },
+    example1(){
+      this.$router.push("/example1")
+    }
   },
 
   components: {
