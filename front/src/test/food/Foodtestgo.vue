@@ -3,37 +3,39 @@
       <div class="inside">
         <v-layout align-center justify-center>
           <div>
-            <h1>쩝쩝박사 테스트</h1>
+            <h1>무슨음식일까요?</h1>
           </div>
         </v-layout>
         <v-layout align-center justify-center>
-          <div style="display: block; margin: auto; width: auto; height: auto">
-            <img src="..\src\thumbnail\foodtest.png" class="image">
+            <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="..\src\image\food\tteokbokki.jpg" class="image">
           </div>
           </v-layout>
-          <v-layout class="st_btn" align-center justify-center>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
-        </v-layout>
-        </div>
+          <v-layout align-center justify-center>
+          <div class = "answer">
+          <v-text-field v-model="keyword"
+    dense outlined label="정답을 입력하세요(맞춤법 틀리면 오답처리)"
+     @keyup.enter="answer(keyword)"
+      ></v-text-field>
+    </div>
+</v-layout>
+    </div>
     </v-layout>
+
  
       
   </template>
       
-      <script>
-  import HelloWorld from "../components/HelloWorld";
-  
+  <script>
+
   export default {
     name: "Home",
     methods: {
-      testStart() {
-        this.$router.push("/foodtestgo");
+      answer(keyword) {
+        this.$router.push("/");
       },
     },
   
-    components: {
-      HelloWorld,
-    },
   };
   </script>
       <style scoped>
@@ -52,13 +54,16 @@
   }
   .image {
   margin-top: 50px;
-  width: auto;
+  width: 450px;
   height: auto;
-  max-width: 1000px;
-  max-height: 900px;
+  max-width: 3000px;
+  max-height: 3000px;
   }
   .st_btn{
     margin-top: 140px;
+  }
+  .answer{
+    width:500px
   }
   </style>
       
