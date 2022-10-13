@@ -32,7 +32,7 @@ export default {
   name: "Home",
   methods: {
     NextPage() {
-      this.$router.push("/exampleEnd");
+      this.$router.push("/idealtypeEnd");
     },
   },
 };
@@ -56,6 +56,8 @@ export default {
   height: auto;
   max-width: 500px;
   max-height: 500px;
+  display: block;
+  margin: auto;
 }
 .vs {
   font-size: 2.2em;
