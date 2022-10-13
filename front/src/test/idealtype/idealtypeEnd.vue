@@ -12,7 +12,7 @@
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <div class="result">최종 우승은 [ ??? ] 입니다 !!</div>
+        <div class="result">최종 우승은 [ 아이유 ] 입니다 !!</div>
       </v-layout>
 
       <!-- 아니 아래 이거 공백 넣고 싶은데 못넣어서 우선 이렇게 해놓은거..  -->
