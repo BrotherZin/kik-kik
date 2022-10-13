@@ -101,7 +101,7 @@ p{
   width: 400px;
   width: 400px;
   height: 500px;
-  /* background-image:url("/image/test/backimg.png"); */
+  /*background-image:url("/image/test/backimg.png");*/
   background-size: cover;
   margin: auto;
   font-weight:bold;

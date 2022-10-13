@@ -6,7 +6,7 @@
               <span v-bind:style="{fontSize:'30px', fontWeight:'bold' }" >사이코패스 테스트</span>
             </div>
             <div class="psychopage-img">
-              <img src="@/image/test/blood.png">
+              <img src="/image/test/blood.png">
             </div>
           </div>
           <div class="backimg">
@@ -102,7 +102,7 @@
     width: 400px;
     width: 400px;
     height: 500px;
-    background-image:url('@/image/test/backimg.png');
+    /*background-image:url('/image/test/.png');*/
     background-size: cover;
     margin: auto;
     font-weight:bold;

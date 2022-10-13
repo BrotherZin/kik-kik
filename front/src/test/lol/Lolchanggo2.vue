@@ -3,12 +3,15 @@
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
-            <img src="/thumbnail/dlqmffls.png" class="image">
+            <video src="/videos/ahri.mp4" class="ahri" autoplay="" muted loop></video>
           </div>
           </v-layout>
           <div class="lol-text">
-            <div class="lolmain"><span>누구 스킬이게?</span></div>
-          <div><v-btn @click="testStart">Ready? Go!</v-btn></div>
+            <div class="lolmain"><span>무슨 스킬이게?</span></div>
+          <div><v-btn @click="testStart">매혹</v-btn></div>
+          <div><v-btn @click="testStart">황홀한 저주</v-btn></div>
+          <div><v-btn @click="testStart">앙코르</v-btn></div>
+          <div><v-btn @click="testStart">매혹의 질주</v-btn></div>
         </div>
     </div>
     </v-layout>
@@ -59,6 +62,8 @@
     font-size:30px;
     font-weight: bold;
   }
-
+  .ahri{
+    margin-top:70px;
+  }
   </style>
       
