@@ -3,7 +3,7 @@
     <div class="psychomain">
       <div class="psychomain-index">
 
-        <img src="@/image/test/main.png" class="image" />
+        <img src="/image/minji.png" class="image" />
 
       </div>
       <div class="psycho-title">
