@@ -3,7 +3,7 @@
     <div>
   <v-layout class="inside" fill-height align-center justify-center>
     <div class="text" style="text-align : center;">
-      <v-text-field v-model="keyword"
+      <v-text-field class="field" v-model="keyword"
     dense outlined label="원하는 테스트의 키워드를 검색해보세요!"
      @keyup.enter="searchresult(keyword)"
       ></v-text-field>
@@ -18,10 +18,9 @@
         
         
           <img class=" image1" src="@/image/iu2.png" @click="example1">
+
+          <img class=" image1" src="@/image/kda.png" @click="lolchango">
         
-        <div class="image">
-          <img src="../..\src\assets\dd.png">
-        </div>
         <div class="image">
           <img src="../..\src\assets\dd.png">
         </div>
@@ -67,6 +66,9 @@ export default {
     },
     example1(){
       this.$router.push("/example1")
+    },
+    lolchango(){
+      this.$router.push("/lolchango")
     }
   },
 
@@ -102,5 +104,10 @@ export default {
     width:135px;
     height: 140px;
     border: solid 1px black;
+    margin-right: 35px;
+  }
+  .v-text-field{
+    padding:0px;
+    border: none;
   }
 </style>
