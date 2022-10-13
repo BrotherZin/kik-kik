@@ -11,39 +11,39 @@
        <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
         
-          <img class="image1" src="..\src\thumbnail\foodtest.png" @click="foodtest">
+          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
         
        
-          <img class="image1" src="@/image/minji.png" @click="psychotest">
+          <img class="image1" src="/image/minji.png" @click="psychotest">
         
         
-          <img class=" image1" src="@/image/iu2.png" @click="example1">
+          <img class=" image1" src="/image/iu2.png" @click="example1">
 
-          <img class=" image1" src="@/image/kda.png" @click="lolchango">
+          <img class=" image1" src="/image/kda.png" @click="lolchango">
         
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
       </div>
   </v-layout>
@@ -68,7 +68,7 @@ export default {
       this.$router.push("/example1")
     },
     lolchango(){
-      this.$router.push("/lolchango")
+      this.$router.push("/lolchang")
     }
   },
 

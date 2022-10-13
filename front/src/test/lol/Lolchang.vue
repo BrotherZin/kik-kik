@@ -3,7 +3,7 @@
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
-            <img src="..\src\thumbnail\dlqmffls.png" class="image">
+            <img src="/thumbnail/dlqmffls.png" class="image">
           </div>
           </v-layout>
           <div class="lol-text">
@@ -17,18 +17,13 @@
   </template>
       
       <script>
-  import HelloWorld from "../components/HelloWorld";
   
   export default {
     name: "Home",
     methods: {
       testStart() {
-        this.$router.push("/lolchanggo2");
+        this.$router.push("/Lolchanggo2");
       },
-    },
-  
-    components: {
-      HelloWorld,
     },
   };
   </script>
