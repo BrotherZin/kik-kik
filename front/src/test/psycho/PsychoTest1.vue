@@ -33,10 +33,10 @@
             </div>
             <div class="psycho-prevnext">
                 <div class="psyprev">
-                  <a href="#" style="color:black;">◀ 이전</a>
+                  <a href="#" style="color:black;" @click="$router.push('/PsychoTest')">◀ 이전</a>
                 </div>
                 <div class="psynext">
-                  <a href="#" style="color:black;">다음 ▶</a>
+                  <a href="#" style="color:black;" @click="$router.push('/PsychoTest2')">다음 ▶</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,6 @@
 
 <!-- 스크립트파일 -->
 <script>
-
 
 </script>
 
