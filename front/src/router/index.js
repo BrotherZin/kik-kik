@@ -44,7 +44,7 @@ const routes = [
     name: 'foodtest',
     component: Foodtest
   },
-  {s
+  {
     path: '/Foodtestgo',
     name: 'foodtestgo',
     component: Foodtestgo
