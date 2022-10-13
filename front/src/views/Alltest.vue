@@ -65,7 +65,7 @@ export default {
       this.$router.push("/psychotest")
     },
     example1(){
-      this.$router.push("/example1")
+      this.$router.push("/idealtypeStart")
     },
     lolchango(){
       this.$router.push("/lolchang")

@@ -8,12 +8,12 @@
       </v-layout>
       <v-layout align-center justify-center>
         <v-flex xs6 @click="selectItem(getLeft())">
-          <img src="@/image/idealtype/winter.png" class="image" />
+          <img src="/image/idealtype/winter.png" class="image" />
           <!-- {{ getLeft() }} -->
         </v-flex>
         <div class="vs">vs</div>
         <v-flex xs6 @click="selectItem(getRight())">
-          <img src="@/image/idealtype/iu2.png" class="image" />
+          <img src="/image/idealtype/iu2.png" class="image" />
           <!-- {{ getRight() }} -->
         </v-flex>
       </v-layout>
