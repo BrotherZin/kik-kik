@@ -1,133 +1,134 @@
 <template>
-  <div>
-    <div>round :{{round}} step:{{step}}</div>
-    <v-layout>
-        <v-flex xs6 @click="selectItem(getLeft())">
-            {{getLeft()}}
-        </v-flex>
-        <v-flex xs6 @click="selectItem(getRight())">
-            {{getRight()}}
-        </v-flex>
-    </v-layout>
-  </div>
-</template>
-
-<script>
-    import _ from "underscore"
-export default {
-    data(){
-        return {
-            step:1,
-            round:16,
-            list:[
-                {
-                    title:"test1",
-                    url:"",
-                    selected:false
-                },
-                {
-                    title:"test2",
-                    selected:false
-                },{
-                    title:"test3",
-                    selected:false
-                },{
-                    title:"test4",
-                    selected:false
-                },
-                {
-                    title:"test1",
-                    selected:false
-                },
-                {
-                    title:"test2",
-                    selected:false
-                },{
-                    title:"test3",
-                    selected:false
-                },{
-                    title:"test4",
-                    selected:false
-                },
-                {
-                    title:"test1",
-                    selected:false
-                },
-                {
-                    title:"test2",
-                    selected:false
-                },{
-                    title:"test3",
-                    selected:false
-                },{
-                    title:"test4",
-                    selected:false
-                },
-                {
-                    title:"test1",
-                    selected:false
-                },
-                {
-                    title:"test2",
-                    selected:false
-                },{
-                    title:"test3",
-                    selected:false
-                },{
-                    title:"test4",
-                    selected:false
-                },
-            ]
-        }
-    },
-    methods:{
-        getLeft(){
-            var selectedList=this.getSelected()
-            console.log(selectedList,Math.floor(this.step/2))
-            return selectedList[Math.floor(this.step/2)]
-
-        },
-        getRight(){
-            var selectedList=this.getSelected()
-            return selectedList[Math.floor(this.step/2)   +1]
-        }, 
-        selectItem(item){
-            item.selected=true
-           
-            
-            if(this.step==this.round/2){
-                this.step=1
-                this.round=this.round/2
-            }
-            else{
-                this.step++
-            }
-            if(this.round==1){
-                console.log("final")
-                var finalList=this.getSelected()
-                var finalItem=_.first(finalList)
-                console.log(finalItem)
-            }
-            
-        },  
-        getSelected(){
-            if(this.round==this.list.length){
-                return this.list
-            }
-            return _.chain(this.list)
-            .map(item=>{
-                
-                if(item.selected){
-                    return item;
-                }
-            })
-            .compact()
-            .value()
-        }
-    }
-}
-</script>
-
-<style>
-
-</style>
+    <div>
+      <div>round :{{round}} step:{{step}}</div>
+      <v-layout>
+          <v-flex xs6 @click="selectItem(getLeft())">
+              {{getLeft()}}
+          </v-flex>
+          <v-flex xs6 @click="selectItem(getRight())">
+              {{getRight()}}
+          </v-flex>
+      </v-layout>
+    </div>
+  </template>
+  
+  <script>
+      import _ from "underscore"
+  export default {
+      data(){
+          return {
+              step:1,
+              round:16,
+              list:[
+                  {
+                      title:"test1",
+                      url:"",
+                      selected:false
+                  },
+                  {
+                      title:"test2",
+                      selected:false
+                  },{
+                      title:"test3",
+                      selected:false
+                  },{
+                      title:"test4",
+                      selected:false
+                  },
+                  {
+                      title:"test1",
+                      selected:false
+                  },
+                  {
+                      title:"test2",
+                      selected:false
+                  },{
+                      title:"test3",
+                      selected:false
+                  },{
+                      title:"test4",
+                      selected:false
+                  },
+                  {
+                      title:"test1",
+                      selected:false
+                  },
+                  {
+                      title:"test2",
+                      selected:false
+                  },{
+                      title:"test3",
+                      selected:false
+                  },{
+                      title:"test4",
+                      selected:false
+                  },
+                  {
+                      title:"test1",
+                      selected:false
+                  },
+                  {
+                      title:"test2",
+                      selected:false
+                  },{
+                      title:"test3",
+                      selected:false
+                  },{
+                      title:"test4",
+                      selected:false
+                  },
+              ]
+          }
+      },
+      methods:{
+          getLeft(){
+              var selectedList=this.getSelected()
+              console.log(selectedList,Math.floor(this.step/2))
+              return selectedList[Math.floor(this.step/2)]
+  
+          },
+          getRight(){
+              var selectedList=this.getSelected()
+              return selectedList[Math.floor(this.step/2)   +1]
+          }, 
+          selectItem(item){
+              item.selected=true
+             
+              
+              if(this.step==this.round/2){
+                  this.step=1
+                  this.round=this.round/2
+              }
+              else{
+                  this.step++
+              }
+              if(this.round==1){
+                  console.log("final")
+                  var finalList=this.getSelected()
+                  var finalItem=_.first(finalList)
+                  console.log(finalItem)
+              }
+              
+          },  
+          getSelected(){
+              if(this.round==this.list.length){
+                  return this.list
+              }
+              return _.chain(this.list)
+              .map(item=>{
+                  
+                  if(item.selected){
+                      return item;
+                  }
+              })
+              .compact()
+              .value()
+          }
+      }
+  }
+  </script>
+  
+  <style>
+  
+  </style>
+  </style>

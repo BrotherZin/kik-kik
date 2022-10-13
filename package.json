@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "underscore": "^1.13.6"
+  },
+  "scripts": {
+    "build":"cd front && npm install && npm run build && cd ../server && npm install && npm run start"
+  }
+}

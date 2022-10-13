@@ -2,14 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import Example1 from '../views/Example1.vue'
-import ExampleEnd from '../views/ExampleEnd.vue'
-import Foodtest from '../views/Foodtest.vue'
-import Foodtestgo from '../test/Foodtestgo.vue'
-import PsychoTest from '../views/PsychoTest.vue'
+import Example1 from '../test/idealtype/Example1.vue'
+import ExampleEnd from '../test/idealtype/ExampleEnd.vue'
+import Foodtest from '../test/food/Foodtest.vue'
+import Foodtestgo from '../test/food/Foodtestgo.vue'
+import PsychoTest from '../test/psycho/PsychoTest.vue'
 import test from '../views/test.vue'
-import Lolchango from '../views/Lolchang.vue'
-import Lolchanggo2 from '../test/Lolchanggo2.vue'
+import PsychoTest1 from '../test/psycho/PsychoTest1.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,14 +20,9 @@ const routes = [
   {
     path: '/test',
 
-    component:test
+    component: test
   },
 
-  {
-    path: '/Alltest',
-    name: 'testStart',
-    component: Alltest
-  },
   {
     path: '/Alltest',
     name: 'testStart',
@@ -55,19 +49,16 @@ const routes = [
     component: Foodtestgo
   },
   {
-    path: '/psychoTest',
+    path: '/PsychoTest',
     name: 'psychotest',
     component: PsychoTest
   },
   {
-    path: '/Lolchango',
-    name: 'lolchango',
-    component: Lolchango
-  },{
-    path: '/Lolchanggo2',
-    name: 'lolchanggo2',
-    component: Lolchanggo2
-  }
+    path: '/PsychoTest1',
+    name: 'psychotest1',
+    component: PsychoTest1
+  },
+
 
 
 ]
