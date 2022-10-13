@@ -9,6 +9,7 @@ import Foodtestgo from '../test/food/Foodtestgo.vue'
 import PsychoTest from '../test/psycho/PsychoTest.vue'
 import test from '../views/test.vue'
 import PsychoTest1 from '../test/psycho/PsychoTest1.vue'
+import PsychoTest2 from '../test/psycho/PsychoTest2.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,7 +44,7 @@ const routes = [
     name: 'foodtest',
     component: Foodtest
   },
-  {
+  {s
     path: '/Foodtestgo',
     name: 'foodtestgo',
     component: Foodtestgo
@@ -57,6 +58,11 @@ const routes = [
     path: '/PsychoTest1',
     name: 'psychotest1',
     component: PsychoTest1
+  },
+  {
+    path: '/PsychoTest2',
+    name: 'psychotest2',
+    component: PsychoTest2
   },
 
 
