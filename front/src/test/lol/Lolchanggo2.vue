@@ -3,11 +3,11 @@
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
-            <img src="..\src\thumbnail\dlqmffls.png" class="image">
+            <img src="/thumbnail/dlqmffls.png" class="image">
           </div>
           </v-layout>
           <div class="lol-text">
-            <div class="lolmain"><span>너의 롤창인생 실력은?!</span></div>
+            <div class="lolmain"><span>누구 스킬이게?</span></div>
           <div><v-btn @click="testStart">Ready? Go!</v-btn></div>
         </div>
     </div>
@@ -17,18 +17,14 @@
   </template>
       
       <script>
-  import HelloWorld from "../components/HelloWorld";
+  // import HelloWorld from "../components/HelloWorld";
   
   export default {
     name: "Home",
     methods: {
       testStart() {
-        this.$router.push("/Lolchanggo2");
+        this.$router.push("/lolchanggo2");
       },
-    },
-  
-    components: {
-      HelloWorld,
     },
   };
   </script>

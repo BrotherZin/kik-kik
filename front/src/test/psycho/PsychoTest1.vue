@@ -6,7 +6,7 @@
             <span v-bind:style="{fontSize:'30px', fontWeight:'bold' }" >사이코패스 테스트</span>
           </div>
           <div class="psychopage-img">
-            <img src="@/image/test/blood.png">
+            <img src="/image/test/blood.png">
           </div>
         </div>
         <div class="backimg">
@@ -15,7 +15,7 @@
                         <p>당신은 혼자 길을 걸어가고 있습니다. 그때 무엇이 지나갔습니다. 그것의 존재는 무엇이었을까요?</p>
                     </div>
                 <div class="psycho-selectarea">
-                    <div class="pstcho-radio">
+                    <div class="psycho-radio">
                         <input type="radio" id="rd1" name="radio" value="1"/>
                         <label for="rd1">귀신</label><br/>
                         <br>
@@ -102,7 +102,7 @@ p{
   width: 400px;
   width: 400px;
   height: 500px;
-  background-image:url('@/image/test/backimg.png');
+  /* background-image:url("/image/test/backimg.png"); */
   background-size: cover;
   margin: auto;
   font-weight:bold;

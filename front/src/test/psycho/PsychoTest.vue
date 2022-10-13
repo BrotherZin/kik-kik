@@ -2,7 +2,7 @@
   <v-layout class="psychomain">
     <div class="psychomain">
       <div class="psychomain-index">
-        <img src="@/image/minji.png" class="image" />
+        <img src="/image/minji.png" class="image" />
       </div>
       <div class="psycho-title">
         <span> 쉿... 조심해...! [싸이코패스 테스트] </span>
