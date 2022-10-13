@@ -8,7 +8,7 @@
       </v-layout>
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="@/image/iu2.png" class="image" />
+          <img src="@/image/idealtype/iu2.png" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
@@ -18,8 +18,7 @@
       <!-- 아니 아래 이거 공백 넣고 싶은데 못넣어서 우선 이렇게 해놓은거..  -->
 
       <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
+      <br />
       <!-- 이 공간에다가 댓글 구현하면 딱 좋을듯.. -->
 
       <v-layout align-center justify-center>
@@ -36,7 +35,6 @@
 </template>
     
     <script>
-
 export default {
   name: "Home",
   methods: {

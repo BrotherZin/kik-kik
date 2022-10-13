@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <div>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</div>
-    <v-layout>
-      <v-flex xs6 @click="selectItem(getLeft())">
-        {{ getLeft() }}
-      </v-flex>
-      <v-flex xs6 @click="selectItem(getRight())">
-        {{ getRight() }}
-      </v-flex>
-    </v-layout>
-  </div>
+  <v-layout class="background" align-center justify-center>
+    <div>
+      <v-layout>
+        <div>
+          <h1>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</h1>
+        </div>
+      </v-layout>
+      <v-layout>
+        <v-flex xs6 @click="selectItem(getLeft())">
+          {{ getLeft() }}
+        </v-flex>
+        <v-flex xs6 @click="selectItem(getRight())">
+          {{ getRight() }}
+        </v-flex>
+      </v-layout>
+    </div>
+  </v-layout>
 </template>
 
 <script>
@@ -99,5 +105,17 @@ export default {
 </script>
 
 <style>
-</style>
+.background {
+  height: 100px;
+  background-color: #f0f8ff;
+  height: 100%;
+  background-color: #e6e6fa;
+}
+.inside {
+  background-color: white;
+  width: 1500px;
+  height: 750px;
+  margin-top: 50px;
+  border-radius: 100px 100px 100px 100px;
+}
 </style>
