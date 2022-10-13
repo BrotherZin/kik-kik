@@ -8,7 +8,7 @@
         </v-layout>
         <v-layout align-center justify-center>
             <div style="display: block; margin: auto; width: auto; height: auto">
-            <img src="..\src\image\food\tteokbokki.jpg" class="image">
+            <img src="/image/food/tteokbokki.jpg" class="image">
           </div>
           </v-layout>
           <v-layout align-center justify-center>

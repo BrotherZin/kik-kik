@@ -14,16 +14,16 @@
        <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
         <div class="image1">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image2">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
         <div class="image3">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
           <div class="image4">
-          <img src="../..\src\assets\dd.png">
+          <img src="/image/dd.png">
         </div>
     <v-btn @click="testStart">테스트 시작하기</v-btn>
       </div>
