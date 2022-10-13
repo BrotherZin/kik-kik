@@ -1,17 +1,20 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div>
-      <v-layout>
+    <div class="inside">
+      <v-layout align-center justify-center>
         <div>
           <h1>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</h1>
         </div>
       </v-layout>
-      <v-layout>
+      <v-layout align-center justify-center>
         <v-flex xs6 @click="selectItem(getLeft())">
-          {{ getLeft() }}
+          <img src="@/image/idealtype/winter.png" class="image" />
+          <!-- {{ getLeft() }} -->
         </v-flex>
+        <div class="vs">vs</div>
         <v-flex xs6 @click="selectItem(getRight())">
-          {{ getRight() }}
+          <img src="@/image/idealtype/iu2.png" class="image" />
+          <!-- {{ getRight() }} -->
         </v-flex>
       </v-layout>
     </div>
@@ -117,5 +120,17 @@ export default {
   height: 750px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
+}
+.image {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+}
+.vs {
+  font-size: 2.2em;
+  font-weight: bold;
 }
 </style>
