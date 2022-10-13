@@ -21,13 +21,10 @@
 </v-layout>
     </div>
     </v-layout>
-
- 
-      
   </template>
-      
-  <script>
 
+
+  <script>
   export default {
     name: "Home",
     methods: {
