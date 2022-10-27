@@ -3,7 +3,7 @@
     <div class="psychomain">
       <div class="psychomain-index">
 
-        <img src="/image/psycho/main.png" class="image" />
+        <img src="/image/test/main.png" class="image" />
 
       </div>
       <div class="psycho-title">
@@ -12,9 +12,7 @@
       <div class="psycho-input">
         <input type="text" name="name" placeholder="이름을 입력하세요" />
         <div class="psycho-button">
-          <button class="custom-btn btn-7" v-on:click="psychobutton()">
-            <span>시작하기 →</span>
-          </button>
+          <button class="custom-btn btn-7" v-on:click="psychobutton()"><span>시작하기 →</span></button>
         </div>
       </div>
     </div>
@@ -25,16 +23,16 @@
 export default {
   name: "Home",
   methods: {
-    psychobutton() {
+     psychobutton() {
       this.$router.push("/PsychoTest1");
     },
   },
 };
 </script>
-<style>
-.background {
+<style scoped lang="less">
+.background{
   height: 100%;
-  background-color: #e6e6fa;
+  background-color: #E6E6FA
 }
 
 .psychomain {

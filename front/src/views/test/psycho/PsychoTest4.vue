@@ -10,13 +10,21 @@
           </div>
         </div>
         <div class="backimg">
-                <div class="psycho-area"> 
+
+                <div class="psycho-area" style="background-image:url(/image/test/backimg.png)"> 
                     <div class="psycho-content">
-                        <p>당신은 혼자 길을 걸어가고 있습니다. 그때 무엇이 지나갔습니다. 그것의 존재는 무엇이었을까요?</p>
+                        <p>남들보다 좀 더 튀는 악세사리를 장만하려고 하는데 무엇을 사시겠습니까?</p>
                     </div>
                 <div class="psycho-selectarea">
                     <div class="psycho-radio">
-                        <input type="radio" id="rd1" name="radio" value="1"/>
+                      
+                      <v-radio-group v-model="answer">
+                        <v-radio label="소리가나는 물건" :value="1"></v-radio>
+                        <v-radio label="손전등" :value="2"></v-radio>
+                        <v-radio label="원색의모자" :value="3"></v-radio>
+                        <v-radio label="여러가지 악세사리" :value="4"></v-radio>
+                      </v-radio-group>
+                        <!-- <input type="radio" id="rd1" name="radio" value="1"/>
                         <label for="rd1">귀신</label><br/>
                         <br>
                         <input type="radio" id="rd2" name="radio" value="2"/>
@@ -27,7 +35,7 @@
                         <br>
                         <input type="radio" id="rd4" name="radio" value="4"/>
                         <label for="rd4">아이</label><br/>
-                        <br>
+                        <br> -->
                     </div>
                 </div>
             </div>
@@ -36,7 +44,7 @@
                   <a href="#" style="color:black;" @click="$router.push('/PsychoTest')">◀ 이전</a>
                 </div>
                 <div class="psynext">
-                  <a href="#" style="color:black;" @click="$router.push('/PsychoTest2')">다음 ▶</a>
+                  <a href="#" style="color:black;" @click="next()">다음 ▶</a>
                 </div>
             </div>
         </div>
@@ -44,13 +52,30 @@
   </v-layout>
 </template>
 
-<!-- 스크립트파일 -->
 <script>
-
+export default{
+  data(){
+      return {
+        answer:null
+      }
+  },  
+  methods:{
+    next(){
+      var answer=Number(this.$route.query.answer)
+      if(this.answer==1){
+        
+        answer++
+        this.$router.push('/PsychoTest5?answer='+answer)
+      }
+      else{
+        this.$router.push('/PsychoTest5?answer='+answer)
+      }
+    }
+  }
+}
 </script>
 
-<!-- css 코드 -->
-<style>
+<style scoped lang="less">
 
 p{
   font-size: 20px;
@@ -123,8 +148,9 @@ input[type=radio] {
   
 }
 .psycho-radio {
-  display: inline;
+  
   font-size: 20px;
+  padding-left:30px;
 }
 
 .psycho-prevnext {
