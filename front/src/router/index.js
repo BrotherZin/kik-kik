@@ -8,7 +8,8 @@ import idealtypeEnd from '../test/idealtype/idealtypeEnd.vue'
 import Foodtest from '../test/food/Foodtest.vue'
 import Foodtestgo from '../test/food/Foodtestgo.vue'
 import PsychoTest from '../test/psycho/PsychoTest.vue'
-import test from '../views/test.vue'
+import idealtest from '../test/idealtype/idealtest.vue'
+import idealtest2 from '../test/idealtype/idealtest2.vue'
 import PsychoTest1 from '../test/psycho/PsychoTest1.vue'
 
 import PsychoTest2 from '../test/psycho/PsychoTest2.vue'
@@ -25,9 +26,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/test',
+    path: '/idealtest',
 
-    component: test
+    component: idealtest
+  },
+  {
+    path: '/idealtest2',
+
+    component: idealtest2
   },
 
   {

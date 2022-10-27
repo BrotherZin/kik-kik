@@ -20,7 +20,7 @@
       <div>&nbsp;</div>
       <div>&nbsp;</div>
       <div>&nbsp;</div>
-      <!-- 이 공간에다가 댓글 구현하면 딱 좋을듯.. -->
+      <!-- 이 공간에다가 댓글 구현하면 좋을듯.. -->
 
       <v-layout align-center justify-center>
         <v-btn class="mr-2 pink white--text" @click="Restart"
