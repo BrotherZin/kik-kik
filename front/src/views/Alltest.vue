@@ -14,12 +14,12 @@
           <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
         
        
-          <img class="image1" src="/image/minji.png" @click="psychotest">
+          <img class="image1" src="/image/idealtype/minji.png" @click="psychotest">
         
         
-          <img class=" image1" src="/image/iu2.png" @click="example1">
+          <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
 
-          <img class=" image1" src="/image/kda.png" @click="lolchango">
+          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
         
         <div class="image">
           <img src="/image/dd.png">
