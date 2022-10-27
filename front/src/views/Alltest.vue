@@ -2,7 +2,7 @@
   <v-layout class="background" align-center justify-center>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
-        <div class="text" style="text-align: center">
+        <div class="text" style= "text-align : center;">
           <v-text-field
             class="field"
             v-model="keyword"
