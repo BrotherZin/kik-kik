@@ -14,39 +14,19 @@
           {{ keyword }}
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
+        
+          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
+        
+       
+          <img class="image1" src="/image/idealtype/minji.png" @click="psychotest">
+        
+        
+          <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
 
-          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
-
-          <img class="image1" src="/image/minji.png" @click="psychotest" />
-
-          <img class="image1" src="/thumbnail/idealTN.png" @click="idealtype" />
-
-          <img class="image1" src="/image/kda.png" @click="lolchango" />
-
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image">
-            <img src="/image/dd.png" />
-          </div>
+          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
+        
+        <div class="image">
+          <img src="/image/dd.png">
         </div>
       </v-layout>
     </div>
