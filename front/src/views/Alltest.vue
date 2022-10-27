@@ -14,7 +14,7 @@
           <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
         
        
-          <img class="image1" src="/image/idealtype/minji.png" @click="psychotest">
+          <img class="image1" src="/image/psycho/main.png" @click="psychotest">
         
         
           <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
