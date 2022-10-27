@@ -5,6 +5,8 @@ import Alltest from '../views/Alltest.vue'
 import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
 import idealtype1 from '../views/test/idealtype/idealtype1.vue'
 import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
+import idealtest from '../views/test/idealtype/idealtest.vue'
+import idealtest2 from '../views/test/idealtype/idealtest2.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
@@ -15,6 +17,7 @@ import PsychoTest4 from '../views/test/psycho/PsychoTest4.vue'
 import PsychoTest5 from '../views/test/psycho/PsychoTest5.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+
 
 Vue.use(VueRouter)
 
@@ -56,6 +59,18 @@ const routes = [
     name: 'idealtypeend',
     component: idealtypeEnd
   },
+  {
+    path: '/idealtest',
+    name: 'idealtest',
+    component: idealtest
+  },
+  {
+    path: '/idealtest2',
+    name: 'idealtest2',
+    component: idealtest2
+  },
+
+
   {
     path: '/Foodtest',
     name: 'foodtest',

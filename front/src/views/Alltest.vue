@@ -2,7 +2,7 @@
   <v-layout class="background" align-center justify-center>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
-        <div class="text" style= "text-align : center;">
+        <div class="text" style="text-align: center">
           <v-text-field
             class="field"
             v-model="keyword"
@@ -11,22 +11,25 @@
             label="원하는 테스트의 키워드를 검색해보세요!"
             @keyup.enter="searchresult(keyword)"
           ></v-text-field>
-          {{ keyword }}
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
+        </div>
+        {{ keyword }}
+        <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-        
-          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
-        
-       
-          <img class="image1" src="/image/idealtype/minji.png" @click="psychotest">
-        
-        
-          <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
 
-          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
-        
+        <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
+
+        <img
+          class="image1"
+          src="/image/idealtype/minji.png"
+          @click="psychotest"
+        />
+
+        <img class="image1" src="/image/idealtype/iu2.png" @click="example1" />
+
+        <img class="image1" src="/image/idealtype/kda.png" @click="lolchango" />
+
         <div class="image">
-          <img src="/image/dd.png">
+          <img src="/image/dd.png" />
         </div>
       </v-layout>
     </div>
