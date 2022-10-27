@@ -8,11 +8,15 @@
       </v-layout>
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/winter.png" class="image" @click="NextPage" />
+          <img
+            src="/image/idealtype/winter.png"
+            class="image"
+            @click="NextPage"
+          />
         </div>
         <div class="vs">vs</div>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/iu2.png" class="image" @click="NextPage" />
+          <img src="/image/idealtype/iu2.png" class="image" @click="NextPage" />
         </div>
       </v-layout>
     </div>
@@ -20,7 +24,6 @@
 </template>
     
     <script>
-
 export default {
   name: "Home",
   methods: {
