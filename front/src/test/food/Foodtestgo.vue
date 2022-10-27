@@ -2,7 +2,7 @@
     <v-layout class="background" align-center justify-center>
       <div class="inside">
         <v-layout align-center justify-center>
-          <div>
+          <div class="text">
             <h1>무슨음식일까요?</h1>
           </div>
         </v-layout>
@@ -13,10 +13,20 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <v-text-field v-model="keyword"
-    dense outlined label="정답을 입력하세요(맞춤법 틀리면 오답처리)"
-     @keyup.enter="answer(keyword)"
-      ></v-text-field>
+          <label><input type="checkbox" v-model="food" value="tteogkkochi"> 떡꼬치 </label><br/>
+           <br>
+           <label><input type="checkbox" v-model="food" value="tteogbokki"> 떡볶이 </label><br/>
+           <br>
+           <label><input type="checkbox" v-model="food" value="sotteogsotteog"> 소떡소떡 </label><br/>
+           <br>
+           <label><input type="checkbox" v-model="food" value="tteoggangjeong"> 떡강정 </label><br/>
+           <br>   
+           <h>선택한 음식</h><p>{{ food }}</p>          
+    
+    <div class="button">
+    <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
+    <v-btn class="next" style="background-color: #c74eff" @click="nextpage">다음</v-btn>
+    </div>
     </div>
 </v-layout>
     </div>
@@ -26,6 +36,11 @@
 
   <script>
   export default {
+    data(){
+      return{
+        food : [],
+      }
+    },
     name: "Home",
     methods: {
       answer(keyword) {
@@ -50,17 +65,25 @@
     border-radius: 100px 100px 100px 100px;
   }
   .image {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 450px;
   height: auto;
   max-width: 3000px;
   max-height: 3000px;
-  }
-  .st_btn{
-    margin-top: 140px;
+  padding-bottom: 20px;
   }
   .answer{
-    width:500px
+    width:500px;
+    font-size:20px;
+    font-weight:bold;
+  }
+  .button{
+    padding-left:150px;
+    padding-top:3px;
+  
+  }
+  .text{
+    padding-top:20px;
   }
   </style>
       
