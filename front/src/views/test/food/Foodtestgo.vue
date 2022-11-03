@@ -21,7 +21,7 @@
            <br>
            <label><input type="checkbox" v-model="food" value="tteoggangjeong"> 떡강정 </label><br/>
            <br>   
-           <h>선택한 음식</h><p>{{ food }}</p>          
+           <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
     <div class="button">
     <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
@@ -43,6 +43,10 @@
     },
     name: "Home",
     methods: {
+      previous() {
+        this.$router.push("/foodtest")
+      },
+
       answer(keyword) {
         this.$router.push("/");
       },
@@ -78,8 +82,7 @@
     font-weight:bold;
   }
   .button{
-    padding-left:150px;
-    padding-top:3px;
+    padding-left:200px;
   
   }
   .text{
