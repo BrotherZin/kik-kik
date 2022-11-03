@@ -197,25 +197,29 @@
         };
       }
     },
-    getResultStyle(item) {
+    getResultStyle(item) { //정답 색상
       if (item.isCorrect) {
         return {
-          backgroundColor: "#68bf3a",
+          fontSize: '30px',
+          textAlign : "center",
         };
       } else {
         return {
-          backgroundColor: "#ff3457",
+          fontSize: '30px',
+          textAlign : "center",
         };
       }
     },
     getScorePopupStyle() {
       if (this.incScore > 0) {
         return {
-          backgroundColor: "#68bf3a",
+          fontSize: '30px',
+          textAlign : "center",
         };
       } else {
         return {
-          backgroundColor: "#ff3457",
+          fontSize: '30px',
+          textAlign : "center",
         };
       }
     },
