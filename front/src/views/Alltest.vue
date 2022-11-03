@@ -1,14 +1,19 @@
 <template>
-<v-layout class="background" align-center justify-center>
+  <v-layout class="background" align-center justify-center>
     <div>
-  <v-layout class="inside" fill-height align-center justify-center>
-    <div class="text" style="text-align : center;">
-      <v-text-field class="field" v-model="keyword"
-    dense outlined label="원하는 테스트의 키워드를 검색해보세요!"
-     @keyup.enter="searchresult(keyword)"
-      ></v-text-field>
-      {{ keyword }}
-       <!--<v-btn type="submit" @click="search">검색</v-btn>
+      <v-layout class="inside" fill-height align-center justify-center>
+        <div class="text" style="text-align: center">
+          <v-text-field
+            class="field"
+            v-model="keyword"
+            dense
+            outlined
+            label="원하는 테스트의 키워드를 검색해보세요!"
+            @keyup.enter="searchresult(keyword)"
+          ></v-text-field>
+        </div>
+        {{ keyword }}
+        <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
         
           <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
@@ -19,57 +24,44 @@
         
           <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
 
-          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
-        
+        <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
+
+        <img
+          class="image1"
+          src="/image/idealtype/minji.png"
+          @click="psychotest"
+        />
+
+        <img class="image1" src="/image/idealtype/iu2.png" @click="example1" />
+
+        <img class="image1" src="/image/idealtype/kda.png" @click="lolchango" />
+
         <div class="image">
-          <img src="/image/dd.png">
+          <img src="/image/dd.png" />
         </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-        <div class="image">
-          <img src="/image/dd.png">
-        </div>
-      </div>
-  </v-layout>
+      </v-layout>
     </div>
   </v-layout>
-  </template>
+</template>
     
     <script>
-import HelloWorld from "../components/HelloWorld"
+import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
   methods: {
     foodtest() {
-      this.$router.push("/foodtest")
-
+      this.$router.push("/foodtest");
     },
-    psychotest(){
-      this.$router.push("/psychotest")
+    psychotest() {
+      this.$router.push("/psychotest");
     },
-    example1(){
-      this.$router.push("/idealtypeStart")
+    idealtype() {
+      this.$router.push("/idealtypeStart");
     },
-    lolchango(){
-      this.$router.push("/lolchang")
-    }
+    lolchango() {
+      this.$router.push("/lolchang");
+    },
   },
 
   components: {
