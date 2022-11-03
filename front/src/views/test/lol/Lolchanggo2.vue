@@ -46,13 +46,6 @@
         </div>
       </div>
     </div>
-          <!-- <div class="lol-text">
-            <div class="lolmain"><span>무슨 스킬이게?</span></div>
-          <div><v-btn @click="testStart">매혹</v-btn></div>
-          <div><v-btn @click="testStart">황홀한 저주</v-btn></div>
-          <div><v-btn @click="testStart">앙코르</v-btn></div>
-          <div><v-btn @click="testStart">매혹의 질주</v-btn></div>
-        </div> -->
     </div>
     </v-layout>
  
@@ -197,29 +190,33 @@
         };
       }
     },
-    getResultStyle(item) { //정답 색상
+    getResultStyle(item) { //문제 정답
       if (item.isCorrect) {
         return {
           fontSize: '30px',
           textAlign : "center",
+          color : "green"
         };
-      } else {
+      } else { //문제 오답
         return {
           fontSize: '30px',
           textAlign : "center",
+          color : "red"
         };
       }
     },
-    getScorePopupStyle() {
+    getScorePopupStyle() { //정답! 표시
       if (this.incScore > 0) {
         return {
           fontSize: '30px',
           textAlign : "center",
+          color : "blue"
         };
       } else {
-        return {
+        return {//땡! 표시
           fontSize: '30px',
           textAlign : "center",
+          color : "red"
         };
       }
     },
@@ -241,7 +238,7 @@
     },
     next() {
       if (++this.step >= this.questions.length) {
-        alert(`퀴즈가 완료되었습니다.\n총점 : ${this.score}`);
+        alert(`두근두근 너의 롤창점수는? \n총점 : ${this.score}`);
         this.initialize();
         this.$router.push("/");
       }
@@ -300,6 +297,10 @@
     font-size:40px;
     text-align: center;
     margin-top:40px;
+  }
+  .btn-next{
+    font-size:25px;
+    text-align: right;
   }
   </style>
       
