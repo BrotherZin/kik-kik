@@ -25,9 +25,9 @@ export default {
       round: 4,
       list: [
         {
-          name: "아이유",
+          id: 1,
+          title: "아이유",
           img: "/image/idealtype/iu2.png",
-          selected: false,
         },
         {
           title: "카리나",
