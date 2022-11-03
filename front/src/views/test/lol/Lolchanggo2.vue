@@ -3,7 +3,7 @@
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
-            <video :src="videoList[current]" class="ahri" muted ref="video" @ended="videoEnded"></video>
+            <!-- <video :src="videoList[current]" class="ahri" muted ref="video" @ended="videoEnded"></video> -->
           </div>
           </v-layout>
           <div class="title">
