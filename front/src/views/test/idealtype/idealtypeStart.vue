@@ -8,7 +8,7 @@
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <img src="/image/idealtype/idealStart.png" class="image" />
+          <img src="/thumbnail/idealTN.png" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
