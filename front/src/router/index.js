@@ -11,10 +11,9 @@ import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
-import PsychoTest2 from '../views/test/psycho/PsychoTest2.vue'
-import PsychoTest3 from '../views/test/psycho/PsychoTest3.vue'
-import PsychoTest4 from '../views/test/psycho/PsychoTest4.vue'
-import PsychoTest5 from '../views/test/psycho/PsychoTest5.vue'
+
+
+
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 
@@ -91,30 +90,7 @@ const routes = [
     name: 'psychotest1',
     component: PsychoTest1
   },
-  {
-
-    path: '/PsychoTest2',
-    name: 'psychotest2',
-    component: PsychoTest2
-  },
-  {
-
-    path: '/PsychoTest3',
-    name: 'psychotest3',
-    component: PsychoTest3
-  },
-  {
-
-    path: '/PsychoTest4',
-    name: 'psychotest4',
-    component: PsychoTest4
-  },
-  {
-
-    path: '/PsychoTest5',
-    name: 'psychotest5',
-    component: PsychoTest5
-  },
+  
   {
     path: '/Lolchang',
     name: 'lolchang',
