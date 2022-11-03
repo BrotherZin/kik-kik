@@ -46,13 +46,6 @@
         </div>
       </div>
     </div>
-          <!-- <div class="lol-text">
-            <div class="lolmain"><span>무슨 스킬이게?</span></div>
-          <div><v-btn @click="testStart">매혹</v-btn></div>
-          <div><v-btn @click="testStart">황홀한 저주</v-btn></div>
-          <div><v-btn @click="testStart">앙코르</v-btn></div>
-          <div><v-btn @click="testStart">매혹의 질주</v-btn></div>
-        </div> -->
     </div>
     </v-layout>
  
