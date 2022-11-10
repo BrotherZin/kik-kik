@@ -15,18 +15,18 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="tteogkkochi"> 떡꼬치 </label><br/>
+          <label><input type="radio" v-model="food" value="tteogkkochi"> 떡꼬치 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="tteogbokki"> 떡볶이 </label><br/>
+           <label><input type="radio" v-model="food" value="tteogbokki"> 떡볶이 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="sotteogsotteog"> 소떡소떡 </label><br/>
+           <label><input type="radio" v-model="food" value="sotteogsotteog"> 소떡소떡 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="tteoggangjeong"> 떡강정 </label><br/>
+           <label><input type="radio" v-model="food" value="tteoggangjeong"> 떡강정 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
     <div class="button">
-    <v-btn class="previous" style="background-color: #c74eff" @click="$router.push('/foodtest')">이전</v-btn>
+    <v-btn class="previous" style="background-color: #c74eff" @click="prevpage">이전</v-btn>
     <v-btn class="next" style="background-color: #c74eff" @click="nextpage">다음</v-btn>
     </div>
     </div>
@@ -41,13 +41,13 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="dalg-geun-wibokk-eum"> 닭근위볶음 </label><br/>
+          <label><input type="radio" v-model="food" value="dalg-geun-wibokk-eum"> 닭근위볶음 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="dalgdolitang"> 닭도리탕 </label><br/>
+           <label><input type="radio" v-model="food" value="dalgdolitang"> 닭도리탕 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="yeomtong"> 염통볶음 </label><br/>
+           <label><input type="radio" v-model="food" value="yeomtong"> 염통볶음 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="dakbal"> 닭발 </label><br/>
+           <label><input type="radio" v-model="food" value="dakbal"> 닭발 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
@@ -67,13 +67,13 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="pizza"> 피자 </label><br/>
+          <label><input type="radio" v-model="food" value="pizza"> 피자 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="pasta"> 파스타 </label><br/>
+           <label><input type="radio" v-model="food" value="pasta"> 파스타 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="salad"> 샐러드 </label><br/>
+           <label><input type="radio" v-model="food" value="salad"> 샐러드 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="nyokki"> 뇨끼 </label><br/>
+           <label><input type="radio" v-model="food" value="nyokki"> 뇨끼 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
@@ -93,13 +93,13 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="chadolbag-i sugjubokk-eum"> 차돌박이 숙주볶음 </label><br/>
+          <label><input type="radio" v-model="food" value="chadolbag-i sugjubokk-eum"> 차돌박이 숙주볶음 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="sundubujjigae"> 순두부찌개 </label><br/>
+           <label><input type="radio" v-model="food" value="sundubujjigae"> 순두부찌개 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="doenjangstew"> 된장찌개 </label><br/>
+           <label><input type="radio" v-model="food" value="doenjangstew"> 된장찌개 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="seukiyaki"> 스키야끼 </label><br/>
+           <label><input type="radio" v-model="food" value="seukiyaki"> 스키야끼 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
@@ -119,13 +119,13 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="jokbal"> 족발 </label><br/>
+          <label><input type="radio" v-model="food" value="jokbal"> 족발 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="pigskin"> 돼지껍데기 </label><br/>
+           <label><input type="radio" v-model="food" value="pigskin"> 돼지껍데기 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="suyug"> 수육 </label><br/>
+           <label><input type="radio" v-model="food" value="suyug"> 수육 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="donpimug"> 돈피묵 </label><br/>
+           <label><input type="radio" v-model="food" value="donpimug"> 돈피묵 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
@@ -145,13 +145,13 @@
           </v-layout>
           <v-layout align-center justify-center>
           <div class = "answer">
-          <label><input type="checkbox" v-model="food" value="Tomato Egg Stir-fry"> 토마토달걀볶음 </label><br/>
+          <label><input type="radio" v-model="food" value="Tomato Egg Stir-fry"> 토마토달걀볶음 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="scrambled eggs"> 스크램블 에그 </label><br/>
+           <label><input type="radio" v-model="food" value="scrambled eggs"> 스크램블 에그 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="gyeranmari"> 계란말이 </label><br/>
+           <label><input type="radio" v-model="food" value="gyeranmari"> 계란말이 </label><br/>
            <br>
-           <label><input type="checkbox" v-model="food" value="gyelanjjim"> 계란찜 </label><br/>
+           <label><input type="radio" v-model="food" value="gyelanjjim"> 계란찜 </label><br/>
            <br>   
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     
@@ -163,6 +163,108 @@
 </v-layout>
     </div>
 
+    <div v-if="number === 7">
+        <v-layout align-center justify-center>
+            <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="/image/food/porkcutlet.jpg" class="image">
+          </div>
+          </v-layout>
+          <v-layout align-center justify-center>
+          <div class = "answer">
+          <label><input type="radio" v-model="food" value="shrimptempura"> 새우튀김 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="porkcutlet"> 돈까스 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="Chicken Cutlet"> 치킨까스 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="Cheese Pork Cutlet"> 치즈돈까스 </label><br/>
+           <br>   
+           <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
+    
+    <div class="button">
+    <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
+    <v-btn class="next" style="background-color: #c74eff" @click="nextpage">다음</v-btn>
+    </div>
+    </div>
+</v-layout>
+    </div>
+
+    <div v-if="number === 8">
+        <v-layout align-center justify-center>
+            <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="/image/food/hamburger.jpg" class="image">
+          </div>
+          </v-layout>
+          <v-layout align-center justify-center>
+          <div class = "answer">
+          <label><input type="radio" v-model="food" value="banh mi"> 반미 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="salad"> 샐러드 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="sandwich"> 샌드위치 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="hamburger"> 햄버거 </label><br/>
+           <br>   
+           <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
+    
+    <div class="button">
+    <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
+    <v-btn class="next" style="background-color: #c74eff" @click="nextpage">다음</v-btn>
+    </div>
+    </div>
+</v-layout>
+    </div>
+
+    <div v-if="number === 9">
+        <v-layout align-center justify-center>
+            <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="/image/food/kimchibap.jpg" class="image">
+          </div>
+          </v-layout>
+          <v-layout align-center justify-center>
+          <div class = "answer">
+          <label><input type="radio" v-model="food" value="kimchibap"> 김치볶음밥 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="risotto"> 리조또 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="jeyugbokkeum"> 제육볶음 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="KhaoPaMusab"> 카오팟무쌉(태국식 돼지고기 덮밥) </label><br/>
+           <br>   
+           <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
+    
+    <div class="button">
+    <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
+    <v-btn class="next" style="background-color: #c74eff" @click="nextpage">다음</v-btn>
+    </div>
+    </div>
+</v-layout>
+    </div>
+
+    <div v-if="number === 10">
+        <v-layout align-center justify-center>
+            <div style="display: block; margin: auto; width: auto; height: auto">
+            <img src="/image/food/samgyeopsal.jpg" class="image">
+          </div>
+          </v-layout>
+          <v-layout align-center justify-center>
+          <div class = "answer">
+          <label><input type="radio" v-model="food" value="ogyeobsal"> 오겹살 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="galmaegisal"> 갈매기살 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="samgyeopsal"> 삼겹살 </label><br/>
+           <br>
+           <label><input type="radio" v-model="food" value="hangjeongsal"> 항정살 </label><br/>
+           <br>   
+           <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
+    <div class="button">
+    <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
+    <v-btn class="result" style="background-color: #c74eff" @click="result">결과보기</v-btn>
+    </div>
+    </div>
+</v-layout>
+    </div>
   </div>
     </v-layout>
   </template>
@@ -172,33 +274,27 @@
   export default {
     data(){
       return{
-        answer: 0,
-        number: 1,
-        food : [],
+        answer:0,
+        number:1,
+        food:[], 
       }
     },
-
-    methods: {
-      nextpage(){
-      var answer=Number(this.answers)
-      if(this.answers==1){ 
-          this.number++;
-          this.answer++;
-        }
-        else{
-          this.number++;
-
-      }
-    },
-    previous() {
-      this.number--;
-    },
-
-      answer(keyword) {
-        this.$router.push("/");
+    methods:{
+      prevpage: function() {
+       window.alert("첫번째 페이지입니다")
       },
-    },
-  
+      nextpage: function(){
+        if(this.food == ""){
+          window.alert("음식을 선택해주세요!!๑•‿•๑")
+        }//음식을 선택하지 않았을 때
+        else{
+          this.number++
+        }
+      },
+      previous(){
+        this.number--;
+      },
+    },  
   };
   </script>
       <style scoped>
