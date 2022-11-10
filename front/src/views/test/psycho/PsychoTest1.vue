@@ -14,15 +14,15 @@
                                 <div v-if="number === 1">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>당신은 혼자 길을 걸어가고 있습니다. 그때 무엇이 지나갔습니다. 그것의 존재는 무엇이었을까요?  </p>
+                                              <p>당신은 혼자 길을 걸어가고 있습니다. 그때 무엇이 지나갔습니다. 그것의 존재는 무엇이었을까요?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
+                                                  <v-radio label="귀신" :value="4"></v-radio>
                                                   <v-radio label="강아지" :value="2"></v-radio>
                                                   <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="아이" :value="1"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -33,7 +33,7 @@
                                             <button href="#" style="color:black;" @click="$router.push('/PsychoTest')">◀ 돌아가기</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -49,10 +49,10 @@
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="주문을 외운다" :value="1"></v-radio>
+                                                  <v-radio label="주문을 외운다" :value="4"></v-radio>
                                                   <v-radio label="집어던진다" :value="2"></v-radio>
                                                   <v-radio label="도구를 이용한다" :value="3"></v-radio>
-                                                  <v-radio label="포기한다" :value="4"></v-radio>
+                                                  <v-radio label="포기한다" :value="1"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -63,7 +63,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -79,8 +79,8 @@
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="음악" :value="1"></v-radio>
-                                                  <v-radio label="미술" :value="2"></v-radio>
+                                                  <v-radio label="음악" :value="2"></v-radio>
+                                                  <v-radio label="미술" :value="1"></v-radio>
                                                   <v-radio label="체육" :value="3"></v-radio>
                                                   <v-radio label="과학" :value="4"></v-radio>
                                                 </v-radio-group>
@@ -93,7 +93,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -123,7 +123,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -139,9 +139,9 @@
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="공포" :value="1"></v-radio>
+                                                  <v-radio label="공포" :value="3"></v-radio>
                                                   <v-radio label="로맨스" :value="2"></v-radio>
-                                                  <v-radio label="스릴러" :value="3"></v-radio>
+                                                  <v-radio label="스릴러" :value="1"></v-radio>
                                                   <v-radio label="액션" :value="4"></v-radio>
                                                 </v-radio-group>
                                               </div>
@@ -153,7 +153,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -164,15 +164,15 @@
                                   <div v-else-if="number === 6">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>6</p>
+                                              <p>4개의 마을중 어디로 가는게 좋습니까?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
-                                                  <v-radio label="강아지" :value="2"></v-radio>
-                                                  <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="사람이없는마을" :value="1"></v-radio>
+                                                  <v-radio label="시체가많은마을" :value="2"></v-radio>
+                                                  <v-radio label="남자들만있는마을" :value="3"></v-radio>
+                                                  <v-radio label="여자들만있는마을" :value="4"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -183,7 +183,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -194,15 +194,15 @@
                                   <div v-else-if="number === 7">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>7</p>
+                                              <p>갑자기 당신을 보고 기절한 사람 이유는 무엇입니까?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
-                                                  <v-radio label="강아지" :value="2"></v-radio>
-                                                  <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="더러워서" :value="4"></v-radio>
+                                                  <v-radio label="무서워서" :value="2"></v-radio>
+                                                  <v-radio label="좋아서" :value="3"></v-radio>
+                                                  <v-radio label="내 옆에 있는 사람이 죽어서" :value="1"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -213,7 +213,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -224,15 +224,15 @@
                                   <div v-else-if="number === 8">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>8</p>
+                                              <p>어두컴컴한 방에 무언가 보인다 그것은 무엇입니까?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
-                                                  <v-radio label="강아지" :value="2"></v-radio>
-                                                  <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="해골" :value="3"></v-radio>
+                                                  <v-radio label="귀신" :value="2"></v-radio>
+                                                  <v-radio label="귀여운 어린아이" :value="1"></v-radio>
+                                                  <v-radio label="시체" :value="4"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -243,7 +243,7 @@
                                             <button href="#" style="color:black;" @click="$router.push('/PsychoTest')">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -254,15 +254,15 @@
                                   <div v-else-if="number === 9">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>9</p>
+                                              <p>아무도 없는 집에 인기척이 났습니다 어쩌시겠습니까?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
-                                                  <v-radio label="강아지" :value="2"></v-radio>
-                                                  <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="방망이를 든다" :value="2"></v-radio>
+                                                  <v-radio label="TV를 본다" :value="1"></v-radio>
+                                                  <v-radio label="숨는다" :value="3"></v-radio>
+                                                  <v-radio label="밖으로 나간다" :value="4"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -273,7 +273,7 @@
                                             <button href="#" style="color:black;" @click="prev">◀ 이전</button>
                                           </div>
                                           <div class="psynext">
-                                            <button href="#" style="color:black;" @click="next">다음 ▶</button>
+                                            <button href="#" style="color:black;" @click="next() ,nan()">다음 ▶</button>
                                           </div>
                                       </div>
                                   </div>
@@ -284,15 +284,15 @@
                                   <div v-else-if="number === 10">
                                       <div class="psycho-area" style="background-image:url(/image/psycho/backimg.png)"> 
                                           <div class="psycho-content">
-                                              <p>10</p>
+                                              <p>모르는 사람이 당신의 집 문을 두드리는 이유는 무엇입니까?</p>
                                           </div>
                                           <div class="psycho-selectarea">
                                               <div class="psycho-radio">
                                                 <v-radio-group v-model="answers">
-                                                  <v-radio label="귀신" :value="1"></v-radio>
-                                                  <v-radio label="강아지" :value="2"></v-radio>
-                                                  <v-radio label="사람" :value="3"></v-radio>
-                                                  <v-radio label="아이" :value="4"></v-radio>
+                                                  <v-radio label="택배가와서" :value="3"></v-radio>
+                                                  <v-radio label="술에취해서" :value="2"></v-radio>
+                                                  <v-radio label="살인마가 쫓아와서" :value="1"></v-radio>
+                                                  <v-radio label="집을 착각해서" :value="4"></v-radio>
                                                 </v-radio-group>
                                               </div>
                                           </div>
@@ -313,38 +313,41 @@
   </v-layout>
 </template>
 
+
 <script>
 export default{
   data(){
       return {
-        answer:0,
+        answer:0 ,
         number: 1,
-        shoe: true
-
+        answers:''
       }
   },  
   methods:{
     next(){
       var answer=Number(this.answers)
+      console.log(answer)
       if(this.answers==1){ 
           this.number++;
           this.answer++;
         }
         else{
           this.number++;
-
       }
     },
     prev() {
       this.number--;
     },
+    nan() {
+      this.answers='';
+    },
     finish() {
       if(this.answers==1){ 
       this.answer++;
-      this.$router.push('/PsychoFinish?answer='+this.answer);
+      this.$router.push('/PsychoTestF?answer='+this.answer);
     }
       else {
-        this.$router.push('/PsychoFinish?answer='+this.answer);
+        this.$router.push('/PsychoTestF?answer='+this.answer);
       }
   }
   }
