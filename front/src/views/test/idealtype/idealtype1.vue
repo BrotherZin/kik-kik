@@ -3,34 +3,98 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <h1>아이돌 이상형 월드컵 [ 8강 1/4 ]</h1>
+          <h1>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</h1>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/idealtype/winter.png" class="image" @click="NextPage" />
-        </div>
+        <v-flex xs6 @click="selectideal(getLeft())">
+          <img :src="getLeft().img" class="left-image" />
+        </v-flex>
         <div class="vs">vs</div>
-        <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/idealtype/iu2.png" class="image" @click="NextPage" />
-        </div>
+        <v-flex xs6 @click="selectideal(getRight())">
+          <img :src="getRight().img" class="right-image"
+        /></v-flex>
       </v-layout>
     </div>
   </v-layout>
 </template>
-    
-    <script>
+
+<script>
+import _ from "underscore";
 
 export default {
-  name: "Home",
+  data() {
+    return {
+      step: 1,
+      round: 4,
+      list: [
+        {
+          id: 1,
+          title: "아이유",
+          img: "/image/idealtype/iu2.png",
+        },
+        {
+          id: 2,
+          title: "카리나",
+          img: "/image/idealtype/karina.png",
+          selected: false,
+        },
+        {
+          title: "윈터",
+          img: "/image/idealtype/winter.png",
+          selected: false,
+        },
+        {
+          title: "민지",
+          img: "/image/idealtype/minji.png",
+          selected: false,
+        },
+      ],
+    };
+  },
   methods: {
-    NextPage() {
-      this.$router.push("/idealtypeEnd");
+    selectideal(item) {
+      item.selected = true;
+      if (this.step == this.round / 2) {
+        this.step = 1;
+        this.round = this.round / 2;
+      } else {
+        this.step++;
+      }
+      if (this.round == 1) {
+        console.log("final");
+        var finalList = this.getSelected();
+        var finalItem = _.first(finalList);
+        console.log(finalItem);
+      }
+    },
+    getLeft() {
+      var selectedList = this.getSelected();
+      console.log(selectedList, Math.floor(this.step / 2));
+      return selectedList[Math.floor(this.step / 2)];
+    },
+    getRight() {
+      var selectedList = this.getSelected();
+      return selectedList[Math.floor(this.step / 2) + 1];
+    },
+    getSelected() {
+      if (this.round == this.list.length) {
+        return this.list;
+      }
+      return _.chain(this.list)
+        .map((item) => {
+          if (item.selected) {
+            return item;
+          }
+        })
+        .compact()
+        .value();
     },
   },
 };
 </script>
-    <style scoped>
+
+<style>
 .background {
   height: 100px;
   background-color: #f0f8ff;
@@ -56,5 +120,21 @@ export default {
   font-size: 2.2em;
   font-weight: bold;
 }
+.img{
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+}
+.left-image,.right-image{
+  width:100%;
+  height:100%;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+
+}
 </style>
-    

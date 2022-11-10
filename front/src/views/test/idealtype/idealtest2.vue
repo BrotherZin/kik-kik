@@ -7,9 +7,13 @@
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-flex xs6 @click="selectideal(getLeft())"> {{ getLeft() }} </v-flex>
+        <v-flex xs6 @click="selectideal(getLeft())">
+          <img :src="getLeft().img" alt="" />
+        </v-flex>
         <div class="vs">vs</div>
-        <v-flex xs6 @click="selectideal(getRight())"> {{ getRight() }}</v-flex>
+        <v-flex xs6 @click="selectideal(getRight())">
+          <img :src="getRight().img" alt=""
+        /></v-flex>
       </v-layout>
     </div>
   </v-layout>
@@ -30,6 +34,7 @@ export default {
           img: "/image/idealtype/iu2.png",
         },
         {
+          id: 2,
           title: "카리나",
           img: "/image/idealtype/karina.png",
           selected: false,
@@ -49,6 +54,7 @@ export default {
   },
   methods: {
     selectideal(item) {
+      item.img = url("/image/idealtype/iu2.png");
       item.selected = true;
       if (this.step == this.round / 2) {
         this.step = 1;
@@ -115,4 +121,12 @@ export default {
   font-size: 2.2em;
   font-weight: bold;
 }
-</style>
+.img {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+}
+</style>w
