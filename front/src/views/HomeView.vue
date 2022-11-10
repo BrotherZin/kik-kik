@@ -16,18 +16,14 @@
           </div>
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-          <div class="image1">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image2">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image3">
-            <img src="/image/dd.png" />
-          </div>
-          <div class="image4">
-            <img src="/image/dd.png" />
-          </div>
+          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
+          
+          <img class="image1" src="/image/psycho/main.png" @click="psychotest">
+          
+          <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
+  
+          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
+
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
@@ -44,6 +40,18 @@ export default {
     testStart() {
       this.$router.push("/alltest");
     },
+    foodtest() {
+        this.$router.push("/foodtest")
+      },
+      psychotest(){
+        this.$router.push("/psychotest")
+      },
+      example1(){
+        this.$router.push("/idealtypeStart")
+      },
+      lolchango(){
+        this.$router.push("/lolchang")
+      },
     //   search(){
     //     this.$router.push("");
     //   }, //검색버튼 클릭 시
@@ -73,12 +81,13 @@ export default {
 .text {
   width: 700px;
 }
-.image1,
-.image2,
-.image3,
-.image4 {
+.image1{
   display: inline-block;
-  padding: 20px;
+  margin-bottom: 20px;
+  width: 135px;
+  height: 140px;
+  border: solid 1px black;
+  margin-right: 35px;
 }
 .font {
   margin-top: 50px;
