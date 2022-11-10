@@ -3,19 +3,25 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <h1>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</h1>
+          <h1>아이돌 이상형 월드컵 {{ round * 2 }}강 {{ step }}번째 라운드</h1>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-flex xs6 @click="selectItem(getLeft())">
-          <img src="/image/idealtype/winter.png" class="image" />
-          <!-- {{ getLeft() }} -->
-        </v-flex>
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getLeft())"
+        >
+          <img :src="getLeft().img" alt="" />
+        </div>
         <div class="vs">vs</div>
-        <v-flex xs6 @click="selectItem(getRight())">
-          <img src="/image/idealtype/iu2.png" class="image" />
-          <!-- {{ getRight() }} -->
-        </v-flex>
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getRight())"
+        >
+          <img :src="getRight().img" alt="" />
+        </div>
       </v-layout>
     </div>
   </v-layout>
@@ -23,90 +29,119 @@
 
 <script>
 import _ from "underscore";
+
 export default {
   data() {
     return {
+      // 라운드와 스코어를 저장하는 변수, 라운드는 4, 스텝은 2까지만,  우승한 아이돌을 저장하는 변수 선택되면 1점씩 더해짐
+
+      round: 2,
       step: 1,
-      round: 8,
+      score: 0,
+      winner: null,
+
+      // 아이돌 리스트를 저장하는 변수
       list: [
         {
-          name: "test1",
-          // img: "/image/idealtype/iu2.png",
-          selected: false,
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
         },
         {
-          title: "test2",
-          // img: "/image/idealtype/karina.png",
-          selected: false,
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
         },
         {
-          title: "test3",
-          selected: false,
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
         },
         {
-          title: "test4",
-          selected: false,
-        },
-        {
-          title: "test5",
-          selected: false,
-        },
-        {
-          title: "test6",
-          selected: false,
-        },
-        {
-          title: "test7",
-          selected: false,
-        },
-        {
-          title: "test8",
-          selected: false,
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
         },
       ],
     };
   },
   methods: {
-    getLeft() {
-      var selectedList = this.getSelected();
-      console.log(selectedList, Math.floor(this.step / 2));
-      return selectedList[Math.floor(this.step / 2)];
+    // 라운드를 1씩 감소시키는 함수
+    roundDown() {
+      this.round--;
     },
-    getRight() {
-      var selectedList = this.getSelected();
-      return selectedList[Math.floor(this.step / 2) + 1];
+    // 스코어를 1씩 증가시키는 함수
+    scoreUp() {
+      this.score++;
     },
-    selectItem(item) {
-      item.selected = true;
-
-      if (this.step == this.round / 2) {
-        this.step = 1;
-        this.round = this.round / 2;
-      } else {
-        this.step++;
-      }
+    // 스텝을 1씩 증가시키는 함수
+    stepUp() {
+      this.step++;
+    },
+    // 스텝을 1씩 감소시키는 함수
+    stepDown() {
+      this.step--;
+    },
+    // 선택된 아이돌의 스코어를 1씩 증가시키고, 우승한 아이돌을 저장하는 함수
+    selectideal(ideal) {
+      ideal.score++;
+      this.winner = ideal;
+      // 라운드가 1이면 라운드를 감소시키고, 스텝을 1로 초기화시키고, 우승한 아이돌을 리스트에 저장하는 함수
       if (this.round == 1) {
-        console.log("final");
-        var finalList = this.getSelected();
-        var finalItem = _.first(finalList);
-        console.log(finalItem);
+        this.roundDown();
+        this.step = 1;
+        this.list.push(this.winner);
+        // 라운드와 스텝이 같아지면 다음 라운드로 넘어가고, 스텝을 1로 초기화시키는 함수
+      } else if (this.round == this.step) {
+        this.roundDown();
+
+        // 라운드가 1이 아니면 스텝을 증가시키고, 우승한 아이돌을 리스트에 저장하는 함수
+      } else {
+        this.stepUp();
+        this.list.push(this.winner);
       }
     },
-    getSelected() {
-      if (this.round == this.list.length) {
-        return this.list;
-      }
-      return _.chain(this.list)
-        .map((item) => {
-          if (item.selected) {
-            return item;
-          }
-        })
-        .compact()
-        .value();
+
+    // 왼쪽에 아이돌을 표시하는 함수
+    getLeft() {
+      // 라운드가 1이면 리스트의 홀수번째 아이돌을 반환
+
+      return this.list[this.step * 2 - 2];
+    },
+
+    // 오른쪽에 표시될 아이돌을 반환하는 함수
+    getRight() {
+      // 짝수번째 아이돌을 반환
+      return this.list[this.step * 2 - 1];
     },
   },
 };
+
+// getLeft() {
+//   var selectedList = this.getSelected();
+//   console.log(selectedList, Math.floor(this.step / 2));
+//   return selectedList[Math.floor(this.step / 2)];
+// },
+
+// getRight() {
+//   var selectedList = this.getSelected();
+//   return selectedList[Math.floor(this.step / 2) + 1];
+// },
+//     getSelected() {
+//       if (this.round == this.list.length) {
+//         return this.list;
+//       }
+//       return _.chain(this.list)
+//         .map((item) => {
+//           if (item.selected) {
+//             return item;
+//           }
+//         })
+//         .compact()
+//         .value();
+//     },
+//   },
+// };
 </script>
 
 <style>
@@ -134,5 +169,13 @@ export default {
 .vs {
   font-size: 2.2em;
   font-weight: bold;
+}
+.selectimg {
+  width: 200px;
+  height: 200px;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
 }
 </style>
