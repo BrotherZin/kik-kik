@@ -7,13 +7,21 @@
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-flex xs6 @click="selectideal(getLeft())">
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getLeft())"
+        >
           <img :src="getLeft().img" alt="" />
-        </v-flex>
+        </div>
         <div class="vs">vs</div>
-        <v-flex xs6 @click="selectideal(getRight())">
-          <img :src="getRight().img" alt=""
-        /></v-flex>
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getRight())"
+        >
+          <img :src="getRight().img" alt="" />
+        </div>
       </v-layout>
     </div>
   </v-layout>
@@ -121,12 +129,12 @@ export default {
   font-size: 2.2em;
   font-weight: bold;
 }
-.img {
-  width: auto;
-  height: auto;
+.selectimg {
+  width: 200px;
+  height: 200px;
   max-width: 500px;
   max-height: 500px;
   display: block;
   margin: auto;
 }
-</style>w
+</style>
