@@ -260,11 +260,11 @@
            <!-- <h>선택한 음식</h><p>{{ food }}</p>           -->
     <div class="button">
     <v-btn class="previous" style="background-color: #c74eff" @click="previous">이전</v-btn>
-    <v-btn class="result" style="background-color: #c74eff" @click="result">결과보기</v-btn>
+    <v-btn class="nextpage" style="background-color: #c74eff" @click="nextpage">결과보기</v-btn>
     </div>
     </div>
 </v-layout>
-    </div>
+</div>
   </div>
     </v-layout>
   </template>
@@ -276,24 +276,23 @@
       return{
         answer:0,
         number:1,
-        food:[], 
-      }
+        food:'',
+        result:'',}
     },
     methods:{
-      prevpage: function() {
+      prevpage: function() { //첫 화면에서의 이전 버튼
        window.alert("첫번째 페이지입니다")
       },
-      nextpage: function(){
+      nextpage: function(){ //다음 버튼
         if(this.food == ""){
           window.alert("음식을 선택해주세요!!๑•‿•๑")
         }//음식을 선택하지 않았을 때
         else{
-          this.number++
-        }
+          this.number++;
+          this.food = "";
+        } //음식을 선택했을 때
       },
-      previous(){
-        this.number--;
-      },
+
     },  
   };
   </script>
