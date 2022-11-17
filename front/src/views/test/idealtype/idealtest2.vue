@@ -1,22 +1,22 @@
 <template>
   <v-layout class="background" align-center justify-center>
     <div class="inside">
-      <v-layout align-center justify-center>
-        <div>
+        <div class="wlsdk" >
+          <div class="round">
           <div v-if="roundLength > 4">{{ roundLength }}강</div>
           <div v-else-if="roundLength == 4">준결승</div>
           <div v-else-if="roundLength == 2">결승</div>
-          <v-layout class="wlsdk" align-center justify-center>
-            <div @click="clickLeft" class="selectimg">
-              <img :src="getLeftItem().img" alt="" />
+          </div>
+          <div class="vsvs" >
+          <div @click="clickLeft" class="selectimg">
+              <img class="left" :src="getLeftItem().img" alt="" />
             </div>
-            <div class="vs">vs</div>
+            <div class="vs" >vs</div>
             <div @click="clickRight" class="selectimg">
-              <img :src="getRightItem().img" alt="" />
+              <img class="right" :src="getRightItem().img" alt="" />
             </div>
-          </v-layout>
+          </div>
         </div>
-      </v-layout>
     </div>
   </v-layout>
 </template>
@@ -168,24 +168,28 @@ export default {
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }
-.image {
-  width: auto;
-  height: auto;
-  max-width: 500px;
-  max-height: 500px;
-  display: block;
-  margin: auto;
-}
 .vs {
   font-size: 2.2em;
   font-weight: bold;
+  text-align: center;
 }
-.selectimg {
-  width: 200px;
-  height: 200px;
-  max-width: 500px;
-  max-height: 500px;
-  display: block;
-  margin: auto;
+.vsvs{
+  display: flex;
+  text-align: center;
+}
+img{
+  height: 500px;
+  width:500px;
+}
+.left{
+  margin-top:100px;
+  margin-left: 150px;
+}
+.right{
+  margin-top:100px;
+  margin-left:600px;
+}
+.round{
+  text-align: center;
 }
 </style>
