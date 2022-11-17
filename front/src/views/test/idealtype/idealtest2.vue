@@ -1,16 +1,22 @@
 <template>
-  <v-layout>
-    <div id="app">
-      <div v-if="roundLength > 4">{{ roundLength }}강</div>
-      <div v-else-if="roundLength == 4">준결승</div>
-      <div v-else-if="roundLength == 2">결승</div>
-
-      <div @click="clickLeft">
-        {{ getLeftItem() }}
-      </div>
-      <div @click="clickRight">
-        {{ getRightItem() }}
-      </div>
+  <v-layout class="background" align-center justify-center>
+    <div class="inside">
+      <v-layout align-center justify-center>
+        <div>
+          <div v-if="roundLength > 4">{{ roundLength }}강</div>
+          <div v-else-if="roundLength == 4">준결승</div>
+          <div v-else-if="roundLength == 2">결승</div>
+          <v-layout class="wlsdk" align-center justify-center>
+            <div @click="clickLeft" class="selectimg">
+              <img :src="getLeftItem().img" alt="" />
+            </div>
+            <div class="vs">vs</div>
+            <div @click="clickRight" class="selectimg">
+              <img :src="getRightItem().img" alt="" />
+            </div>
+          </v-layout>
+        </div>
+      </v-layout>
     </div>
   </v-layout>
 </template>
@@ -19,8 +25,6 @@
 import _ from "underscore";
 
 export default {
-  name: "App",
-
   methods: {
     getCurrentList() {
       return _.chain(this.list)
@@ -100,10 +104,30 @@ export default {
     return {
       roundLength: 1,
       list: [
-        { name: "아이유", selected: false, round: false },
-        { name: "카리나", selected: false, round: false },
-        { name: "윈터", selected: false, round: false },
-        { name: "민지", selected: false, round: false },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          selected: false,
+          round: false,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          selected: false,
+          round: false,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          selected: false,
+          round: false,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          selected: false,
+          round: false,
+        },
         { name: "5", selected: false, round: false },
         { name: "6", selected: false, round: false },
         { name: "7", selected: false, round: false },
@@ -130,5 +154,38 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.background {
+  height: 100px;
+  background-color: #f0f8ff;
+  height: 100%;
+  background-color: #e6e6fa;
+}
+.inside {
+  background-color: white;
+  width: 1500px;
+  height: 750px;
+  margin-top: 50px;
+  border-radius: 100px 100px 100px 100px;
+}
+.image {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+}
+.vs {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.selectimg {
+  width: 200px;
+  height: 200px;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: auto;
 }
 </style>
