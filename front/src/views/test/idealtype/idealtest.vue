@@ -12,7 +12,8 @@
           style="display: block; margin: auto; width: auto; height: auto"
           @click="selectideal(getLeft())"
         >
-          <img :src="getLeft().img" alt="" />
+          {{ getLeft() }}
+          <!-- <img :src="getLeft().img" alt="" /> -->
         </div>
         <div class="vs">vs</div>
         <div
@@ -20,7 +21,8 @@
           style="display: block; margin: auto; width: auto; height: auto"
           @click="selectideal(getRight())"
         >
-          <img :src="getRight().img" alt="" />
+          {{ getRight() }}
+          <!-- <img :src="getRight().img" alt="" /> -->
         </div>
       </v-layout>
     </div>
@@ -41,7 +43,68 @@ export default {
       winner: null,
 
       // 아이돌 리스트를 저장하는 변수
-      list: [
+      list: [],
+      sample: [
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
+        },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
+        },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
+        },
         {
           name: "아이유",
           img: "/image/idealtype/iu2.png",
@@ -65,6 +128,10 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.list = _.sample(this.sample, 4);
+    console.log(this.list);
+  },
   methods: {
     // 라운드를 1씩 감소시키는 함수
     roundDown() {
@@ -82,66 +149,50 @@ export default {
     stepDown() {
       this.step--;
     },
-    // 선택된 아이돌의 스코어를 1씩 증가시키고, 우승한 아이돌을 저장하는 함수
+
+    getLeft() {
+      var selectedList = this.getSelected();
+      console.log(selectedList, Math.floor(this.step / 2));
+      return selectedList[Math.floor(this.step / 2)];
+    },
+    getRight() {
+      var selectedList = this.getSelected();
+      return selectedList[Math.floor(this.step / 2) + 1];
+    },
+    getSelected() {
+      if (this.round == this.list.length) {
+        return this.list;
+      }
+      return _.chain(this.list)
+        .map((item) => {
+          if (item.selected) {
+            return item;
+          }
+        })
+        .compact()
+        .value();
+    },
+
+    // 이미지를 선택하면 스코어 1점 증가
     selectideal(ideal) {
       ideal.score++;
-      this.winner = ideal;
-      // 라운드가 1이면 라운드를 감소시키고, 스텝을 1로 초기화시키고, 우승한 아이돌을 리스트에 저장하는 함수
+      this.scoreUp();
+      // 라운드가 1이면 우승자를 결정하고, 아니면 다음 라운드로 넘어감
       if (this.round == 1) {
-        this.roundDown();
-        this.step = 1;
-        this.list.push(this.winner);
-        // 라운드와 스텝이 같아지면 다음 라운드로 넘어가고, 스텝을 1로 초기화시키는 함수
-      } else if (this.round == this.step) {
-        this.roundDown();
-
-        // 라운드가 1이 아니면 스텝을 증가시키고, 우승한 아이돌을 리스트에 저장하는 함수
+        this.winner = ideal;
       } else {
-        this.stepUp();
-        this.list.push(this.winner);
+        // 스텝이 2이면 라운드를 1 증가시키고, 스텝을 1로 초기화
+        if (this.step == 2) {
+          this.roundup();
+          this.step = 1;
+        } else {
+          // 스텝이 1이면 스텝을 1 증가시킴
+          this.stepUp();
+        }
       }
-    },
-
-    // 왼쪽에 아이돌을 표시하는 함수
-    getLeft() {
-      // 라운드가 1이면 리스트의 홀수번째 아이돌을 반환
-
-      return this.list[this.step * 2 - 2];
-    },
-
-    // 오른쪽에 표시될 아이돌을 반환하는 함수
-    getRight() {
-      // 짝수번째 아이돌을 반환
-      return this.list[this.step * 2 - 1];
     },
   },
 };
-
-// getLeft() {
-//   var selectedList = this.getSelected();
-//   console.log(selectedList, Math.floor(this.step / 2));
-//   return selectedList[Math.floor(this.step / 2)];
-// },
-
-// getRight() {
-//   var selectedList = this.getSelected();
-//   return selectedList[Math.floor(this.step / 2) + 1];
-// },
-//     getSelected() {
-//       if (this.round == this.list.length) {
-//         return this.list;
-//       }
-//       return _.chain(this.list)
-//         .map((item) => {
-//           if (item.selected) {
-//             return item;
-//           }
-//         })
-//         .compact()
-//         .value();
-//     },
-//   },
-// };
 </script>
 
 <style>
