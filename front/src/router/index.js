@@ -102,12 +102,12 @@ const routes = [
   },
   {
     path: '/Lolskin',
-    name: 'lolskin',
+    name: 'Lolskin',
     component: Lolskin
   },
   {
     path: '/Lolskin2',
-    name: 'lolskin2',
+    name: 'Lolskin2',
     component: Lolskin2
   },
 ]
