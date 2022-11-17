@@ -76,7 +76,7 @@ export default {
     psychotest() {
       this.$router.push("/psychotest");
     },
-    example1() {
+    idealtypeStart() {
       this.$router.push("/idealtypeStart");
     },
     lolchango() {
