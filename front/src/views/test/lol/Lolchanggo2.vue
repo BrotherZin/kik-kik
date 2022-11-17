@@ -438,18 +438,10 @@ max-height: 900px;
 }
 .next{
   text-align: right;
-  margin-right: 100px;
-}
-.next:hover::after{
-    position: absolute; 
-        content:""; display: block; 
-        border-bottom: 2px solid #000; 
-        transition: all 250ms ease-out; 
-        left: 50%; 
-        width: 0;
+  margin-right: 200px;
 }
 video{
-  height: 500px;
+  height: 400px;
 }
 /* .score-popup{
   display: flex;

@@ -13,17 +13,14 @@
           
             <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
           
-         
             <img class="image1" src="/image/psycho/main.png" @click="psychotest">
-          
           
             <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
   
-            <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
+            <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
+
+            <img class=" image1" src="/thumbnail/box.png" @click="lolskin">
           
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
           <div class="image">
             <img src="/image/dd.png">
           </div>
@@ -67,6 +64,9 @@
       },
       lolchango(){
         this.$router.push("/lolchang")
+      },
+      lolskin(){
+        this.$router.push("/lolskin")
       }
     },
     components: {

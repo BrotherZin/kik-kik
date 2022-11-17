@@ -11,11 +11,10 @@ import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
-
-
-
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import Lolskin from '../views/test/lolskin/Lolskin.vue'
+import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
 
 
 Vue.use(VueRouter)
@@ -100,6 +99,16 @@ const routes = [
     path: '/Lolchanggo2',
     name: 'lolchanggo',
     component: Lolchanggo2
+  },
+  {
+    path: '/Lolskin',
+    name: 'lolskin',
+    component: Lolskin
+  },
+  {
+    path: '/Lolskin2',
+    name: 'lolskin2',
+    component: Lolskin2
   },
 
 
