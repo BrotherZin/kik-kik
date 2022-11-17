@@ -110,9 +110,6 @@ const routes = [
     name: 'lolskin2',
     component: Lolskin2
   },
-
-
-
 ]
 
 const router = new VueRouter({
