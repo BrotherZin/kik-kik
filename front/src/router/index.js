@@ -2,19 +2,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import idealtypeStart from '../test/idealtype/idealtypeStart.vue'
-import idealtype1 from '../test/idealtype/idealtype1.vue'
-import idealtypeEnd from '../test/idealtype/idealtypeEnd.vue'
-import Foodtest from '../test/food/Foodtest.vue'
-import Foodtestgo from '../test/food/Foodtestgo.vue'
-import PsychoTest from '../test/psycho/PsychoTest.vue'
-import test from '../views/test.vue'
-import PsychoTest1 from '../test/psycho/PsychoTest1.vue'
+import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
+import idealtype1 from '../views/test/idealtype/idealtype1.vue'
+import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
+import idealtest from '../views/test/idealtype/idealtest.vue'
+import idealtest2 from '../views/test/idealtype/idealtest2.vue'
+import Foodtest from '../views/test/food/Foodtest.vue'
+import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import PsychoTest from '../views/test/psycho/PsychoTest.vue'
+import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
+import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
 
-import PsychoTest2 from '../test/psycho/PsychoTest2.vue'
 
-import Lolchang from '../test/lol/Lolchang.vue'
-import Lolchanggo2 from '../test/lol/Lolchanggo2.vue'
+
+import Lolchang from '../views/test/lol/Lolchang.vue'
+import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+
 
 Vue.use(VueRouter)
 
@@ -25,9 +28,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/test',
+    path: '/idealtest',
 
-    component: test
+    component: idealtest
+  },
+  {
+    path: '/idealtest2',
+
+    component: idealtest2
   },
 
   {
@@ -52,6 +60,18 @@ const routes = [
     component: idealtypeEnd
   },
   {
+    path: '/idealtest',
+    name: 'idealtest',
+    component: idealtest
+  },
+  {
+    path: '/idealtest2',
+    name: 'idealtest2',
+    component: idealtest2
+  },
+
+
+  {
     path: '/Foodtest',
     name: 'foodtest',
     component: Foodtest
@@ -72,11 +92,11 @@ const routes = [
     component: PsychoTest1
   },
   {
-
-    path: '/PsychoTest2',
-    name: 'psychotest2',
-    component: PsychoTest2
+    path: '/PsychoTestF',
+    name: 'psychotestf',
+    component: PsychoTestF
   },
+  
   {
     path: '/Lolchang',
     name: 'lolchang',

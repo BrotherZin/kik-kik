@@ -30,11 +30,13 @@ export default {
       round: 8,
       list: [
         {
-          title: "test1",
+          name: "test1",
+          // img: "/image/idealtype/iu2.png",
           selected: false,
         },
         {
           title: "test2",
+          // img: "/image/idealtype/karina.png",
           selected: false,
         },
         {
