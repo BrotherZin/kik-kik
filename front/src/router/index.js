@@ -96,7 +96,7 @@ const routes = [
     name: 'psychotestf',
     component: PsychoTestF
   },
-  
+
   {
     path: '/Lolchang',
     name: 'lolchang',
