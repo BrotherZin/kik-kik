@@ -12,7 +12,7 @@
           
         </div>
         <div class="psycho-result">
-            <span>10 문제 中 당신이 맞춘 문제는</span><br>
+            <span>10 문제 中 <span style="color:blue">{{tester}}</span>님이 맞춘 문제는</span><br>
             총 <span>{{answer}}</span> 문제 입니다.
         </div>
         <div class="result-text">
@@ -50,6 +50,7 @@ export default {
   data(){
       return {
           answer:this.$route.query.answer,
+          tester:this.$route.query.tester
     };
 },
 methods: {

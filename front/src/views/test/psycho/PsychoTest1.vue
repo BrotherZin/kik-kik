@@ -320,7 +320,7 @@ export default{
       return {
         answer:0 ,
         number: 1,
-        answers:''
+        answers:'',
       }
   },  
   methods:{
@@ -342,12 +342,13 @@ export default{
       this.answers='';
     },
     finish() {
+      this.tester=this.$route.query.tester
       if(this.answers==1){ 
       this.answer++;
-      this.$router.push('/PsychoTestF?answer='+this.answer);
+      this.$router.push('/PsychoTestF?tester='+this.tester+'&answer='+this.answer);
     }
       else {
-        this.$router.push('/PsychoTestF?answer='+this.answer);
+        this.$router.push('/PsychoTestF?tester='+this.tester+'&answer='+this.answer);
       }
   }
   }

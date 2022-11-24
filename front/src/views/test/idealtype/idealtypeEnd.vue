@@ -3,12 +3,12 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <h1>아이돌 이상형 월드컵 [ 우승 ]</h1>
+          <h1>아이돌 이상형 월드컵 [ 최종 우승 ]</h1>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/iu2.png" class="image" />
+          <img src="/image/idealtype/iu.jpg" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
@@ -36,12 +36,11 @@
 </template>
     
     <script>
-
 export default {
   name: "Home",
   methods: {
     Restart() {
-      this.$router.push("/example1");
+      this.$router.push("/idealtypeStart");
     },
     OtherTest() {
       this.$router.push("/alltest");

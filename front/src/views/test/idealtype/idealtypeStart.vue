@@ -36,7 +36,7 @@ export default {
   name: "Home",
   methods: {
     start() {
-      this.$router.push("/idealtype1");
+      this.$router.push("/idealtest");
     },
   },
 };
