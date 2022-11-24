@@ -11,15 +11,10 @@ import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
-import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
-import Dtest from '../views/test/depression/Dtest.vue'
-import Dtest1 from '../views/test/depression/Dtest1.vue'
-
-
-
-
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import Lolskin from '../views/test/lolskin/Lolskin.vue'
+import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
 
 
 Vue.use(VueRouter)
@@ -94,22 +89,7 @@ const routes = [
     name: 'psychotest1',
     component: PsychoTest1
   },
-  {
-    path: '/PsychoTestF',
-    name: 'psychotestf',
-    component: PsychoTestF
-  },
-  {
-    path: '/Dtest',
-    name: 'dtest',
-    component: Dtest
-  },
-  {
-    path: '/Dtest1',
-    name: 'dtest1',
-    component: Dtest1
-  },
-
+  
   {
     path: '/Lolchang',
     name: 'lolchang',
@@ -120,9 +100,16 @@ const routes = [
     name: 'lolchanggo',
     component: Lolchanggo2
   },
-
-
-
+  {
+    path: '/Lolskin',
+    name: 'Lolskin',
+    component: Lolskin
+  },
+  {
+    path: '/Lolskin2',
+    name: 'Lolskin2',
+    component: Lolskin2
+  },
 ]
 
 const router = new VueRouter({
