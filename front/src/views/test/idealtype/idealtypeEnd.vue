@@ -8,19 +8,16 @@
       </v-layout>
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
-          <img src="/image/idealtype/iu.jpg" class="image" />
+          <img :src="$route.query.img" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <div class="result">최종 우승은 [ 아이유 ] 입니다 !!</div>
+        <div class="result">최종 우승은 {{ $route.query.name }} 입니다 !!</div>
       </v-layout>
 
-      <!-- 아니 아래 이거 공백 넣고 싶은데 못넣어서 우선 이렇게 해놓은거..  -->
-
       <div>&nbsp;</div>
       <div>&nbsp;</div>
       <div>&nbsp;</div>
-      <!-- 이 공간에다가 댓글 구현하면 딱 좋을듯.. -->
 
       <v-layout align-center justify-center>
         <v-btn class="mr-2 pink white--text" @click="Restart"
@@ -47,6 +44,16 @@ export default {
     },
     Rank() {
       this.$router.push("/");
+    },
+  },
+  data() {
+    return {
+      name: "",
+    };
+  },
+  computed: {
+    name() {
+      return this.$store.state.selected.name;
     },
   },
 };

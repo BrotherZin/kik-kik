@@ -120,7 +120,7 @@ export default {
   font-size: 2.2em;
   font-weight: bold;
 }
-.img{
+.img {
   width: auto;
   height: auto;
   max-width: 500px;
@@ -128,13 +128,13 @@ export default {
   display: block;
   margin: auto;
 }
-.left-image,.right-image{
-  width:100%;
-  height:100%;
+.left-image,
+.right-image {
+  width: 100%;
+  height: 100%;
   max-width: 500px;
   max-height: 500px;
   display: block;
   margin: auto;
-
 }
 </style>

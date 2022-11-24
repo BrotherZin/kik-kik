@@ -107,9 +107,6 @@ const routes = [
     name: 'lolchanggo',
     component: Lolchanggo2
   },
-
-
-
 ]
 
 const router = new VueRouter({

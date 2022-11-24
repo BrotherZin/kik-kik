@@ -1,25 +1,46 @@
 <template>
   <v-layout class="background" align-center justify-center>
     <div class="inside">
-      <div class="round">
+      <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
           이상형 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
-      </div>
-      <div class="wlsdk">
-        <div class="vsvs">
-          <div @click="clickLeft" class="selectimg">
+
+        <v-flex>
+          <div class="vsvs">
+            <v-layout fill-heght>
+              <v-flex xs6 class="left">
+                <v-img
+                  :aspect-ratio="1 / 1"
+                  class="image"
+                  :src="getLeftItem().img"
+                  alt=""
+                />
+                <div @click="clickLeft" class="clickspace"></div>
+              </v-flex>
+              <v-flex xs6 class="right">
+                <v-img
+                  class="image"
+                  :aspect-ratio="1 / 1"
+                  :src="getRightItem().img"
+                  alt=""
+                />
+                <div @click="clickRight" class="clickspace"></div>
+              </v-flex>
+            </v-layout>
+            <!-- <div @click="clickLeft" class="selectimg">
             <img class="left" :src="getLeftItem().img" alt="" />
           </div>
 
           <div @click="clickRight" class="selectimg">
             <img class="right" :src="getRightItem().img" alt="" />
+          </div> -->
           </div>
-        </div>
-      </div>
-      <div class="vsimg"><img src="/image/idealtype/vs.png" /></div>
+        </v-flex>
+        <div class="vsimg"><img src="/image/idealtype/vs.png" /></div>
+      </v-layout>
     </div>
   </v-layout>
 </template>
@@ -81,7 +102,10 @@ export default {
         return item.selected;
       });
       console.log("finish", selected);
-      this.$router.push("/idealtypeEnd");
+
+      this.$router.push(
+        "/idealtypeEnd?name=" + selected.name + "&img=" + selected.img
+      );
     },
     nextRound() {
       this.list = _.chain(this.list)
@@ -229,6 +253,7 @@ export default {
   background-color: white;
   width: 1500px;
   height: 750px;
+  max-width: 100%;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }
@@ -239,22 +264,40 @@ export default {
 }
 
 .vsvs {
-  display: flex;
   text-align: center;
+
+  height: 100%;
 }
-img {
-  height: 500px;
-  width: 500px;
+.image {
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
-.left {
-  margin-top: 100px;
-  margin-left: 150px;
-}
+.left,
 .right {
-  margin-top: 100px;
-  margin-left: 600px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
 }
+.clickspace {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 12;
+}
+
 .round {
   text-align: center;
+  position: relative;
+}
+.vsimg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
 }
 </style>
