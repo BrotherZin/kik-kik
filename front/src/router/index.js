@@ -12,6 +12,9 @@ import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
+import Dtest from '../views/test/depression/Dtest.vue'
+import Dtest1 from '../views/test/depression/Dtest1.vue'
+
 
 
 
@@ -95,6 +98,16 @@ const routes = [
     path: '/PsychoTestF',
     name: 'psychotestf',
     component: PsychoTestF
+  },
+  {
+    path: '/Dtest',
+    name: 'dtest',
+    component: Dtest
+  },
+  {
+    path: '/Dtest1',
+    name: 'dtest1',
+    component: Dtest1
   },
 
   {
