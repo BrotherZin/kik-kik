@@ -1,5 +1,8 @@
 <template>
     <v-layout class="background" align-center justify-center>
+      <div class="logo">
+      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
+    </div>
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
@@ -14,7 +17,7 @@
                    :pre-type-delay='70'
                    :type-delay='100'
                    :pre-erase-delay='5000'
-                   :erase-delay='10'
+                   :erase-delay='0'
                    erase-style='select-back'
                    :erase-on-complete='test'
                    caret-animation='smooth'
@@ -42,12 +45,15 @@
      .lol-text .lolskin{
     font-size : 50px;
    }
-  .background {
-    height: 100px;
-    background-color: #f0f8ff;
-    height: 100%;
-    background-color: #e6e6fa;
-  }
+   .background {
+  height: 100%;
+  background-color: #e6e6fa;
+  display: grid;
+}
+.logo{
+  display: flex;
+  margin-right: 100px;
+}
   .inside {
     background-color: white;
     width: 1500px;

@@ -1,5 +1,7 @@
 <template>
-  <v-layout class="background" align-center justify-center>
+  <v-layout class="background" align-center justify-center><div class="logo">
+      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
+    </div>
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -42,6 +44,9 @@
         <div class="answer-text">
           {{ item.text }}
         </div> <!--문제 선택-->
+      </div>
+      <div class="next2">
+        <button class="btn-next" @click="next">다음</button>
       </div>
     </div>
   </div>
@@ -392,10 +397,13 @@ methods: {
   font-family: 'Dongle', sans-serif !important;
 }
 .background {
-  height: 100px;
-  background-color: #f0f8ff;
   height: 100%;
   background-color: #e6e6fa;
+  display: grid;
+}
+.logo{
+  display: flex;
+  margin-right: 100px;
 }
 .inside {
   background-color: white;
@@ -439,6 +447,11 @@ max-height: 900px;
 .next{
   text-align: right;
   margin-right: 200px;
+}
+.next2{
+  text-align: right;
+  margin-right: 200px;
+  margin-top: 30px;
 }
 video{
   height: 400px;

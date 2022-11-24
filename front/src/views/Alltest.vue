@@ -1,5 +1,8 @@
 <template>
   <v-layout class="background" align-center justify-center>
+    <div class="logo">
+      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
+    </div>
       <div>
     <v-layout class="inside" fill-height align-center justify-center>
       <div class="text" style="text-align : center;">
@@ -75,15 +78,22 @@
   };
   </script>
   <style scoped>
-    .background{
-      height: 100%;
-          background-color: #E6E6FA;
-    }
+    .background {
+  height: 100%;
+  background-color: #e6e6fa;
+  display: grid;
+}
+.logo{
+  display: flex;
+  margin-right: 100px;
+}
+.logo2{
+  
+}
     .inside{
       background-color: white;
       width:1200px;
       height: 750px;
-      margin-top: 50px;
       border-radius: 100px 100px 100px 100px;
     }
     .text{
