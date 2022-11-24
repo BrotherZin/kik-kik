@@ -298,13 +298,7 @@
         this.food = "";
       },
       result: function(){ //결과보기 버튼
-        if(this.answer==checked){
-          this.answer++;
-          this.$router.push("/Foodresult"+this.answer);
-        }
-        else {
-          this.$router.push("/Foodresult"+this.answer);
-        }
+        this.$router.push("/foodresult");
           }
     }
   };
@@ -332,6 +326,7 @@
   padding-bottom: 20px;
   }
   .answer{
+    padding-right:300px;
     width:500px;
     font-size:20px;
     font-weight:bold;

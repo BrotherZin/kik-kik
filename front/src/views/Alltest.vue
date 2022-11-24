@@ -24,27 +24,7 @@
 
             <img class=" image1" src="/thumbnail/box.png" @click="lolskin">
           
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
+          
         </div>
     </v-layout>
       </div>
@@ -78,17 +58,14 @@
   };
   </script>
   <style scoped>
-    .background {
+  .background {
   height: 100%;
   background-color: #e6e6fa;
   display: grid;
 }
-.logo{
-  display: flex;
-  margin-right: 100px;
-}
 .logo2{
-  
+  width: 500px;
+  height: 100px;
 }
     .inside{
       background-color: white;

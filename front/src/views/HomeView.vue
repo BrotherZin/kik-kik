@@ -75,7 +75,6 @@ export default {
   display: grid;
 }
 .logo2{
-  margin-left: 300px;
   width: 500px;
   height: 100px;
 }
