@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "less-loader": "^11.1.0",
-    "underscore": "^1.13.6"
+    "underscore": "^1.13.6",
+    "vue-typer": "^1.2.0"
   },
   "scripts": {
     "build": "cd front && npm install && npm run build && cd ../server && npm install && npm run start"
