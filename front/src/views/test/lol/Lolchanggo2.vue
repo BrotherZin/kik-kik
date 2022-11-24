@@ -1,5 +1,7 @@
 <template>
-  <v-layout class="background" align-center justify-center>
+  <v-layout class="background" align-center justify-center><div class="logo">
+      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
+    </div>
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -42,6 +44,9 @@
         <div class="answer-text">
           {{ item.text }}
         </div> <!--문제 선택-->
+      </div>
+      <div class="next2">
+        <button class="btn-next" @click="next">다음</button>
       </div>
     </div>
   </div>
@@ -386,16 +391,19 @@ methods: {
 };
 </script>
     <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Yeon+Sung:400');
 
 * {
-  font-family: 'Dongle', sans-serif !important;
+  font-family: 'Yeon Sung', cursive;
 }
 .background {
-  height: 100px;
-  background-color: #f0f8ff;
   height: 100%;
   background-color: #e6e6fa;
+  display: grid;
+}
+.logo{
+  display: flex;
+  margin-right: 100px;
 }
 .inside {
   background-color: white;
@@ -438,18 +446,15 @@ max-height: 900px;
 }
 .next{
   text-align: right;
-  margin-right: 100px;
+  margin-right: 200px;
 }
-.next:hover::after{
-    position: absolute; 
-        content:""; display: block; 
-        border-bottom: 2px solid #000; 
-        transition: all 250ms ease-out; 
-        left: 50%; 
-        width: 0;
+.next2{
+  text-align: right;
+  margin-right: 200px;
+  margin-top: 30px;
 }
 video{
-  height: 500px;
+  height: 400px;
 }
 /* .score-popup{
   display: flex;

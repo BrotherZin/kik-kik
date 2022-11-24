@@ -1,5 +1,8 @@
 <template>
   <v-layout class="background" align-center justify-center>
+    <div class="logo">
+      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
+    </div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
@@ -22,7 +25,7 @@
           
           <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
   
-          <img class=" image1" src="/image/idealtype/kda.png" @click="lolchango">
+          <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
 
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
@@ -69,8 +72,13 @@ export default {
 .background {
   height: 100%;
   background-color: #e6e6fa;
+  display: grid;
 }
-
+.logo2{
+  margin-left: 300px;
+  width: 500px;
+  height: 100px;
+}
 .inside {
   background-color: white;
   width: 1200px;
@@ -92,6 +100,11 @@ export default {
 .font {
   margin-top: 50px;
   margin-bottom: 40px;
+}
+.v-btn{
+  margin-top:30px;
+  width:400px;
+    font-size:35px;
 }
 </style>
   
