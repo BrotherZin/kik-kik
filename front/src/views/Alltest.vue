@@ -1,8 +1,6 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
+    
       <div>
     <v-layout class="inside" fill-height align-center justify-center>
       <div class="text" style="text-align : center;">
@@ -23,28 +21,6 @@
             <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
 
             <img class=" image1" src="/thumbnail/box.png" @click="lolskin">
-          
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
-          <div class="image">
-            <img src="/image/dd.png">
-          </div>
         </div>
     </v-layout>
       </div>
