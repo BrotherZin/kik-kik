@@ -3,10 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
-import idealtype1 from '../views/test/idealtype/idealtype1.vue'
 import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
 import idealtest from '../views/test/idealtype/idealtest.vue'
-import idealtest2 from '../views/test/idealtype/idealtest2.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
@@ -30,11 +28,6 @@ const routes = [
 
     component: idealtest
   },
-  {
-    path: '/idealtest2',
-
-    component: idealtest2
-  },
 
   {
     path: '/Alltest',
@@ -47,12 +40,6 @@ const routes = [
     component: idealtypeStart
   },
   {
-    path: '/idealtype1',
-    name: 'idealtype1',
-    component: idealtype1
-  },
-
-  {
     path: '/idealtypeEnd',
     name: 'idealtypeend',
     component: idealtypeEnd
@@ -62,13 +49,6 @@ const routes = [
     name: 'idealtest',
     component: idealtest
   },
-  {
-    path: '/idealtest2',
-    name: 'idealtest2',
-    component: idealtest2
-  },
-
-
   {
     path: '/Foodtest',
     name: 'foodtest',
@@ -89,7 +69,7 @@ const routes = [
     name: 'psychotest1',
     component: PsychoTest1
   },
-  
+
   {
     path: '/Lolchang',
     name: 'lolchang',
