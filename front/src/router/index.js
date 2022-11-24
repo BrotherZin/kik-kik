@@ -9,12 +9,10 @@ import idealtest from '../views/test/idealtype/idealtest.vue'
 import idealtest2 from '../views/test/idealtype/idealtest2.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import Foodresult from '../views/test/food/Foodresult.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
-
-
-
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 
@@ -80,6 +78,11 @@ const routes = [
     path: '/Foodtestgo',
     name: 'foodtestgo',
     component: Foodtestgo
+  },
+  {
+    path: '/Foodresult',
+    name: 'foodresult',
+    component: Foodresult
   },
   {
     path: '/PsychoTest',

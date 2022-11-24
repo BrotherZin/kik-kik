@@ -298,10 +298,14 @@
         this.food = "";
       },
       result: function(){ //결과보기 버튼
-          if(answer[i].checked == true){//선택한 음식이 맞을 때
-            this.answer++;//정답 개수 증가
-          }
+        if(this.answer==checked){
+          this.answer++;
+          this.$router.push("/Foodresult"+this.answer);
         }
+        else {
+          this.$router.push("/Foodresult"+this.answer);
+        }
+          }
     }
   };
   </script>
