@@ -288,6 +288,28 @@ export default {
             },
           ],
         },
+        {
+          image: "/image/lol/skin/전투다이애나.png",
+          score: 10,
+          answers: [
+            {
+              text: '에테르 날개 케일',
+              isCorrect: false,
+            },
+            {
+              text: '전투 여왕 이렐리아',
+              isCorrect: false,
+            },
+            {
+              text: '전투 여왕 피오라',
+              isCorrect: true,
+            },
+            {
+              text: '전투 여왕 다이애나',
+              isCorrect: false,
+            },
+          ],
+        },
     ],
     answerColors: [],// 문제 선택 후 결과 색상
     isResult: false,// 문제 선택 후 결과 화면 여부
@@ -380,10 +402,10 @@ methods: {
 };
 </script>
     <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Yeon+Sung:400');
 
 * {
-  font-family: 'Dongle', sans-serif !important;
+  font-family: 'Yeon Sung', cursive;
 }
 .background {
   height: 100%;

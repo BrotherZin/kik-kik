@@ -391,10 +391,10 @@ methods: {
 };
 </script>
     <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Yeon+Sung:400');
 
 * {
-  font-family: 'Dongle', sans-serif !important;
+  font-family: 'Yeon Sung', cursive;
 }
 .background {
   height: 100%;
