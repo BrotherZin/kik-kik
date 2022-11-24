@@ -1,7 +1,8 @@
 <template>
-  <v-layout class="background" align-center justify-center><div class="logo">
+  <v-layout class="background" align-center justify-center>
+    <!-- <div class="logo">
       <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
+    </div> -->
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -455,6 +456,11 @@ max-height: 900px;
 }
 video{
   height: 400px;
+}
+.answer:hover{
+  background: transparent;
+  color: #00AFFF;
+  box-shadow: none;
 }
 /* .score-popup{
   display: flex;
