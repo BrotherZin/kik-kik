@@ -456,6 +456,22 @@ max-height: 900px;
 video{
   height: 400px;
 }
+
+.answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.answer:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.answer:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
 /* .score-popup{
   display: flex;
 } */
