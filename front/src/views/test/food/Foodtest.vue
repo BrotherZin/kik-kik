@@ -12,8 +12,16 @@
           </div>
           </v-layout>
           <v-layout class="st_btn" align-center justify-center>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
+          <v-btn large style="background-color: #c74eff" @click="testStart">테스트 시작하기</v-btn>
         </v-layout>
+        <div class="btn">
+          <v-btn fab dark small color="pink" @click="alltest">
+      <v-icon dark>
+        mdi-arrow-left
+      </v-icon>
+    </v-btn>
+    이전 페이지
+        </div>
         </div>
     </v-layout>
  
@@ -25,6 +33,10 @@
   export default {
     name: "Home",
     methods: {
+      alltest() {
+        this.$router.push("/alltest");
+      },
+
       testStart() {
         this.$router.push("/foodtestgo");
       },
@@ -54,6 +66,10 @@
   }
   .st_btn{
     margin-top: 140px;
+  }
+  
+  .btn{
+    padding-right: 300px;
   }
   </style>
       
