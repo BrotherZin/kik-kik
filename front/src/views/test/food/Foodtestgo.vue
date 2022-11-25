@@ -298,10 +298,8 @@
         this.food = "";
       },
       result: function(){ //결과보기 버튼
-          if(answer[i].checked == true){//선택한 음식이 맞을 때
-            this.answer++;//정답 개수 증가
+        this.$router.push("/foodresult");
           }
-        }
     }
   };
   </script>
@@ -328,6 +326,7 @@
   padding-bottom: 20px;
   }
   .answer{
+    padding-right:300px;
     width:500px;
     font-size:20px;
     font-weight:bold;

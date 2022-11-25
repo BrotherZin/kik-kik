@@ -3,17 +3,27 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <h1>아이돌 이상형 월드컵 {{ round }}강 {{ step }}번째 라운드</h1>
+          <h1>아이돌 이상형 월드컵 {{ round * 2 }}강 {{ step }}번째 라운드</h1>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <v-flex xs6 @click="selectideal(getLeft())">
-          <img :src="getLeft().img" alt="" />
-        </v-flex>
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getLeft())"
+        >
+          {{ getLeft() }}
+          <!-- <img :src="getLeft().img" alt="" /> -->
+        </div>
         <div class="vs">vs</div>
-        <v-flex xs6 @click="selectideal(getRight())">
-          <img :src="getRight().img" alt=""
-        /></v-flex>
+        <div
+          class="selectimg"
+          style="display: block; margin: auto; width: auto; height: auto"
+          @click="selectideal(getRight())"
+        >
+          {{ getRight() }}
+          <!-- <img :src="getRight().img" alt="" /> -->
+        </div>
       </v-layout>
     </div>
   </v-layout>
@@ -25,50 +35,121 @@ import _ from "underscore";
 export default {
   data() {
     return {
+      // 라운드와 스코어를 저장하는 변수, 라운드는 4, 스텝은 2까지만,  우승한 아이돌을 저장하는 변수 선택되면 1점씩 더해짐
+
+      round: 2,
       step: 1,
-      round: 4,
-      list: [
+      score: 0,
+      winner: null,
+
+      // 아이돌 리스트를 저장하는 변수
+      list: [],
+      sample: [
         {
-          id: 1,
-          title: "아이유",
+          name: "아이유",
           img: "/image/idealtype/iu2.png",
+          score: 0,
         },
         {
-          id: 2,
-          title: "카리나",
+          name: "카리나",
           img: "/image/idealtype/karina.png",
-          selected: false,
+          score: 0,
         },
         {
-          title: "윈터",
+          name: "윈터",
           img: "/image/idealtype/winter.png",
-          selected: false,
+          score: 0,
         },
         {
-          title: "민지",
+          name: "민지",
           img: "/image/idealtype/minji.png",
-          selected: false,
+          score: 0,
+        },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
+        },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
+        },
+        {
+          name: "아이유",
+          img: "/image/idealtype/iu2.png",
+          score: 0,
+        },
+        {
+          name: "카리나",
+          img: "/image/idealtype/karina.png",
+          score: 0,
+        },
+        {
+          name: "윈터",
+          img: "/image/idealtype/winter.png",
+          score: 0,
+        },
+        {
+          name: "민지",
+          img: "/image/idealtype/minji.png",
+          score: 0,
         },
       ],
     };
   },
+  mounted() {
+    this.list = _.sample(this.sample, 4);
+    console.log(this.list);
+  },
   methods: {
-    selectideal(item) {
-      item.img = url("/image/idealtype/iu2.png");
-      item.selected = true;
-      if (this.step == this.round / 2) {
-        this.step = 1;
-        this.round = this.round / 2;
-      } else {
-        this.step++;
-      }
-      if (this.round == 1) {
-        console.log("final");
-        var finalList = this.getSelected();
-        var finalItem = _.first(finalList);
-        console.log(finalItem);
-      }
+    // 라운드를 1씩 감소시키는 함수
+    roundDown() {
+      this.round--;
     },
+    // 스코어를 1씩 증가시키는 함수
+    scoreUp() {
+      this.score++;
+    },
+    // 스텝을 1씩 증가시키는 함수
+    stepUp() {
+      this.step++;
+    },
+    // 스텝을 1씩 감소시키는 함수
+    stepDown() {
+      this.step--;
+    },
+
     getLeft() {
       var selectedList = this.getSelected();
       console.log(selectedList, Math.floor(this.step / 2));
@@ -90,6 +171,25 @@ export default {
         })
         .compact()
         .value();
+    },
+
+    // 이미지를 선택하면 스코어 1점 증가
+    selectideal(ideal) {
+      ideal.score++;
+      this.scoreUp();
+      // 라운드가 1이면 우승자를 결정하고, 아니면 다음 라운드로 넘어감
+      if (this.round == 1) {
+        this.winner = ideal;
+      } else {
+        // 스텝이 2이면 라운드를 1 증가시키고, 스텝을 1로 초기화
+        if (this.step == 2) {
+          this.roundup();
+          this.step = 1;
+        } else {
+          // 스텝이 1이면 스텝을 1 증가시킴
+          this.stepUp();
+        }
+      }
     },
   },
 };
@@ -121,12 +221,16 @@ export default {
   font-size: 2.2em;
   font-weight: bold;
 }
-.img {
-  width: auto;
-  height: auto;
+.selectimg {
+  width: 200px;
+  height: 200px;
   max-width: 500px;
   max-height: 500px;
   display: block;
   margin: auto;
 }
-</style>w
+.wlsdk {
+  width: 200px;
+  height: 200px;
+}
+</style>
