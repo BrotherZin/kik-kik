@@ -41,6 +41,8 @@
             @click="mansideal"
           />
 
+          <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
+
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
@@ -68,6 +70,9 @@ export default {
     },
     mansideal() {
       this.$router.push("/mansidealtypeStart");
+    },
+    ramenTest() {
+      this.$router.push("/ramenStart");
     },
     lolchango() {
       this.$router.push("/lolchang");

@@ -38,6 +38,8 @@
             src="/thumbnail/mansidealTN.png"
             @click="mansideal"
           />
+
+          <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
         </div>
       </v-layout>
     </div>
@@ -66,6 +68,9 @@ export default {
     },
     lolskin() {
       this.$router.push("/lolskin");
+    },
+    ramenTest() {
+      this.$router.push("/ramenStart");
     },
   },
   components: {

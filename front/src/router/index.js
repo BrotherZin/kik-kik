@@ -8,6 +8,9 @@ import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
 import MansidealtypeStart from '../views/test/Mansidealtype/MansidealtypeStart.vue'
 import MansidealtypeEnd from '../views/test/Mansidealtype/MansidealtypeEnd.vue'
 import Mansidealtest from '../views/test/Mansidealtype/Mansidealtest.vue'
+import ramenTest from '../views/test/ramenWorldcup/ramenTest.vue'
+import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
+import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
@@ -32,6 +35,21 @@ const routes = [
     path: '/Alltest',
     name: 'testStart',
     component: Alltest
+  },
+  {
+    path: '/ramenTest',
+    name: 'ramenTest',
+    component: ramenTest
+  },
+  {
+    path: '/ramenStart',
+    name: 'ramenStart',
+    component: ramenStart
+  },
+  {
+    path: '/ramenEnd',
+    name: 'ramenEnd',
+    component: ramenEnd
   },
   {
     path: '/GirlsidealtypeStart',
