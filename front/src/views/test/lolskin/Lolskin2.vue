@@ -441,7 +441,7 @@ max-height: 900px;
   margin-top:50px;
   height: 400px;
   width: 700px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 50px 50px 50px 50px;
 }
 .answer{
   font-size:40px;
