@@ -109,7 +109,7 @@ export default {
 }
 span{
   color:#2828CD;
-  text-shadow:1px 3px 2px #C0FFFF
+  text-shadow:1px 3px 2px #C0FFFF;
 }
 
 .image1 figure {
