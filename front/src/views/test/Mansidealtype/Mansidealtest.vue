@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
-          이상형 월드컵 {{ roundLength }}강
+          남자 아이돌 이상형 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
@@ -12,6 +12,7 @@
           <div class="vsvs">
             <v-layout fill-heght>
               <v-flex xs6 class="left">
+                <div class="BZ">{{ getLeftItem().name }}</div>
                 <v-img
                   :aspect-ratio="1 / 1"
                   class="image"
@@ -21,6 +22,7 @@
                 <div @click="clickLeft" class="clickspace"></div>
               </v-flex>
               <v-flex xs6 class="right">
+                <div class="BZ">{{ getRightItem().name }}</div>
                 <v-img
                   class="image"
                   :aspect-ratio="1 / 1"
@@ -30,16 +32,9 @@
                 <div @click="clickRight" class="clickspace"></div>
               </v-flex>
             </v-layout>
-            <!-- <div @click="clickLeft" class="selectimg">
-            <img class="left" :src="getLeftItem().img" alt="" />
-          </div>
-
-          <div @click="clickRight" class="selectimg">
-            <img class="right" :src="getRightItem().img" alt="" />
-          </div> -->
           </div>
         </v-flex>
-        <div class="vsimg"><img src="/image/idealtype/vs.png" /></div>
+        <div class="vsimg"><img src="/image/mansidealtype/vs.png" /></div>
       </v-layout>
     </div>
   </v-layout>
@@ -104,7 +99,7 @@ export default {
       console.log("finish", selected);
 
       this.$router.push(
-        "/idealtypeEnd?name=" + selected.name + "&img=" + selected.img
+        "/mansidealtypeEnd?name=" + selected.name + "&img=" + selected.img
       );
     },
     nextRound() {
@@ -133,98 +128,98 @@ export default {
       roundLength: 1,
       list: [
         {
-          name: "아이유",
-          img: "/image/idealtype/iu.jpg",
+          name: "TXT 수빈",
+          img: "/image/mansidealtype/1.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "카리나",
-          img: "/image/idealtype/karina.jpg",
+          name: "TXT 연준",
+          img: "/image/mansidealtype/2.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "윈터",
-          img: "/image/idealtype/winter.jpg",
+          name: "TXT 범규",
+          img: "/image/mansidealtype/3.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "민지",
-          img: "/image/idealtype/minji.jpg",
+          name: "BTS 뷔",
+          img: "/image/mansidealtype/4.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "채원",
-          img: "/image/idealtype/chaewon.jpg",
+          name: "ASTRO 차은우",
+          img: "/image/mansidealtype/5.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "다현",
-          img: "/image/idealtype/dahyeon.jpg",
+          name: "NCT 재현",
+          img: "/image/mansidealtype/6.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "송하영",
-          img: "/image/idealtype/hayoung.jpg",
+          name: "TXT 태현",
+          img: "/image/mansidealtype/7.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "제니",
-          img: "/image/idealtype/jeni.jpg",
+          name: "세븐틴 정한",
+          img: "/image/mansidealtype/8.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "지수",
-          img: "/image/idealtype/jisu.jpg",
+          name: "세븐틴 원우",
+          img: "/image/mansidealtype/9.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "수지",
-          img: "/image/idealtype/suji.jpg",
+          name: "BTS 정국",
+          img: "/image/mansidealtype/10.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "태연",
-          img: "/image/idealtype/taeyeon.jpg",
+          name: "BTS 진",
+          img: "/image/mansidealtype/11.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "안유진",
-          img: "/image/idealtype/ujin.jpg",
+          name: "NUEST 민현",
+          img: "/image/mansidealtype/12.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "예지",
-          img: "/image/idealtype/yeji.jpg",
+          name: "THE BOYZ 주연",
+          img: "/image/mansidealtype/13.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "장원영",
-          img: "/image/idealtype/wonyoung.jpg",
+          name: "NCT 정우",
+          img: "/image/mansidealtype/14.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "최예나",
-          img: "/image/idealtype/yena.jpg",
+          name: "EXO 백현",
+          img: "/image/mansidealtype/15.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "우기",
-          img: "/image/idealtype/woogi.jpg",
+          name: "THE BOYZ 현재",
+          img: "/image/mansidealtype/16.jpg",
           selected: false,
           round: false,
         },
@@ -259,17 +254,17 @@ export default {
 }
 .vs {
   font-size: 2.2em;
-  font-weight: bold;
   text-align: center;
+  font-family: bz;
 }
 
 .vsvs {
   text-align: center;
-
   height: 100%;
 }
 .image {
-  width: 100%;
+  left: 30px;
+  width: 90%;
   position: relative;
   z-index: 10;
 }
@@ -298,6 +293,21 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 11;
+}
+
+@font-face {
+  font-family: "bz";
+  src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.BZ {
+  position: absolute;
+  font-family: "bz";
+  font-size: 2.5em;
+  left: 60px;
+  /* text-align: center;
+  text-justify: center; */
+  color: rgb(255, 255, 255);
   z-index: 11;
 }
 </style>

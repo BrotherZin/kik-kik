@@ -2,9 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
-import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
-import idealtest from '../views/test/idealtype/idealtest.vue'
+import GirlsidealtypeStart from '../views/test/Girlsidealtype/GirlsidealtypeStart.vue'
+import GirlsidealtypeEnd from '../views/test/Girlsidealtype/GirlsidealtypeEnd.vue'
+import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
+import MansidealtypeStart from '../views/test/Mansidealtype/MansidealtypeStart.vue'
+import MansidealtypeEnd from '../views/test/Mansidealtype/MansidealtypeEnd.vue'
+import Mansidealtest from '../views/test/Mansidealtype/Mansidealtest.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
@@ -23,11 +26,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  {
-    path: '/idealtest',
 
-    component: idealtest
-  },
 
   {
     path: '/Alltest',
@@ -35,19 +34,34 @@ const routes = [
     component: Alltest
   },
   {
-    path: '/idealtypeStart',
-    name: 'idealtypeStart',
-    component: idealtypeStart
+    path: '/GirlsidealtypeStart',
+    name: 'GirlsidealtypeStart',
+    component: GirlsidealtypeStart
   },
   {
-    path: '/idealtypeEnd',
-    name: 'idealtypeend',
-    component: idealtypeEnd
+    path: '/GirlsidealtypeEnd',
+    name: 'Girlsidealtypeend',
+    component: GirlsidealtypeEnd
   },
   {
-    path: '/idealtest',
-    name: 'idealtest',
-    component: idealtest
+    path: '/Girlsidealtest',
+    name: 'Girlsidealtest',
+    component: Girlsidealtest
+  },
+  {
+    path: '/MansidealtypeStart',
+    name: 'MansidealtypeStart',
+    component: MansidealtypeStart
+  },
+  {
+    path: '/MansidealtypeEnd',
+    name: 'Mansidealtypeend',
+    component: MansidealtypeEnd
+  },
+  {
+    path: '/Mansidealtest',
+    name: 'Mansidealtest',
+    component: Mansidealtest
   },
   {
     path: '/Foodtest',
