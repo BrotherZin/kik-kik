@@ -93,14 +93,6 @@ span:hover{
                0 10px 10px rgba(#db469f 0%, #2188ff 100%);
 }
 
-span:nth-child(2) { animation-delay: .1s; }
-span:nth-child(3) { animation-delay: .2s; }
-span:nth-child(4) { animation-delay: .3s; }
-span:nth-child(5) { animation-delay: .4s; }
-span:nth-child(6) { animation-delay: .5s; }
-span:nth-child(7) { animation-delay: .6s; }
-span:nth-child(8) { animation-delay: .7s; }
-
 @keyframes bounce {
   100% {
     top: -20px;
