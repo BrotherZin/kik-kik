@@ -2,10 +2,10 @@
     <div class="header">
         <v-layout>
             <div class="kik">
-            <a href="/"><img src="/image/logo.png">
-                
+            <a href="/">
+                    <img class="one" src="/image/logo.png">
                     <span class="logo" >KIK KIK</span>
-                
+                    <img class="two" src="/image/logo.png">
             </a>
         </div>
             <v-spacer></v-spacer>
@@ -54,7 +54,6 @@ img{
     width: 80px;
     height: 80px;
     vertical-align: middle;
-    margin-left: 20px;
     transition: all ease 1s;
 }
 .kik{
@@ -63,9 +62,18 @@ img{
   margin: 0;
   display: flex;
 }
-img:hover {
-				transform: rotate( 45deg );
+.one:hover {
+				transform: rotate( 180deg );
 			}
+            .two:hover {
+                transform: rotate( -180deg );
+            }
+            .one{
+                margin-left:40px;
+            }
+            .two{
+                margin-left:10px;
+            }
 .logo {
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
     -webkit-background-clip: text;
@@ -79,18 +87,9 @@ span:hover{
   top: 20px;
   display: inline-block;
   animation: bounce .3s ease infinite alternate;
-  font-family: 'Titan One', cursive;
   font-size: 80px;
   color: #FFF;
-  text-shadow: 0 1px 0 #CCC,
-               0 2px 0 #CCC,
-               0 3px 0 #CCC,
-               0 4px 0 #CCC,
-               0 5px 0 #CCC,
-               0 6px 0 transparent,
-               0 7px 0 transparent,
-               0 8px 0 transparent,
-               0 9px 0 transparent,
+  text-shadow:
                0 10px 10px rgba(#db469f 0%, #2188ff 100%);
 }
 
@@ -105,15 +104,7 @@ span:nth-child(8) { animation-delay: .7s; }
 @keyframes bounce {
   100% {
     top: -20px;
-    text-shadow: 0 1px 0 #CCC, 
-                 0 2px 0 #CCC,
-                 0 3px 0 #CCC,
-                 0 4px 0 #CCC,
-                 0 5px 0 #CCC,
-                 0 6px 0 #CCC,
-                 0 7px 0 #CCC,
-                 0 8px 0 #CCC,
-                 0 9px 0 #CCC,
+    text-shadow:
                  0 50px 25px rgba(#db469f 0%, #2188ff 100%);
   }
 }

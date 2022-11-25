@@ -472,6 +472,9 @@ video{
   transition: all 500ms ease;
   height: 100%;
 }
+.btn-next:hover{
+  color: #76aef1;
+}
 /* .score-popup{
   display: flex;
 } */

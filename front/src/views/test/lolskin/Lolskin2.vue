@@ -471,6 +471,9 @@ video{
   color: #00AFFF;
   box-shadow: none;
 }
+.btn-next:hover{
+  color: #76aef1;
+}
 /* .score-popup{
   display: flex;
 } */
