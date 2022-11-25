@@ -69,6 +69,7 @@
   height: auto;
   max-width: 1000px;
   max-height: 900px;
+  border-radius: 50px 50px 50px 50px;
   }
   .lol-text{
     text-align: center;

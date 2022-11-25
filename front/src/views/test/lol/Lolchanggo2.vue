@@ -429,6 +429,7 @@ max-height: 900px;
 }
 .ahri{
   margin-top:50px;
+  border-radius: 50px 50px 50px 50px;
 }
 .answer{
   font-size:40px;
@@ -473,8 +474,5 @@ video{
 .btn-next:hover{
   color: #76aef1;
 }
-/* .score-popup{
-  display: flex;
-} */
 </style>
     

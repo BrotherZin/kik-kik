@@ -418,7 +418,7 @@ methods: {
   width: 1500px;
   height: 950px;
   margin-top: 50px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 50px 50px 50px 50px;
 }
 .image {
 margin-top: 50px;
@@ -441,6 +441,7 @@ max-height: 900px;
   margin-top:50px;
   height: 400px;
   width: 700px;
+  border-radius: 100px 100px 100px 100px;
 }
 .answer{
   font-size:40px;
@@ -474,8 +475,5 @@ video{
 .btn-next:hover{
   color: #76aef1;
 }
-/* .score-popup{
-  display: flex;
-} */
 </style>
     
