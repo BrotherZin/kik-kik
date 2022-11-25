@@ -1,8 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -162,7 +159,7 @@ export default {
           answers: [
             {
               text: '천상의 빛 모르가나',
-              isCorrect: true,
+              isCorrect: false,
             },
             {
               text: '은빛 모르가나',
@@ -170,7 +167,7 @@ export default {
             },
             {
               text: '빛의 인도자 모르가나',
-              isCorrect: false,
+              isCorrect: true,
             },
             {
               text: '신성한 모르가나',
@@ -302,11 +299,11 @@ export default {
             },
             {
               text: '전투 여왕 피오라',
-              isCorrect: true,
+              isCorrect: false,
             },
             {
               text: '전투 여왕 다이애나',
-              isCorrect: false,
+              isCorrect: true,
             },
           ],
         },

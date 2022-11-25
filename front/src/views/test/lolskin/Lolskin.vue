@@ -1,8 +1,5 @@
 <template>
     <v-layout class="background" align-center justify-center>
-      <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
@@ -42,8 +39,13 @@
   };
   </script>
       <style scoped>
+      @import url('https://fonts.googleapis.com/css?family=Yeon+Sung:400');
+
+* {
+  font-family: 'Yeon Sung', cursive;
+}
      .lol-text .lolskin{
-    font-size : 50px;
+    font-size : 60px;
    }
    .background {
   height: 100%;
