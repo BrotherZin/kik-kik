@@ -1,7 +1,5 @@
 <template>
-  <v-layout class="background" align-center justify-center><div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
+  <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
