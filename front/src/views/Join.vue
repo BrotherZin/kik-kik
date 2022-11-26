@@ -3,12 +3,12 @@
       <div>
         <v-layout class="inside" fill-height align-center justify-center>
           <div class="form">
-            <v-text-field v-model="form.id" label="아이디를 입력하세요!"></v-text-field>
-            <v-text-field v-model="form.name" label="이름을 입력하세요!"></v-text-field>
-            <v-text-field v-model="form.pw" type="password" label="패스워드를 입력해주세요!"></v-text-field>
-            <v-text-field v-model="form.pwConfirm" type="password" label="패스워드 확인해주세요!"></v-text-field>
+            <v-text-field v-model="form.id" label="ID"></v-text-field>
+            <v-text-field v-model="form.name" label="NAME"></v-text-field>
+            <v-text-field v-model="form.pw" type="password" label="PW"></v-text-field>
+            <v-text-field v-model="form.pwConfirm" type="password" label="Confirm PW"></v-text-field>
                 <div id="email">
-                <v-text-field v-model="form.email" label="이메일" maxlength="18" style="width:100px;"/>
+                <v-text-field v-model="form.email" label="Email" maxlength="18" style="width:100px;"/>
                 <div class="haha">@</div>
                 <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
                 <select v-model="form.selected">

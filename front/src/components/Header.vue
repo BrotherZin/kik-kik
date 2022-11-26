@@ -10,7 +10,7 @@
         </div>
         </v-layout>
         <div class="main"  style="float: right;">
-            <v-btn @click="login" class="login"><span>로그인</span></v-btn>
+            <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
             <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
         </div>
     </div>
@@ -22,7 +22,7 @@ export default{
     mounted(){
     },
     methods:{
-        login(){
+        Login(){
             this.$router.push("/Login");
         },
         Join(){
