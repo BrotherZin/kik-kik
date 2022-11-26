@@ -3,15 +3,15 @@
       <div>
         <v-layout class="inside" fill-height align-center justify-center>
           <div class="form">
-            <v-text-field v-model="form.id" label="ID"></v-text-field>
-            <v-text-field v-model="form.name" label="NAME"></v-text-field>
-            <v-text-field v-model="form.pw" type="password" label="PW"></v-text-field>
-            <v-text-field v-model="form.pwConfirm" type="password" label="Confirm PW"></v-text-field>
+            <v-text-field v-model="input.id" label="ID"></v-text-field>
+            <v-text-field v-model="input.name" label="NAME"></v-text-field>
+            <v-text-field v-model="input.pw" type="password" label="PW"></v-text-field>
+            <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field>
                 <div id="email">
-                <v-text-field v-model="form.email" label="Email" maxlength="18" style="width:100px;"/>
+                <v-text-field v-model="input.email" label="Email" maxlength="18" style="width:100px;"/>
                 <div class="haha">@</div>
                 <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
-                <select v-model="form.selected">
+                <select v-model="input.selected">
                     <option v-for="(item, index) in selectList"
                     :key="index" :value="item.value">{{ item.name }}</option>
                 </select>
@@ -31,7 +31,7 @@
     name: "Join",
     data() {
       return {
-        form: {
+        input: {
           id: "",
           name: "",
           pw: "",
@@ -51,16 +51,12 @@
     },
     methods: {
       join() {
-        if (this.form.id == "") {
+        if (this.input.id == "") {
         window.alert("아이디를 입력해주세요");
         return;
       }
-      if (this.form.name == "") {
+      if (this.input.name == "") {
         window.alert("이름을 입력해주세요");
-        return;
-      }
-      if (this.form.password.length < 8) {
-        window.alert("패스워드는 8자 이상이어야 합니다");
         return;
       }
       if (this.form.password != this.form.passwordConfirm) {

@@ -3,8 +3,8 @@
       <div>
         <v-layout class="inside" align-center justify-center>
             <div>
-            <v-text-field v-model="form.id" label="ID"/>
-            <v-text-field v-model="form.pw" label="PW"/>
+            <v-text-field v-model="input.id" label="ID"/>
+            <v-text-field v-model="input.pw" label="PW"/>
                 <div id="find">
                     <v-btn class="Login" @click="Login">로그인</v-btn>
                     <div class="btn">
@@ -22,7 +22,7 @@
   export default {
     data() {
         return {
-            form: {
+            input: {
                 id: "",
                 pw: "",
             },
@@ -30,11 +30,11 @@
     },
     methods:{
         Login() {
-            if (this.form.id == "") {
+            if (this.input.id == "") {
             window.alert("아이디를 입력하셔야 해요!");
             return;
             }
-            if (this.form.pw == "") {
+            if (this.input.pw == "") {
             window.alert("비밀번호를 입력하셔야 해요!");
             return;
             }
