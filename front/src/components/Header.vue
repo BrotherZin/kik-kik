@@ -8,8 +8,11 @@
                     <img class="two" src="/image/logo.png">
             </a>
         </div>
-            <v-spacer></v-spacer>
         </v-layout>
+        <div class="main"  style="float: right;">
+            <v-btn @click="login" class="login"><span>로그인</span></v-btn>
+            <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
+        </div>
     </div>
 </template>
 
@@ -17,9 +20,14 @@
 
 export default{
     mounted(){
-       
-
-
+    },
+    methods:{
+        login(){
+            this.$router.push("/Login");
+        },
+        Join(){
+            this.$router.push("/Join");
+        }
     }
 }
 
@@ -30,7 +38,17 @@ export default{
 *{
     font-family: 'Yeon Sung', cursive;
 }
+.v-layout{
+    display: flex;
+}
+.main{
+    margin-top:30px;
+}
+.v-btn{
+    margin-right: 30px;
+}
     .header{
+        display: flex;
         position: sticky;
         top: 0px; 
         background-color: white;
@@ -82,12 +100,11 @@ img{
     font-size:50px;
     margin-left:10px;
 }
-span:hover{
+.logo:hover{
   position: relative;
   top: 20px;
   display: inline-block;
   animation: bounce .3s ease infinite alternate;
-  font-size: 80px;
   color: #FFF;
   text-shadow:
                0 10px 10px rgba(#db469f 0%, #2188ff 100%);
