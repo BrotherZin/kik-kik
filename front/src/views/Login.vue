@@ -3,9 +3,15 @@
       <div>
         <v-layout class="inside" fill-height align-center justify-center>
             <div>
-                <v-text-field label="ID"/>
-                <v-text-field label="PW"/>
-                <v-btn class="login" align-center @click="login">로그인</v-btn>
+            <v-text-field label="ID"/>
+            <v-text-field label="PW"/>
+                <div id="find">
+                    <v-btn class="login" @click="login">로그인</v-btn>
+                    <div class="btn">
+                        <v-btn class="find-id" @click="login">아이디 찾기</v-btn><br>
+                        <v-btn class="find-pw" @click="login">비밀번호 찾기</v-btn>
+                    </div>
+                </div>
             </div>
         </v-layout>
       </div>
@@ -34,6 +40,16 @@
     height: 750px;
     margin-top: 50px;
     border-radius: 100px 100px 100px 100px;
+  }
+  #find{
+    display: flex;
+  }
+  .find-pw{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .find-id{
+    margin-left:34px;
   }
   </style>
     
