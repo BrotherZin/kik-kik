@@ -11,11 +11,11 @@
                 <v-text-field v-model="form.email" label="이메일" maxlength="18" style="width:100px;"/>
                 <div class="haha">@</div>
                 <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
-                <select v-model="form.selected2">
+                <select v-model="form.selected">
                     <option v-for="(item, index) in selectList"
                     :key="index" :value="item.value">{{ item.name }}</option>
                 </select>
-                    <span>{{ selected2 }}</span>
+                    <span>{{ selected }}</span>
                     <v-snackbar v-model="snackbarFlag" :timeout="timeout">{{ text }}</v-snackbar>
                 </div>
             <v-btn @click="join">가입하기</v-btn>
@@ -37,7 +37,7 @@
           pw: "",
           pwConfirm: "",
           email: "",
-          selected2: "",
+          selected: "",
         },
         selectList: [
           { name: "naver.com", value: "naver.com" },
