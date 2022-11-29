@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
+import Join from '../views/Join.vue'
+import Login from '../views/Login.vue'
 import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
 import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
 import idealtest from '../views/test/idealtype/idealtest.vue'
@@ -22,6 +24,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/Join',
+    name: 'Join',
+    component: Join
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/idealtest',

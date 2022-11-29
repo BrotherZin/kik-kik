@@ -1,6 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    
       <div>
     <v-layout class="inside" fill-height align-center justify-center>
       <div class="text" style="text-align : center;">
@@ -16,11 +15,33 @@
           
             <img class="image1" src="/image/psycho/main.png" @click="psychotest">
           
-            <img class=" image1" src="/thumbnail/idealTN.png" @click="example1">
+            <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
   
             <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
 
             <img class=" image1" src="/thumbnail/box.png" @click="lolskin">
+          
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
+          <div class="image">
+            <img src="/image/dd.png">
+          </div>
         </div>
     </v-layout>
       </div>

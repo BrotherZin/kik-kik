@@ -1,8 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <!-- <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div> -->
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -432,6 +429,7 @@ max-height: 900px;
 }
 .ahri{
   margin-top:50px;
+  border-radius: 50px 50px 50px 50px;
 }
 .answer{
   font-size:40px;
@@ -457,13 +455,24 @@ max-height: 900px;
 video{
   height: 400px;
 }
+
+.answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .answer:hover{
   background: transparent;
-  color: #00AFFF;
+  color: #76aef1;
   box-shadow: none;
 }
-/* .score-popup{
-  display: flex;
-} */
+.answer:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-next:hover{
+  color: #76aef1;
+}
 </style>
     

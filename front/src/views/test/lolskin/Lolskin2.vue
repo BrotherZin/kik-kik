@@ -1,8 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -399,7 +396,7 @@ methods: {
   width: 1500px;
   height: 950px;
   margin-top: 50px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 50px 50px 50px 50px;
 }
 .image {
 margin-top: 50px;
@@ -422,6 +419,7 @@ max-height: 900px;
   margin-top:50px;
   height: 400px;
   width: 700px;
+  border-radius: 50px 50px 50px 50px;
 }
 .answer{
   font-size:40px;
@@ -452,8 +450,8 @@ video{
   color: #00AFFF;
   box-shadow: none;
 }
-/* .score-popup{
-  display: flex;
-} */
+.btn-next:hover{
+  color: #76aef1;
+}
 </style>
     
