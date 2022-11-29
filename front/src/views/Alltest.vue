@@ -16,7 +16,7 @@
           
             <img class="image1" src="/image/psycho/main.png" @click="psychotest">
           
-            <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
+            <img class=" image1" src="/thumbnail/idealTN.png" @click="example1">
   
             <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
 
