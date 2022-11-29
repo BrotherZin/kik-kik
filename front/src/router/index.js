@@ -4,15 +4,22 @@ import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Join from '../views/Join.vue'
 import Login from '../views/Login.vue'
-import idealtypeStart from '../views/test/idealtype/idealtypeStart.vue'
-import idealtype1 from '../views/test/idealtype/idealtype1.vue'
-import idealtypeEnd from '../views/test/idealtype/idealtypeEnd.vue'
-import idealtest from '../views/test/idealtype/idealtest.vue'
-import idealtest2 from '../views/test/idealtype/idealtest2.vue'
+import GirlsidealtypeStart from '../views/test/Girlsidealtype/GirlsidealtypeStart.vue'
+import GirlsidealtypeEnd from '../views/test/Girlsidealtype/GirlsidealtypeEnd.vue'
+import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
+import MansidealtypeStart from '../views/test/Mansidealtype/MansidealtypeStart.vue'
+import MansidealtypeEnd from '../views/test/Mansidealtype/MansidealtypeEnd.vue'
+import Mansidealtest from '../views/test/Mansidealtype/Mansidealtest.vue'
+import ramenTest from '../views/test/ramenWorldcup/ramenTest.vue'
+import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
+import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
+import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
+import Dtest from '../views/test/depression/Dtest.vue'
+import Dtest1 from '../views/test/depression/Dtest1.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
@@ -27,6 +34,13 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
+
+  {
+    path: '/Alltest',
+    name: 'testStart',
+    component: Alltest
+  },
   {
     path: '/Join',
     name: 'Join',
@@ -38,49 +52,50 @@ const routes = [
     component: Login
   },
   {
-    path: '/idealtest',
-
-    component: idealtest
+    path: '/ramenTest',
+    name: 'ramenTest',
+    component: ramenTest
   },
   {
-    path: '/idealtest2',
-
-    component: idealtest2
-  },
-
-  {
-    path: '/Alltest',
-    name: 'testStart',
-    component: Alltest
+    path: '/ramenStart',
+    name: 'ramenStart',
+    component: ramenStart
   },
   {
-    path: '/idealtypeStart',
-    name: 'idealtypeStart',
-    component: idealtypeStart
+    path: '/ramenEnd',
+    name: 'ramenEnd',
+    component: ramenEnd
   },
   {
-    path: '/idealtype1',
-    name: 'idealtype1',
-    component: idealtype1
-  },
-
-  {
-    path: '/idealtypeEnd',
-    name: 'idealtypeend',
-    component: idealtypeEnd
+    path: '/GirlsidealtypeStart',
+    name: 'GirlsidealtypeStart',
+    component: GirlsidealtypeStart
   },
   {
-    path: '/idealtest',
-    name: 'idealtest',
-    component: idealtest
+    path: '/GirlsidealtypeEnd',
+    name: 'Girlsidealtypeend',
+    component: GirlsidealtypeEnd
   },
   {
-    path: '/idealtest2',
-    name: 'idealtest2',
-    component: idealtest2
+    path: '/Girlsidealtest',
+    name: 'Girlsidealtest',
+    component: Girlsidealtest
   },
-
-
+  {
+    path: '/MansidealtypeStart',
+    name: 'MansidealtypeStart',
+    component: MansidealtypeStart
+  },
+  {
+    path: '/MansidealtypeEnd',
+    name: 'Mansidealtypeend',
+    component: MansidealtypeEnd
+  },
+  {
+    path: '/Mansidealtest',
+    name: 'Mansidealtest',
+    component: Mansidealtest
+  },
   {
     path: '/Foodtest',
     name: 'foodtest',
@@ -101,7 +116,21 @@ const routes = [
     name: 'psychotest1',
     component: PsychoTest1
   },
-  
+  {
+    path: '/PsychoTestF',
+    name: 'psychotestf',
+    component: PsychoTestF
+  },
+  {
+    path: '/Dtest',
+    name: 'dtest',
+    component: Dtest
+  },
+  {
+    path: '/Dtest1',
+    name: 'dtest1',
+    component: Dtest1
+  },
   {
     path: '/Lolchang',
     name: 'lolchang',

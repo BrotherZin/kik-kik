@@ -88,28 +88,6 @@ export default {
           ],
         },
         {
-          score: 10,
-          image: "/image/lol/skin/popstarKai.png",
-          answers: [
-            {
-              text: 'K/DA ALL OUT',
-              isCorrect: false,
-            },
-            {
-              text: 'K/DA POP/STARS',
-              isCorrect: true,
-            },
-            {
-              text: '프레스티지 K/DA ALL OUT',
-              isCorrect: false,
-            },
-            {
-              text: '프레스티지 K/DA POP/STARS',
-              isCorrect: false,
-            },
-          ],
-        },
-        {
           image: "/image/lol/skin/nami 프레스티지.png",
           score: 10,
           answers: [

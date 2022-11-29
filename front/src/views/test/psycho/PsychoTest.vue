@@ -2,18 +2,18 @@
   <v-layout class="background">
     <div class="psychomain">
       <div class="psychomain-index">
-
         <img src="/image/psycho/main.png" class="image" />
-
       </div>
       <div class="psycho-title">
         <span> 쉿... 조심해...! [싸이코패스 테스트] </span>
       </div>
       <div class="psycho-input">
-        <input type="text" name="name" placeholder="이름을 입력하세요" />
-        <div class="psycho-button">
-          <button class="custom-btn btn-7" v-on:click="psychobutton()"><span>시작하기 →</span></button>
-        </div>
+        <form name="psychoname" @submit.prevent="namecheck()">
+          <input v-model="tester" type="text" name="tester" placeholder="이름을 입력하세요"/>
+          <div class="psycho-button">
+            <button class="custom-btn btn-7"><span>시작하기 →</span></button>
+          </div>
+        </form>
       </div>
     </div>
   </v-layout>
@@ -22,19 +22,38 @@
 <script>
 export default {
   name: "Home",
+  data() {
+    return{
+    tester:''
+    }
+  },
   methods: {
-     psychobutton() {
-      this.$router.push("/PsychoTest1");
+    namecheck() {
+      if(! psychoname.tester.value) {
+        alert("이름을 입력하세요");
+      } else {
+        var tester = this.tester
+        this.$router.push('/PsychoTest1?tester='+this.tester);
+      }
     },
   },
 };
+
+    
+          
+            
+    
+
+          
+    
+    
+  
 </script>
 <style scoped lang="less">
 .background{
   height: 100%;
   background-color: #E6E6FA
 }
-
 .psychomain {
   margin: auto;
   border-radius: 50px;
@@ -43,22 +62,18 @@ export default {
   width: 1400px;
   height: 940px;
 }
-
 .psychomain-index {
   padding: 30px;
 }
-
 .psychomain-index img {
   width: 800px;
   height: 400px;
   margin-bottom: 50px;
 }
-
 .psycho-title {
   font-size: 40px;
   margin-bottom: 20px;
 }
-
 input[type="text"] {
   width: 500px;
   height: 30px;
@@ -67,7 +82,6 @@ input[type="text"] {
   padding: 5px;
   text-align: center;
 }
-
 .psycho-button {
   width: 90%;
   margin: auto;
@@ -93,7 +107,6 @@ button {
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-
 .btn-7 {
   background: #c174df;
   line-height: 42px;
