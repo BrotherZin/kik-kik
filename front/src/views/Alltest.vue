@@ -10,28 +10,36 @@
             outlined
             label="원하는 테스트의 키워드를 검색해보세요!"
             @keyup.enter="searchresult(keyword)"
-          ></v-text-field>
+            ></v-text-field>
           {{ keyword }}
           <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
-          <div id="tests">
-
-          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
-
-          <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
-
-          <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
-
-          <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
-
-          <img class="image1" src="/thumbnail/box.png" @click="Lolskin" />
-
-          <img class="image1" src="/thumbnail/mansidealTN.png" @click="mansideal"/>
-
-          <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
-
-          <img class="image1" src="/image/dep/main.png" @click="Dtest" />
-        </div>
+      <div id="tests">
+          <span class="box">
+            <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
+          </span>
+          <span>
+            <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
+          </span>
+          <span>
+            <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
+          </span>
+          <span>
+            <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
+          </span>
+          <span>
+            <img class="image1" src="/thumbnail/box.png" @click="Lolskin" />
+          </span>
+          <span>
+            <img class="image1" src="/thumbnail/mansidealTN.png" @click="mansideal"/>
+          </span>
+          <span>
+            <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
+          </span>
+          <span>
+            <img class="image1" src="/image/dep/main.png" @click="Dtest" />
+          </span>
+      </div>
         </div>
       </v-layout>
     </div>
@@ -83,8 +91,6 @@ export default {
   display: flex;
   margin-right: 100px;
 }
-.logo2 {
-}
 .inside {
   background-color: white;
   width: 1200px;
@@ -107,6 +113,9 @@ export default {
   height: 140px;
   border: solid 1px black;
   margin-right: 35px;
+}
+.box{
+  height: 500px;
 }
 .v-text-field {
   padding: 0px;
