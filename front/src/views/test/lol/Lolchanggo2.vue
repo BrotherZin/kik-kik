@@ -373,7 +373,7 @@ methods: {
       this.videoEnded()
       alert(`두근두근 너의 롤창점수는? \n총점 : ${this.score}`);//총점 표시
       this.initialize();//초기화
-      this.$router.push("/");//메인페이지로 이동
+      this.$router.push("/Alltest");//메인페이지로 이동
     }
 
     if (this.step + 1 >= this.questions.length) {//다음 문제가 없을 경우

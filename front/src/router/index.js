@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
+import Join from '../views/Join.vue'
+import Login from '../views/Login.vue'
 import GirlsidealtypeStart from '../views/test/Girlsidealtype/GirlsidealtypeStart.vue'
 import GirlsidealtypeEnd from '../views/test/Girlsidealtype/GirlsidealtypeEnd.vue'
 import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
@@ -15,6 +17,9 @@ import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
+import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
+import Dtest from '../views/test/depression/Dtest.vue'
+import Dtest1 from '../views/test/depression/Dtest1.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
@@ -35,6 +40,16 @@ const routes = [
     path: '/Alltest',
     name: 'testStart',
     component: Alltest
+  },
+  {
+    path: '/Join',
+    name: 'Join',
+    component: Join
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/ramenTest',
@@ -101,7 +116,21 @@ const routes = [
     name: 'psychotest1',
     component: PsychoTest1
   },
-
+  {
+    path: '/PsychoTestF',
+    name: 'psychotestf',
+    component: PsychoTestF
+  },
+  {
+    path: '/Dtest',
+    name: 'dtest',
+    component: Dtest
+  },
+  {
+    path: '/Dtest1',
+    name: 'dtest1',
+    component: Dtest1
+  },
   {
     path: '/Lolchang',
     name: 'lolchang',

@@ -1,8 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2" /></a>
-    </div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
@@ -34,14 +31,6 @@
           />
 
           <img class="image1" src="/image/lol/kda.png" @click="lolchango" />
-
-          <img
-            class="image1"
-            src="/thumbnail/mansidealTN.png"
-            @click="mansideal"
-          />
-
-          <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
 
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
