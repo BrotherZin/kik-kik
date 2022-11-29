@@ -133,12 +133,12 @@ const routes = [
   },
   {
     path: '/Lolchang',
-    name: 'lolchang',
+    name: 'Lolchang',
     component: Lolchang
   },
   {
     path: '/Lolchanggo2',
-    name: 'lolchanggo',
+    name: 'Lolchanggo',
     component: Lolchanggo2
   },
   {

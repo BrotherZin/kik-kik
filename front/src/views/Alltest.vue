@@ -14,6 +14,7 @@
           {{ keyword }}
           <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
+          <div id="tests">
 
           <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
 
@@ -21,15 +22,16 @@
 
           <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
 
-          <img class="image1" src="/image/lol/kda.png" @click="lolchango" />
+          <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
 
-          <img class="image1" src="/thumbnail/box.png" @click="lolskin" />
+          <img class="image1" src="/thumbnail/box.png" @click="Lolskin" />
 
           <img class="image1" src="/thumbnail/mansidealTN.png" @click="mansideal"/>
 
           <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
 
           <img class="image1" src="/image/dep/main.png" @click="Dtest" />
+        </div>
         </div>
       </v-layout>
     </div>
@@ -53,11 +55,11 @@ export default {
     mansideal() {
       this.$router.push("/mansidealtypeStart");
     },
-    lolchango() {
-      this.$router.push("/lolchang");
+    Lolchango() {
+      this.$router.push("/Lolchang");
     },
-    lolskin() {
-      this.$router.push("/lolskin");
+    Lolskin() {
+      this.$router.push("/Lolskin");
     },
     ramenTest() {
       this.$router.push("/ramenStart");

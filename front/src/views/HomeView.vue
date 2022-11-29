@@ -18,19 +18,11 @@
         버튼 추가할거면 넣기-->
           <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
 
-          <img
-            class="image1"
-            src="/image/psycho/main.png"
-            @click="psychotest"
-          />
+          <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
 
-          <img
-            class="image1"
-            src="/thumbnail/girlsidealTN.png"
-            @click="girlsideal"
-          />
+          <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
 
-          <img class="image1" src="/image/lol/kda.png" @click="lolchango" />
+          <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
 
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
@@ -63,8 +55,8 @@ export default {
     ramenTest() {
       this.$router.push("/ramenStart");
     },
-    lolchango() {
-      this.$router.push("/lolchang");
+    Lolchango() {
+      this.$router.push("/Lolchang");
     },
     //   search(){
     //     this.$router.push("");
