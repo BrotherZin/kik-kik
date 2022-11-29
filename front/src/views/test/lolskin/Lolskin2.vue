@@ -384,7 +384,7 @@ methods: {
     if (++this.step >= this.questions.length) {//다음 문제로 넘어갈 경우
       alert(`축하합니다! 당신의 흑우력 점수입니다! \n총점 : ${this.score}`);//총점 표시
       this.initialize();//초기화
-      this.$router.push("/");//메인페이지로 이동
+      this.$router.push("/Alltest");//메인페이지로 이동
     }
 
     if (this.step + 1 >= this.questions.length) {//다음 문제가 없을 경우
