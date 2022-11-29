@@ -1,6 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    
     <div class="inside">
       <v-layout align-center justify-center>
         <div style="display: block; margin: auto; width: auto; height: auto">
@@ -89,28 +88,6 @@ export default {
           ],
         },
         {
-          score: 10,
-          image: "/image/lol/skin/popstarKai.png",
-          answers: [
-            {
-              text: 'K/DA ALL OUT',
-              isCorrect: false,
-            },
-            {
-              text: 'K/DA POP/STARS',
-              isCorrect: true,
-            },
-            {
-              text: '프레스티지 K/DA ALL OUT',
-              isCorrect: false,
-            },
-            {
-              text: '프레스티지 K/DA POP/STARS',
-              isCorrect: false,
-            },
-          ],
-        },
-        {
           image: "/image/lol/skin/nami 프레스티지.png",
           score: 10,
           answers: [
@@ -160,7 +137,7 @@ export default {
           answers: [
             {
               text: '천상의 빛 모르가나',
-              isCorrect: true,
+              isCorrect: false,
             },
             {
               text: '은빛 모르가나',
@@ -168,7 +145,7 @@ export default {
             },
             {
               text: '빛의 인도자 모르가나',
-              isCorrect: false,
+              isCorrect: true,
             },
             {
               text: '신성한 모르가나',
@@ -300,11 +277,11 @@ export default {
             },
             {
               text: '전투 여왕 피오라',
-              isCorrect: true,
+              isCorrect: false,
             },
             {
               text: '전투 여왕 다이애나',
-              isCorrect: false,
+              isCorrect: true,
             },
           ],
         },
@@ -385,7 +362,7 @@ methods: {
     if (++this.step >= this.questions.length) {//다음 문제로 넘어갈 경우
       alert(`축하합니다! 당신의 흑우력 점수입니다! \n총점 : ${this.score}`);//총점 표시
       this.initialize();//초기화
-      this.$router.push("/");//메인페이지로 이동
+      this.$router.push("/Alltest");//메인페이지로 이동
     }
 
     if (this.step + 1 >= this.questions.length) {//다음 문제가 없을 경우
@@ -419,7 +396,7 @@ methods: {
   width: 1500px;
   height: 950px;
   margin-top: 50px;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 50px 50px 50px 50px;
 }
 .image {
 margin-top: 50px;
@@ -442,6 +419,7 @@ max-height: 900px;
   margin-top:50px;
   height: 400px;
   width: 700px;
+  border-radius: 50px 50px 50px 50px;
 }
 .answer{
   font-size:40px;
@@ -467,8 +445,13 @@ max-height: 900px;
 video{
   height: 400px;
 }
-/* .score-popup{
-  display: flex;
-} */
+.answer:hover{
+  background: transparent;
+  color: #00AFFF;
+  box-shadow: none;
+}
+.btn-next:hover{
+  color: #76aef1;
+}
 </style>
     

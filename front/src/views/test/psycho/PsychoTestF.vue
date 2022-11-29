@@ -5,11 +5,10 @@
             <span>싸이코 패스 테스트 결과</span>
         </div>
         <div class="finish-img">
-
           <img v-if="answer < 4" src="/image/psycho/icon1.png"> 
           <img v-else-if="answer > 3 && answer < 7" src="image/psycho/icon2.png"> 
           <img v-else src="image/psycho/icon3.png"> 
-          
+
         </div>
         <div class="psycho-result">
             <span>10 문제 中 <span style="color:blue">{{tester}}</span>님이 맞춘 문제는</span><br>
@@ -44,7 +43,6 @@
     </div>
   </v-layout>
 </template>
-
 <script>
 export default {
   data(){
@@ -63,18 +61,15 @@ methods: {
 },
 }
 </script>
-
 <style>
 .background{
 background-color: #e6e6fa;
 }
-
 ul {
 list-style:none;
 display: inline-flex;
 margin-right: 3%;
 }
-
 li{
 padding: 5px;
 }
@@ -85,7 +80,6 @@ background-color: white;
 width: 1400px;
 height: 1050px;
 }
-
 .finish-title {
 font-size: 40px;
 padding: 30px;
@@ -96,11 +90,9 @@ width: 300px;
 height: 300px;
 margin-bottom: 50px;
 }
-
 .psycho-result {
 font-size: 30px;
 }
-
 .result-text{
 font-size: 30px;
 padding:20px;
@@ -109,7 +101,6 @@ padding:20px;
 text-align: center;
 font-weight: 700;
 }
-
 .share-sns-list .btn-share {
 display: inline-block;
 background-position: center center;
@@ -120,7 +111,6 @@ background-size: cover;
 background-repeat: no-repeat;
 background-color: transparent;
 }
-
 .share-sns-list .btn-share.kakao {
 background-image: url(https://cdn.banggooso.com/assets/images/icons/btn-share-kakao.png);
 }
@@ -152,5 +142,4 @@ margin-left: -30%;
 text-align: right;
 margin-right: -30%;
 }
-
 </style>

@@ -1,8 +1,5 @@
 <template>
     <v-layout class="background" align-center justify-center>
-      <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
       <div class="inside">
         <v-layout align-center justify-center>
           <div style="display: block; margin: auto; width: auto; height: auto">
@@ -31,7 +28,12 @@
   };
   </script>
       <style scoped>
-.background {
+      @import url('https://fonts.googleapis.com/css?family=Yeon+Sung:400');
+
+* {
+  font-family: 'Yeon Sung', cursive;
+}
+  .background {
   height: 100%;
   background-color: #e6e6fa;
   display: grid;
@@ -53,10 +55,11 @@
   height: auto;
   max-width: 1000px;
   max-height: 900px;
+  border-radius: 50px 50px 50px 50px;
   }
   .lol-text{
     text-align: center;
-    font-size:50px;
+    font-size:70px;
     margin-top:40px;
   }
   .v-btn{
@@ -64,6 +67,5 @@
     font-size:30px;
     font-weight: bold;
   }
-
   </style>
       

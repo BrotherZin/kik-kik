@@ -2,18 +2,20 @@
   <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
-        <div>
-          <h1>아이돌 이상형 월드컵</h1>
+        <div class="ideal">
+          <div class="bz">여자 아이돌 이상형 월드컵</div>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <img src="/thumbnail/idealTN.png" class="image" />
+          <img src="/thumbnail/girlsidealTN.png" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <p class="result">아이돌 이상형 월드컵에 오신것을 환영합니다 !</p>
+          <p class="result">
+            여자 아이돌 이상형 월드컵에 오신것을 환영합니다 !
+          </p>
           <p class="result">자신의 이상형이 누구일지 확인하러 가볼까요 ?</p>
         </div>
       </v-layout>
@@ -36,7 +38,7 @@ export default {
   name: "Home",
   methods: {
     start() {
-      this.$router.push("/idealtest");
+      this.$router.push("/girlsidealtest");
     },
   },
 };
@@ -52,7 +54,7 @@ export default {
   padding: 0;
   border: none;
   font-size: 1.2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .background {
@@ -80,7 +82,21 @@ export default {
 }
 .result {
   font-size: 1.2em;
-  font-weight: bold;
+  font-family: bz;
+}
+.bz {
+  font-size: 2.6em;
+  font-family: bz;
+}
+@font-face {
+  font-family: "bz";
+  src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.ideal{
+  margin-top: 120px;
+}
+.v-btn{
+  margin-top:30px;
 }
 </style>
     

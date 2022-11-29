@@ -2,9 +2,7 @@
   <v-layout class="background">
     <div class="psychomain">
       <div class="psychomain-index">
-
         <img src="/image/psycho/main.png" class="image" />
-
       </div>
       <div class="psycho-title">
         <span> 쉿... 조심해...! [싸이코패스 테스트] </span>
@@ -22,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Home",
   data() {
@@ -41,13 +38,22 @@ export default {
     },
   },
 };
+
+    
+          
+            
+    
+
+          
+    
+    
+  
 </script>
 <style scoped lang="less">
 .background{
   height: 100%;
   background-color: #E6E6FA
 }
-
 .psychomain {
   margin: auto;
   border-radius: 50px;
@@ -56,22 +62,18 @@ export default {
   width: 1400px;
   height: 940px;
 }
-
 .psychomain-index {
   padding: 30px;
 }
-
 .psychomain-index img {
   width: 800px;
   height: 400px;
   margin-bottom: 50px;
 }
-
 .psycho-title {
   font-size: 40px;
   margin-bottom: 20px;
 }
-
 input[type="text"] {
   width: 500px;
   height: 30px;
@@ -80,7 +82,6 @@ input[type="text"] {
   padding: 5px;
   text-align: center;
 }
-
 .psycho-button {
   width: 90%;
   margin: auto;
@@ -106,7 +107,6 @@ button {
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-
 .btn-7 {
   background: #c174df;
   line-height: 42px;
