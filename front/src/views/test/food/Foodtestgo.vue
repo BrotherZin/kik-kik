@@ -505,9 +505,10 @@
 export default {
   data() {
     return {
-      answer: 0,
-      number: 1,
-      food: [],
+      answers: "checked", // 라디오 버튼 체크
+      answer: 0, //정답
+      number: 1, //문제번호
+      food: [], //선택한 음식
     };
   },
   methods: {
@@ -533,6 +534,17 @@ export default {
     result: function () {
       //결과보기 버튼
       this.$router.push("/foodresult");
+      this.tester = this.$route.query.tester;
+      if (this.answer == checked) {
+        this.answer++;
+        this.$router.push(
+          "/Foodresult?tester=" + this.tester + "&answer=" + this.answer
+        );
+      } else {
+        this.$router.push(
+          "/Foodresult?tester=" + this.tester + "&answer=" + this.answer
+        );
+      }
     },
   },
 };
@@ -567,7 +579,6 @@ export default {
 }
 .button {
   padding-right: 300px;
-
   padding-left: 200px;
 }
 .text {
