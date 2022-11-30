@@ -1,25 +1,41 @@
 <template>
   <v-layout class="background" align-center justify-center>
     <div class="inside">
-      <div class="round">
+      <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
-          이상형 월드컵 {{ roundLength }}강
+          여자 아이돌 이상형 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
-      </div>
-      <div class="wlsdk">
-        <div class="vsvs">
-          <div @click="clickLeft" class="selectimg">
-            <img class="left" :src="getLeftItem().img" alt="" />
-          </div>
 
-          <div @click="clickRight" class="selectimg">
-            <img class="right" :src="getRightItem().img" alt="" />
+        <v-flex>
+          <div class="vsvs">
+            <v-layout fill-heght>
+              <v-flex xs6 class="left">
+                <div class="BZ">{{ getLeftItem().name }}</div>
+                <v-img
+                  :aspect-ratio="1 / 1"
+                  class="image"
+                  :src="getLeftItem().img"
+                  alt=""
+                />
+                <div @click="clickLeft" class="clickspace"></div>
+              </v-flex>
+              <v-flex xs6 class="right">
+                <div class="BZ">{{ getRightItem().name }}</div>
+                <v-img
+                  class="image"
+                  :aspect-ratio="1 / 1"
+                  :src="getRightItem().img"
+                  alt=""
+                />
+                <div @click="clickRight" class="clickspace"></div>
+              </v-flex>
+            </v-layout>
           </div>
-        </div>
-      </div>
-      <div class="vsimg"><img src="/image/idealtype/vs.png" /></div>
+        </v-flex>
+        <div class="vsimg"><img src="/image/girlsidealtype/vs.png" /></div>
+      </v-layout>
     </div>
   </v-layout>
 </template>
@@ -81,7 +97,10 @@ export default {
         return item.selected;
       });
       console.log("finish", selected);
-      this.$router.push("/idealtypeEnd");
+
+      this.$router.push(
+        "/girlsidealtypeEnd?name=" + selected.name + "&img=" + selected.img
+      );
     },
     nextRound() {
       this.list = _.chain(this.list)
@@ -110,97 +129,97 @@ export default {
       list: [
         {
           name: "아이유",
-          img: "/image/idealtype/iu.jpg",
+          img: "/image/girlsidealtype/iu.jpg",
           selected: false,
           round: false,
         },
         {
           name: "카리나",
-          img: "/image/idealtype/karina.jpg",
+          img: "/image/girlsidealtype/karina.jpg",
           selected: false,
           round: false,
         },
         {
           name: "윈터",
-          img: "/image/idealtype/winter.jpg",
+          img: "/image/girlsidealtype/winter.jpg",
           selected: false,
           round: false,
         },
         {
           name: "민지",
-          img: "/image/idealtype/minji.jpg",
+          img: "/image/girlsidealtype/minji.jpg",
           selected: false,
           round: false,
         },
         {
           name: "채원",
-          img: "/image/idealtype/chaewon.jpg",
+          img: "/image/girlsidealtype/chaewon.jpg",
           selected: false,
           round: false,
         },
         {
           name: "다현",
-          img: "/image/idealtype/dahyeon.jpg",
+          img: "/image/girlsidealtype/dahyeon.jpg",
           selected: false,
           round: false,
         },
         {
           name: "송하영",
-          img: "/image/idealtype/hayoung.jpg",
+          img: "/image/girlsidealtype/hayoung.jpg",
           selected: false,
           round: false,
         },
         {
           name: "제니",
-          img: "/image/idealtype/jeni.jpg",
+          img: "/image/girlsidealtype/jeni.jpg",
           selected: false,
           round: false,
         },
         {
           name: "지수",
-          img: "/image/idealtype/jisu.jpg",
+          img: "/image/girlsidealtype/jisu.jpg",
           selected: false,
           round: false,
         },
         {
           name: "수지",
-          img: "/image/idealtype/suji.jpg",
+          img: "/image/girlsidealtype/suji.jpg",
           selected: false,
           round: false,
         },
         {
           name: "태연",
-          img: "/image/idealtype/taeyeon.jpg",
+          img: "/image/girlsidealtype/taeyeon.jpg",
           selected: false,
           round: false,
         },
         {
           name: "안유진",
-          img: "/image/idealtype/ujin.jpg",
+          img: "/image/girlsidealtype/ujin.jpg",
           selected: false,
           round: false,
         },
         {
           name: "예지",
-          img: "/image/idealtype/yeji.jpg",
+          img: "/image/girlsidealtype/yeji.jpg",
           selected: false,
           round: false,
         },
         {
           name: "장원영",
-          img: "/image/idealtype/wonyoung.jpg",
+          img: "/image/girlsidealtype/wonyoung.jpg",
           selected: false,
           round: false,
         },
         {
           name: "최예나",
-          img: "/image/idealtype/yena.jpg",
+          img: "/image/girlsidealtype/yena.jpg",
           selected: false,
           round: false,
         },
         {
           name: "우기",
-          img: "/image/idealtype/woogi.jpg",
+          img: "/image/girlsidealtype/woogi.jpg",
           selected: false,
           round: false,
         },
@@ -217,7 +236,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 .background {
   height: 100px;
@@ -229,32 +247,66 @@ export default {
   background-color: white;
   width: 1500px;
   height: 750px;
+  max-width: 100%;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }
 .vs {
   font-size: 2.2em;
-  font-weight: bold;
   text-align: center;
+  font-family: bz;
 }
 
 .vsvs {
-  display: flex;
   text-align: center;
+  height: 100%;
 }
-img {
-  height: 500px;
-  width: 500px;
+.image {
+  left: 30px;
+  width: 90%;
+  position: relative;
+  z-index: 10;
 }
-.left {
-  margin-top: 100px;
-  margin-left: 150px;
-}
+.left,
 .right {
-  margin-top: 100px;
-  margin-left: 600px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
 }
+.clickspace {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 12;
+}
+
 .round {
   text-align: center;
+  position: relative;
+}
+.vsimg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+}
+
+@font-face {
+  font-family: "bz";
+  src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.BZ {
+  position: absolute;
+  font-family: "bz";
+  font-size: 2.5em;
+  left: 60px;
+  /* text-align: center;
+  text-justify: center; */
+  color: rgb(255, 255, 255);
+  z-index: 11;
 }
 </style>

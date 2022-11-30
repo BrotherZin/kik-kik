@@ -1,8 +1,5 @@
 <template>
   <v-layout class="background" align-center justify-center>
-    <div class="logo">
-      <a href="/"><img src="/image/kikkik.png" class="logo2"></a>
-    </div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
@@ -19,13 +16,13 @@
           </div>
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest">
-          
-          <img class="image1" src="/image/psycho/main.png" @click="psychotest">
-          
-          <img class=" image1" src="/image/idealtype/iu2.png" @click="example1">
-  
-          <img class=" image1" src="/image/lol/kda.png" @click="lolchango">
+          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
+
+          <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
+
+          <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
+
+          <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
 
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
@@ -44,17 +41,23 @@ export default {
       this.$router.push("/alltest");
     },
     foodtest() {
-        this.$router.push("/foodtest")
-      },
-      psychotest(){
-        this.$router.push("/psychotest")
-      },
-      example1(){
-        this.$router.push("/idealtypeStart")
-      },
-      lolchango(){
-        this.$router.push("/lolchang")
-      },
+      this.$router.push("/foodtest");
+    },
+    psychotest() {
+      this.$router.push("/psychotest");
+    },
+    girlsideal() {
+      this.$router.push("/girlsidealtypeStart");
+    },
+    mansideal() {
+      this.$router.push("/mansidealtypeStart");
+    },
+    ramenTest() {
+      this.$router.push("/ramenStart");
+    },
+    Lolchango() {
+      this.$router.push("/Lolchang");
+    },
     //   search(){
     //     this.$router.push("");
     //   }, //검색버튼 클릭 시
@@ -74,7 +77,8 @@ export default {
   background-color: #e6e6fa;
   display: grid;
 }
-.logo2{
+.logo2 {
+  margin-left: 300px;
   width: 500px;
   height: 100px;
 }
@@ -88,7 +92,7 @@ export default {
 .text {
   width: 700px;
 }
-.image1{
+.image1 {
   display: inline-block;
   margin-bottom: 20px;
   width: 135px;
@@ -100,10 +104,10 @@ export default {
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.v-btn{
-  margin-top:30px;
-  width:400px;
-    font-size:35px;
+.v-btn {
+  margin-top: 30px;
+  width: 400px;
+  font-size: 35px;
 }
 </style>
   
