@@ -12,17 +12,17 @@
         </div>
       </v-layout>
       <div class="st_btn" align-center justify-center>
-        <v-btn large style="background-color: #c74eff" @click="testStart"
-        ><span>테스트 시작하기</span></v-btn
+        <v-btn large style="background-color: #AA88FF" @click="testStart"
+        ><span>테스트 시작하기♪( 'ω' و(و"</span></v-btn
         >
       </div>
       <div class="btn">
         <v-btn fab dark small color="pink" @click="alltest">
           <v-icon dark> mdi-arrow-left </v-icon>
         </v-btn>
-        이전 페이지
-      </div>
+        이전 페이지로 돌아가기(۶•̀ᴗ•́)۶
     </div>
+  </div>
   </v-layout>
 </template>
       
