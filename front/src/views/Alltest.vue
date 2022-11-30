@@ -14,32 +14,45 @@
           {{ keyword }}
           <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
-      <div id="tests">
-          <span class="box">
-            <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
-          </span>
-          <span>
-            <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
-          </span>
-          <span>
-            <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
-          </span>
-          <span>
-            <img class="image1" src="/image/lol/kda.png" @click="Lolchango" />
-          </span>
-          <span>
-            <img class="image1" src="/thumbnail/box.png" @click="Lolskin" />
-          </span>
-          <span>
-            <img class="image1" src="/thumbnail/mansidealTN.png" @click="mansideal"/>
-          </span>
-          <span>
-            <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
-          </span>
-          <span>
-            <img class="image1" src="/image/dep/main.png" @click="Dtest" />
-          </span>
-      </div>
+          
+          <div class="test1" @click="foodtest">
+          <img class="image1" src="/thumbnail/foodtest.png" />
+          쩝쩝박사 테스트
+        </div>
+        
+        <div class="test1"  @click="psychotest">
+          <img class="image1" src="/image/psycho/main.png"/>
+          사이코패스 테스트
+        </div>
+
+        <div class="test1" @click="girlsideal">
+          <img class="image1" src="/thumbnail/girlsidealTN.png"/>
+           여자이상형 월드컵
+        </div>
+
+        <div class="test1" @click="Lolchango">
+          <img class="image1" src="/image/lol/kda.png"/>
+          롤창 테스트
+        </div>
+        <div class="test1" @click="Lolskin">
+          <img class="image1" src="/thumbnail/box.png" />
+          롤 흑우력 테스트
+        </div>
+        
+        <div class="test1"  @click="mansideal">
+          <img class="image1" src="/thumbnail/mansidealTN.png"/>
+          남자이상형 월드컵
+        </div>
+
+        <div class="test1" @click="ramenTest">
+          <img class="image1" src="/thumbnail/ramenTN.png"/>
+           라면 월드컵
+        </div>
+
+        <div class="test1" @click="Dtest">
+          <img class="image1" src="/image/dep/main.png"/>
+          우울증 테스트
+        </div>
         </div>
       </v-layout>
     </div>
@@ -100,19 +113,26 @@ export default {
 .text {
   width: 700px;
 }
-.image {
-  display: inline-block;
-  padding: 20px;
-}
 .font {
   margin-top: 50px;
   margin-bottom: 40px;
 }
+.test1{
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 35px;
+  font-weight: bold;
+}
+.test1:hover{
+  transform: scale(1.1);
+}
 .image1 {
+  margin-bottom: 5px;
+  display:block;
   width: 135px;
   height: 140px;
   border: solid 1px black;
-  margin-right: 35px;
 }
 .box{
   height: 500px;
