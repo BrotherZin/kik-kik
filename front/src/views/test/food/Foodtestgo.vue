@@ -581,6 +581,7 @@ export default {
   padding-right: 300px;
   padding-left: 200px;
 }
+
 .text {
   padding-top: 20px;
 }

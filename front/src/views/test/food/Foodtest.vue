@@ -11,11 +11,11 @@
           <img src="/thumbnail/foodtest.png" class="image" />
         </div>
       </v-layout>
-      <v-layout class="st_btn" align-center justify-center>
+      <div class="st_btn" align-center justify-center>
         <v-btn large style="background-color: #c74eff" @click="testStart"
-          >테스트 시작하기</v-btn
+        ><span>테스트 시작하기</span></v-btn
         >
-      </v-layout>
+      </div>
       <div class="btn">
         <v-btn fab dark small color="pink" @click="alltest">
           <v-icon dark> mdi-arrow-left </v-icon>
@@ -62,7 +62,7 @@ export default {
   max-height: 900px;
 }
 .st_btn {
-  margin-top: 140px;
+  margin-top: 50px;
 }
 
 .btn {
