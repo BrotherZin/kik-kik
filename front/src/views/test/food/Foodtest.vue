@@ -68,5 +68,8 @@ export default {
 .btn {
   padding-right: 1100px;
 }
+h1{
+  margin-top:30px;
+}
 </style>
       

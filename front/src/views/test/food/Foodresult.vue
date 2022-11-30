@@ -109,7 +109,7 @@ export default {
 .inside {
   background-color: white;
   width: 1500px;
-  height: 750px;
+  height: 850px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }

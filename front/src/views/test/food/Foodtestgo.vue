@@ -328,7 +328,7 @@ export default {
 .inside {
   background-color: white;
   width: 1500px;
-  height: 750px;
+  height: 900px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }
@@ -352,5 +352,8 @@ padding-bottom: 20px;
 }
 .text{
   padding-top:20px;
+}
+.previous{
+  margin-right: 40px;
 }
 </style>
