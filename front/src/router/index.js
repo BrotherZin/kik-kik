@@ -15,6 +15,7 @@ import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
 import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import Foodresult from '../views/test/food/Foodresult.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
@@ -105,6 +106,11 @@ const routes = [
     path: '/Foodtestgo',
     name: 'foodtestgo',
     component: Foodtestgo
+  },
+  {
+    path: '/Foodresult',
+    name: 'foodresult',
+    component: Foodresult
   },
   {
     path: '/PsychoTest',
