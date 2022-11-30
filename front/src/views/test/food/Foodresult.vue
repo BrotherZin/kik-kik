@@ -2,17 +2,21 @@
   <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
-        <div class="title">
-          <h1>쩝쩝박사 테스트 결과</h1>
-          <br />
+        <div class="title" style="color:purple">
+          <h1>쩝쩝박사 테스트 상장 수여식</h1>
+          <div class="result-text"> 
+                  <span v-if="answer < 3" style="color:black; font-weight: bold;"> 쩝쩝노력상 </span>
+                  <span v-else-if="answer > 4 && answer < 9" style="color:black; font-weight: bold;"> 쩝쩝응원상 </span>
+                  <span v-else style="color:black; font-weight: bold;"> 쩝쩝박사상 </span>
+        </div>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
-        <div
-          class="img"
-          style="display: block; margin: auto; width: auto; height: auto"
-        >
-          <img src="/image/food/awards.png" class="image" />
+        <div class="foodresult-img"
+          style="display: block; margin: auto; width: auto; height: auto">
+          <img v-if="answer < 3" src="/image/food/awards2.png"> 
+          <img v-else-if="answer > 4 && answer < 9" src="/image/food/awards3.png"> 
+          <img v-else src="/image/food/awards.png">
         </div>
       </v-layout>
       <div class="sharebutton">
@@ -41,10 +45,14 @@
     
 <script>
 export default {
-  head() {
+  data() {
     return {
       answer: this.$route.query.answer,
       tester: this.$route.query.tester,
+  };
+},
+  head() {
+    return {
 
       script: [
         {
@@ -137,7 +145,10 @@ export default {
   border: 2px solid #636366;
 }
 .sharebutton {
-  padding-top: 20px;
-  padding-left: 50px;
+  padding-top: 3px;
+  padding-bottom: 20px;
+}
+.result-text{
+font-size:35px;
 }
 </style>
