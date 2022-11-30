@@ -3,7 +3,7 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <v-text-field
+          <!-- <v-text-field
             v-model="keyword"
             dense
             outlined
@@ -11,7 +11,7 @@
             @keyup.enter="searchresult(keyword)"
           ></v-text-field>
           {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn>
+          <v-btn type="submit" @click="search">검색</v-btn> -->
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
