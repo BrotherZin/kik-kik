@@ -3,7 +3,7 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <!-- <v-text-field
+          <v-text-field
             v-model="keyword"
             dense
             outlined
@@ -11,7 +11,7 @@
             @keyup.enter="searchresult(keyword)"
           ></v-text-field>
           {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn> -->
+          <v-btn type="submit" @click="search">검색</v-btn>
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
@@ -36,7 +36,7 @@
           <img class="image1" src="/image/lol/kda.png"/>
           롤창 테스트
         </div>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
+          <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
     </div>
@@ -84,6 +84,9 @@ export default {
 };
 </script>
   <style scoped>
+ @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+ *{font-family: 'Jua', sans-serif;}
+
 .background {
   height: 100%;
   background-color: #e6e6fa;
@@ -109,8 +112,7 @@ export default {
   margin:auto;
   text-align: center;
   margin-right: 35px;
-  font-weight: bold;
-  font-size: 17px;
+  font-size: 21px;
 }
 .test1:hover{
   transform: scale(1.1);
@@ -126,7 +128,7 @@ export default {
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.v-btn {
+#start {
   margin-top: 30px;
   width: 400px;
   font-size: 35px;

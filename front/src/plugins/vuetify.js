@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
 import VueTyperPlugin from 'vue-typer'
+import VueSocialSharing from 'vue-social-sharing'
+
+Vue.use(VueSocialSharing);
 
 Vue.use(VueTyperPlugin)
 
@@ -15,4 +18,7 @@ export default new Vuetify({
       icons: {
         iconfont: 'mdi',
       },
+      modules: [
+        'vue-social-sharing/nuxt'
+      ]
 });

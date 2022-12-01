@@ -9,7 +9,6 @@
           <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field>
               <div id="email">
               <v-text-field v-model="input.email" label="Email" maxlength="18" style="width:100px;"/>
-              <div class="haha">@</div>
               <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
               <select v-model="input.selected">
                   <option v-for="(item, index) in selectList"
@@ -40,11 +39,11 @@ export default {
         selected: "",
       },
       selectList: [
-        { name: "naver.com", value: "naver.com" },
-        { name: "gmail.com", value: "gmail.com" },
-        { name: "hanmail.net", value: "hanmail.net" },
-        { name: "nate.com", value: "nate.com" },
-        { name: "daum.net", value: "daum.net" },
+        { name: "@naver.com", value: "naver.com" },
+        { name: "@gmail.com", value: "gmail.com" },
+        { name: "@hanmail.net", value: "hanmail.net" },
+        { name: "@nate.com", value: "nate.com" },
+        { name: "@daum.net", value: "daum.net" },
         { name: "직접입력", value: "직접입력" },
       ],
     };
