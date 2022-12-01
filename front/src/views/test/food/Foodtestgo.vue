@@ -283,17 +283,15 @@ export default {
     // },
     nextpage() {
       var food = Number(this.food);
-      console.log(food);
+      console.log(food,this.food,this.number);
+      if (this.food == ""){
+        return window.alert("음식을 선택해주세요!!๑•‿•๑")
+      }
       if (this.food == 1) {
         this.answer++;
-        this.number++;
       }
-      // if (this.food == ""){
-      //   window.alert("음식을 선택해주세요!!๑•‿•๑")
-      // }
-      else{
-        this.number++;
-      }
+      this.number++;
+      
     },
     previous(){ //이전 버튼
       this.number--;
