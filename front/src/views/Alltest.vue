@@ -75,6 +75,28 @@
               여자 배우 월드컵
             </div>
           </div>
+        <div class="test1" @click="sangsig">
+          <img class="image1" src="/image/sangsig/main.png"/>
+          상식 테스트
+        </div>
+
+        <div class="test1" @click="movietest">
+          <img class="image1" src="/thumbnail/movie.jpg"/>
+          영화 테스트
+        </div>
+        <v-row v-if="searchfinish===true">
+          <v-col v-for="item in searchresult" :key="item.id">
+            <v-card>
+              <v-card-title>{{ item.title }}</v-card-title>
+              <v-card-text>{{ item.content }}</v-card-text>
+              <v-card-actions>
+                <v-btn color="primary" @click="testStart(item.id)">
+                  테스트 시작하기
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
         </div>
       </v-layout>
     </div>
@@ -83,7 +105,7 @@
       
 <script>
 import HelloWorld from "../components/HelloWorld";
-import Ss from "./test/sangsig/ss.vue";
+// import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
   data() {
@@ -128,6 +150,36 @@ export default {
     },
     cheerleader() {
       this.$router.push("/cheerStart");
+    },
+    movietest(){
+      this.$router.push("/movietest");
+    },
+    sangsig(){
+      this.$router.push("/ss");
+    },
+    searchresult(){
+      if(this.searchkeyword == '') {
+        alert('키워드가 입력되지 않았습니다!');
+      } else {
+        axios({
+          url : "http://localhost:8080/search",
+          method: "POST",
+          data: {
+            searchkeyword: this.searchkeyword, //검색어
+            searchoption: this.searchoptionselected //검색옵션
+          },
+        }).then(res => {  
+          if(res.data == 'no') {
+            alert('검색 결과가 없습니다!');
+          } else {
+            alert('검색 결과 입니다!');
+            this.searchkeyword = '';
+            this.searchfinish = true;
+          }
+        }).catch(err => {
+          console.log(err);
+        })
+      }
     },
   },
   components: {

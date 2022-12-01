@@ -39,6 +39,9 @@ import manActorEnd from '../views/test/manActor/manActorEnd.vue'
 import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
 import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
 import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
+import Movietest from '../views/test/movie/movietest.vue'
+import Movietestgo from '../views/test/movie/movietestgo.vue'
+import Movieresult from '../views/test/movie/movieresult.vue'
 
 
 Vue.use(VueRouter)
@@ -236,6 +239,21 @@ const routes = [
     path: '/Lolskin2',
     name: 'Lolskin2',
     component: Lolskin2
+  },
+  {
+    path: '/Movietest',
+    name: 'movietest',
+    component: Movietest
+  },
+  {
+    path: '/Movietestgo',
+    name: 'movietestgo',
+    component: Movietestgo
+  },
+  {
+    path: '/Movieresult',
+    name: 'Movieresult',
+    component: Movieresult
   },
 ]
 
