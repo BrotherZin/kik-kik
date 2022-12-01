@@ -25,7 +25,12 @@ import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
-
+import cheerTest from '../views/test/cheerleader/cheerTest.vue'
+import cheerStart from '../views/test/cheerleader/cheerStart.vue'
+import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
+import manActorTest from '../views/test/manActor/manActorTest.vue'
+import manActorStart from '../views/test/manActor/manActorStart.vue'
+import manActorEnd from '../views/test/manActor/manActorEnd.vue'
 
 Vue.use(VueRouter)
 
@@ -53,6 +58,21 @@ const routes = [
     component: Login
   },
   {
+    path: '/manActorTest',
+    name: 'manActorTest',
+    component: manActorTest
+  },
+  {
+    path: '/manActorStart',
+    name: 'manActorStart',
+    component: manActorStart
+  },
+  {
+    path: '/manActorEnd',
+    name: 'manActorEnd',
+    component: manActorEnd
+  },
+  {
     path: '/ramenTest',
     name: 'ramenTest',
     component: ramenTest
@@ -66,6 +86,21 @@ const routes = [
     path: '/ramenEnd',
     name: 'ramenEnd',
     component: ramenEnd
+  },
+  {
+    path: '/cheerTest',
+    name: 'cheerTest',
+    component: cheerTest
+  },
+  {
+    path: '/cheerStart',
+    name: 'cheerStart',
+    component: cheerStart
+  },
+  {
+    path: '/cheerEnd',
+    name: 'cheerEnd',
+    component: cheerEnd
   },
   {
     path: '/GirlsidealtypeStart',
