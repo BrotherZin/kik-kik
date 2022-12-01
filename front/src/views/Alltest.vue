@@ -3,17 +3,21 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
+          <div>
+          <v-select
+            :items="searchoption"
+            v-model="searchoptionselected"
+            :style="{ width: '140px' }"/>
           <v-text-field
             class="field"
-            v-model="keyword"
+            v-model="searchkeyword"
             dense
             outlined
             label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult(keyword)"
+            @keyup.enter="searchresult()"
             ></v-text-field>
           {{ keyword }}
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
-          버튼 추가할거면 넣기-->
+        </div>
           
           <div class="test1" @click="foodtest">
           <img class="image1" src="/thumbnail/foodtest.png" />
@@ -53,6 +57,19 @@
           <img class="image1" src="/image/dep/main.png"/>
           우울증 테스트
         </div>
+        <v-row v-if="searchfinish===true">
+          <v-col v-for="item in searchresult" :key="item.id">
+            <v-card>
+              <v-card-title>{{ item.title }}</v-card-title>
+              <v-card-text>{{ item.content }}</v-card-text>
+              <v-card-actions>
+                <v-btn color="primary" @click="testStart(item.id)">
+                  테스트 시작하기
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
         </div>
       </v-layout>
     </div>
@@ -63,6 +80,15 @@
 import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
+  data(){
+    return{
+      searchkeyword: '',//검색어
+      keyword: '',
+      searchoption: ['테스트 제목', '테스트 설명', '테스트 키워드'],//검색옵션
+      searchoptionselected: '테스트 제목',//검색옵션 선택
+      searchfinish: false,//검색완료
+    }
+  },
   methods: {
     foodtest() {
       this.$router.push("/foodtest");
@@ -87,7 +113,31 @@ export default {
     },
     Dtest(){
       this.$router.push("/Dtest");
-    }
+    },
+    searchresult(){
+      if(this.searchkeyword == '') {
+        alert('키워드가 입력되지 않았습니다!');
+      } else {
+        axios({
+          url : "http://localhost:8080/search",
+          method: "POST",
+          data: {
+            searchkeyword: this.searchkeyword, //검색어
+            searchoption: this.searchoptionselected //검색옵션
+          },
+        }).then(res => {  
+          if(res.data == 'no') {
+            alert('검색 결과가 없습니다!');
+          } else {
+            alert('검색 결과 입니다!');
+            this.searchkeyword = '';
+            this.searchfinish = true;
+          }
+        }).catch(err => {
+          console.log(err);
+        })
+      }
+    },
   },
   components: {
     HelloWorld,
@@ -142,4 +192,5 @@ export default {
   padding: 0px;
   border: none;
 }
+
 </style>
