@@ -20,6 +20,7 @@ import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
 import Dtest from '../views/test/depression/Dtest.vue'
 import Dtest1 from '../views/test/depression/Dtest1.vue'
+import DtestF from '../views/test/depression/DtestF.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
@@ -130,6 +131,11 @@ const routes = [
     path: '/Dtest1',
     name: 'dtest1',
     component: Dtest1
+  },
+  {
+    path: '/DtestF',
+    name: 'dtestf',
+    component: DtestF
   },
   {
     path: '/Lolchang',
