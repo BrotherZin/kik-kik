@@ -8,7 +8,8 @@
           </v-layout>
           <div class="lol-text">
             <div class="lolmain"><span>너의 롤창인생 실력은?!</span></div>
-          <div><v-btn @click="testStart">Ready? Go!</v-btn></div>
+          <span><v-btn class="gu" @click="testStart">(구) 챔피언 보러가기!</v-btn></span>
+          <span><v-btn class="sin" @click="testStart2">(신) 챔피언 보러가기!</v-btn></span>
         </div>
     </div>
     </v-layout>
@@ -24,6 +25,9 @@
       testStart() {
         this.$router.push("/Lolchanggo2");
       },
+      testStart2() {
+        this.$router.push("/Lolchanggo3");
+      }
     },
   };
   </script>
@@ -63,9 +67,13 @@
     margin-top:40px;
   }
   .v-btn{
-    width:500px;
+    width:300px;
     font-size:30px;
     font-weight: bold;
   }
+  .gu{
+    margin-right:30px;
+  }
+  
   </style>
       
