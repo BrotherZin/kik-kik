@@ -25,6 +25,9 @@ import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
+import Movietest from '../views/test/movie/movietest.vue'
+import Movietestgo from '../views/test/movie/movietestgo.vue'
+import Movieresult from '../views/test/movie/movieresult.vue'
 
 
 Vue.use(VueRouter)
@@ -156,6 +159,21 @@ const routes = [
     path: '/Lolskin2',
     name: 'Lolskin2',
     component: Lolskin2
+  },
+  {
+    path: '/Movietest',
+    name: 'movietest',
+    component: Movietest
+  },
+  {
+    path: '/Movietestgo',
+    name: 'movietestgo',
+    component: Movietestgo
+  },
+  {
+    path: '/Movieresult',
+    name: 'Movieresult',
+    component: Movieresult
   },
 ]
 

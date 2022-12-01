@@ -57,6 +57,11 @@
           <img class="image1" src="/image/dep/main.png"/>
           우울증 테스트
         </div>
+
+        <div class="test1" @click="movietest">
+          <img class="image1" src="/thumbnail/movie.jpg"/>
+          영화 테스트
+        </div>
         <v-row v-if="searchfinish===true">
           <v-col v-for="item in searchresult" :key="item.id">
             <v-card>
@@ -113,6 +118,9 @@ export default {
     },
     Dtest(){
       this.$router.push("/Dtest");
+    },
+    movietest(){
+      this.$router.push("/movietest");
     },
     searchresult(){
       if(this.searchkeyword == '') {
