@@ -288,9 +288,9 @@ export default {
         this.answer++;
         this.number++;
       }
-      if (this.food == ""){
-        window.alert("음식을 선택해주세요!!๑•‿•๑")
-      }
+      // if (this.food == ""){
+      //   window.alert("음식을 선택해주세요!!๑•‿•๑")
+      // }
       else{
         this.number++;
       }
