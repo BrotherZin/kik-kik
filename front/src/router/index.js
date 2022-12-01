@@ -21,6 +21,9 @@ import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
 import Dtest from '../views/test/depression/Dtest.vue'
 import Dtest1 from '../views/test/depression/Dtest1.vue'
 import DtestF from '../views/test/depression/DtestF.vue'
+import ss from '../views/test/sangsig/ss.vue'
+import ss1 from '../views/test/sangsig/ss1.vue'
+import ssF from '../views/test/sangsig/ssF.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
@@ -136,6 +139,21 @@ const routes = [
     path: '/DtestF',
     name: 'dtestf',
     component: DtestF
+  },
+  {
+    path: '/ss',
+    name: 'ss',
+    component: ss
+  },
+  {
+    path: '/ss1',
+    name: 'ss1',
+    component: ss1
+  },
+  {
+    path: '/ssF',
+    name: 'ssf',
+    component: ssF
   },
   {
     path: '/Lolchang',

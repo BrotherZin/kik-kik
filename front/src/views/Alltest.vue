@@ -30,6 +30,9 @@
           <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
 
           <img class="image1" src="/image/dep/main.png" @click="Dtest" />
+
+          <img class="image1" src="/image/sangsig/main.png" @click="ss" />
+         
         </div>
       </v-layout>
     </div>
@@ -38,6 +41,7 @@
       
       <script>
 import HelloWorld from "../components/HelloWorld";
+import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
   methods: {
@@ -64,7 +68,10 @@ export default {
     },
     Dtest(){
       this.$router.push("/Dtest");
-    }
+    }, 
+    ss(){
+      this.$router.push("/ss"); 
+    },
   },
   components: {
     HelloWorld,
