@@ -74,6 +74,11 @@
               <img class="image1" src="/thumbnail/girlActorTN.png" />
               여자 배우 월드컵
             </div>
+
+            <div class="test1" @click="gameWorldcup">
+              <img class="image1" src="/thumbnail/gameTN.jpg" />
+              추억의 게임 월드컵
+            </div>
           </div>
         </div>
       </v-layout>
@@ -83,7 +88,6 @@
       
       <script>
 import HelloWorld from "../components/HelloWorld";
-import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
   data() {
@@ -129,6 +133,9 @@ export default {
     cheerleader() {
       this.$router.push("/cheerStart");
     },
+    gameWorldcup() {
+      this.$router.push("/gameStart");
+    },
   },
   components: {
     HelloWorld,
@@ -160,11 +167,11 @@ export default {
 }
 .test1 {
   display: inline-block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   margin-right: 35px;
   font-size: 21px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 .test1:hover {
   transform: scale(1.1);

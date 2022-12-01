@@ -35,11 +35,12 @@ import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
 import manActorTest from '../views/test/manActor/manActorTest.vue'
 import manActorStart from '../views/test/manActor/manActorStart.vue'
 import manActorEnd from '../views/test/manActor/manActorEnd.vue'
-
 import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
 import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
 import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
-
+import gameEnd from '../views/test/gameWorldcup/gameEnd.vue'
+import gameStart from '../views/test/gameWorldcup/gameStart.vue'
+import gameTest from '../views/test/gameWorldcup/gameTest.vue'
 
 Vue.use(VueRouter)
 
@@ -126,6 +127,21 @@ const routes = [
     path: '/cheerEnd',
     name: 'cheerEnd',
     component: cheerEnd
+  },
+  {
+    path: '/gameTest',
+    name: 'gameTest',
+    component: gameTest
+  },
+  {
+    path: '/gameStart',
+    name: 'gameStart',
+    component: gameStart
+  },
+  {
+    path: '/gameEnd',
+    name: 'gameEnd',
+    component: gameEnd
   },
   {
     path: '/GirlsidealtypeStart',
