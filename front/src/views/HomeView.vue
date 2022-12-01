@@ -17,25 +17,25 @@
           </div>
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-        <div class="test1" @click="foodtest">
-          <img class="image1" src="/thumbnail/foodtest.png" />
-          쩝쩝박사 테스트
-        </div>
-        
-        <div class="test1"  @click="psychotest">
-          <img class="image1" src="/image/psycho/main.png"/>
-          사이코패스 테스트
-        </div>
+          <div class="test1" @click="foodtest">
+            <img class="image1" src="/thumbnail/foodtest.png" />
+            쩝쩝박사 테스트
+          </div>
 
-        <div class="test1" @click="girlsideal">
-          <img class="image1" src="/thumbnail/girlsidealTN.png"/>
-           여자이상형 월드컵
-        </div>
+          <div class="test1" @click="psychotest">
+            <img class="image1" src="/image/psycho/main.png" />
+            사이코패스 테스트
+          </div>
 
-        <div class="test1" @click="Lolchango">
-          <img class="image1" src="/image/lol/kda.png"/>
-          롤창 테스트
-        </div>
+          <div class="test1" @click="girlsideal">
+            <img class="image1" src="/thumbnail/girlsidealTN.png" />
+            이상형 월드컵
+          </div>
+
+          <div class="test1" @click="Lolchango">
+            <img class="image1" src="/image/lol/kda.png" />
+            롤창 테스트
+          </div>
           <v-btn @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
@@ -104,20 +104,20 @@ export default {
 .text {
   width: 700px;
 }
-.test1{
+.test1 {
   display: inline-block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   margin-right: 35px;
   font-weight: bold;
   font-size: 17px;
 }
-.test1:hover{
+.test1:hover {
   transform: scale(1.1);
 }
 .image1 {
   margin-bottom: 5px;
-  display:block;
+  display: block;
   width: 135px;
   height: 140px;
   border: solid 1px black;
