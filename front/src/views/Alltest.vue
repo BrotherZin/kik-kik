@@ -9,7 +9,7 @@
               v-model="searchoptionselected"
               :style="{ width: '140px' }"
             />
-            <v-text-field
+            <!-- <v-text-field
               class="field"
               v-model="searchkeyword"
               dense
@@ -17,7 +17,7 @@
               label="원하는 테스트의 키워드를 검색해보세요!"
               @keyup.enter="searchresult(keyword)"
             ></v-text-field>
-            {{ keyword }}
+            {{ keyword }} -->
             <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
 
@@ -33,7 +33,7 @@
 
             <div class="test1" @click="girlsideal">
               <img class="image1" src="/thumbnail/girlsidealTN.png" />
-              여자 아이돌 월드컵
+              여자이상형 월드컵
             </div>
 
             <div class="test1" @click="Lolchango">
@@ -81,7 +81,7 @@
   </v-layout>
 </template>
       
-      <script>
+<script>
 import HelloWorld from "../components/HelloWorld";
 import Ss from "./test/sangsig/ss.vue";
 export default {
