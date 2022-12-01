@@ -14,62 +14,65 @@
             dense
             outlined
             label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult()"
-            ></v-text-field>
+            @keyup.enter="searchresult(keyword)"
+          ></v-text-field>
           {{ keyword }}
-        </div>
-          
+          <!--<v-btn type="submit" @click="search">검색</v-btn>
+          버튼 추가할거면 넣기-->
+
           <div class="test1" @click="foodtest">
-          <img class="image1" src="/thumbnail/foodtest.png" />
-          쩝쩝박사 테스트
-        </div>
-        
-        <div class="test1"  @click="psychotest">
-          <img class="image1" src="/image/psycho/main.png"/>
-          사이코패스 테스트
-        </div>
+            <img class="image1" src="/thumbnail/foodtest.png" />
+            쩝쩝박사 테스트
+          </div>
 
-        <div class="test1" @click="girlsideal">
-          <img class="image1" src="/thumbnail/girlsidealTN.png"/>
-           여자이상형 월드컵
-        </div>
+          <div class="test1" @click="psychotest">
+            <img class="image1" src="/image/psycho/main.png" />
+            사이코패스 테스트
+          </div>
 
-        <div class="test1" @click="Lolchango">
-          <img class="image1" src="/image/lol/kda.png"/>
-          롤창 테스트
-        </div>
-        <div class="test1" @click="Lolskin">
-          <img class="image1" src="/thumbnail/box.png" />
-          롤 흑우력 테스트
-        </div>
-        
-        <div class="test1"  @click="mansideal">
-          <img class="image1" src="/thumbnail/mansidealTN.png"/>
-          남자이상형 월드컵
-        </div>
+          <div class="test1" @click="girlsideal">
+            <img class="image1" src="/thumbnail/girlsidealTN.png" />
+            여자 아이돌 월드컵
+          </div>
 
-        <div class="test1" @click="ramenTest">
-          <img class="image1" src="/thumbnail/ramenTN.png"/>
-           라면 월드컵
-        </div>
+          <div class="test1" @click="Lolchango">
+            <img class="image1" src="/image/lol/kda.png" />
+            롤창 테스트
+          </div>
+          <div class="test1" @click="Lolskin">
+            <img class="image1" src="/thumbnail/box.png" />
+            롤 흑우력 테스트
+          </div>
 
-        <div class="test1" @click="Dtest">
-          <img class="image1" src="/image/dep/main.png"/>
-          우울증 테스트
-        </div>
-        <v-row v-if="searchfinish===true">
-          <v-col v-for="item in searchresult" :key="item.id">
-            <v-card>
-              <v-card-title>{{ item.title }}</v-card-title>
-              <v-card-text>{{ item.content }}</v-card-text>
-              <v-card-actions>
-                <v-btn color="primary" @click="testStart(item.id)">
-                  테스트 시작하기
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </v-row>
+          <div class="test1" @click="mansideal">
+            <img class="image1" src="/thumbnail/mansidealTN.png" />
+            남자 아이돌 월드컵
+          </div>
+
+          <div class="test1" @click="ramenTest">
+            <img class="image1" src="/thumbnail/ramenTN.png" />
+            라면 월드컵
+          </div>
+
+          <div class="test1" @click="Dtest">
+            <img class="image1" src="/image/dep/main.png" />
+            우울증 테스트
+          </div>
+
+          <div class="test1" @click="manactor">
+            <img class="image1" src="/thumbnail/manActorTN.png" />
+            남자 배우 월드컵
+          </div>
+
+          <div class="test1" @click="cheerleader">
+            <img class="image1" src="/thumbnail/cheerTN.png" />
+            치어리더 월드컵
+          </div>
+
+          <div class="test1" @click="girlActor">
+            <img class="image1" src="/thumbnail/girlActorTN.png" />
+            여자 배우 월드컵
+          </div>
         </div>
       </v-layout>
     </div>
@@ -111,32 +114,17 @@ export default {
     ramenTest() {
       this.$router.push("/ramenStart");
     },
-    Dtest(){
+    Dtest() {
       this.$router.push("/Dtest");
     },
-    searchresult(){
-      if(this.searchkeyword == '') {
-        alert('키워드가 입력되지 않았습니다!');
-      } else {
-        axios({
-          url : "http://localhost:8080/search",
-          method: "POST",
-          data: {
-            searchkeyword: this.searchkeyword, //검색어
-            searchoption: this.searchoptionselected //검색옵션
-          },
-        }).then(res => {  
-          if(res.data == 'no') {
-            alert('검색 결과가 없습니다!');
-          } else {
-            alert('검색 결과 입니다!');
-            this.searchkeyword = '';
-            this.searchfinish = true;
-          }
-        }).catch(err => {
-          console.log(err);
-        })
-      }
+    manactor() {
+      this.$router.push("/manactorStart");
+    },
+    girlActor() {
+      this.$router.push("/girlActorStart");
+    },
+    cheerleader() {
+      this.$router.push("/cheerStart");
     },
   },
   components: {
@@ -167,24 +155,24 @@ export default {
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.test1{
+.test1 {
   display: inline-block;
   margin-top: 20px;
   text-align: center;
   margin-right: 35px;
   font-weight: bold;
 }
-.test1:hover{
+.test1:hover {
   transform: scale(1.1);
 }
 .image1 {
   margin-bottom: 5px;
-  display:block;
+  display: block;
   width: 135px;
   height: 140px;
   border: solid 1px black;
 }
-.box{
+.box {
   height: 500px;
 }
 .v-text-field {

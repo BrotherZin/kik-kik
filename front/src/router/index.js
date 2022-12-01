@@ -32,6 +32,11 @@ import manActorTest from '../views/test/manActor/manActorTest.vue'
 import manActorStart from '../views/test/manActor/manActorStart.vue'
 import manActorEnd from '../views/test/manActor/manActorEnd.vue'
 
+import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
+import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
+import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -71,6 +76,22 @@ const routes = [
     path: '/manActorEnd',
     name: 'manActorEnd',
     component: manActorEnd
+  },
+  {
+
+    path: '/girlActorTest',
+    name: 'girlActorTest',
+    component: girlActorTest
+  },
+  {
+    path: '/girlActorStart',
+    name: 'girlActorStart',
+    component: girlActorStart
+  },
+  {
+    path: '/girlActorEnd',
+    name: 'girlActorEnd',
+    component: girlActorEnd
   },
   {
     path: '/ramenTest',
