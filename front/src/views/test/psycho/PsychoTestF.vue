@@ -33,10 +33,8 @@
             <span>공유하기</span>
             <div class="share-sns-list">
                 <ul class="list">
-                    <li><a href="javascript: shareKakaotalk();" class="btn-share kakao">카카오공유</a></li>
-                    <li><a href="javascript: shareInstagram();" class="btn-share instagram">인스타그램공유</a></li>
-                    <li><a href="javascript: shareFacebook();" class="btn-share facebook">페이스북공유</a></li>
-                    <li><a href="javascript: shareLink();" data-toggle="sns-share" data-service="link" data-url="https://www.banggooso.com/gl/1010/?locale=ko-KR" class="btn-share link-copy">링크복사</a></li>  
+                    <li><a href="javascript: shareKakaotalk();" @click="sendkakao" class="btn-share kakao">카카오공유</a></li>
+                    <li><a href="javascript: shareFacebook();" @click="sendface" class="btn-share facebook">페이스북공유</a></li>
                 </ul>
             </div>
         </div>
@@ -58,6 +56,42 @@ methods: {
   another() {
     this.$router.push("/alltest");
   },
+  sendkakao: function () {
+      if (!Kakao.isInitialized()) {
+        Kakao.init("ebb31377a38a9106e262ae447eba1643");
+      }
+      // Kakao.init('ebb31377a38a9106e262ae447eba1643');
+      Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "사이코패스 테스트 결과",
+          description:
+            "나의 사이코패스 테스트 결과가 궁금하신가요? 테스트 하러 오세요!",
+          imageUrl: "frontpublic\thumbnail\foodtest.png",
+          link: {
+            mobileWebUrl: "http://localhost:8000",
+            webUrl: "http://localhost:8000",
+          },
+        },
+        buttons: [
+          {
+            title: "웹으로 보기",
+            link: {
+              mobileWebUrl: "http://localhost:8000",
+              webUrl: "http://localhost:8000",
+            },
+          },
+        ],
+      });
+    },
+    sendface: function () {
+      window.open(
+        "https://www.facebook.com/",
+        "facebook",
+        "width=500, height=500, resizable=no"
+      );
+    },
+  
 },
 }
 </script>

@@ -19,8 +19,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -47,8 +47,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -75,8 +75,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -103,8 +103,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -131,8 +131,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -159,8 +159,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -187,8 +187,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -215,8 +215,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -243,8 +243,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -268,8 +268,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -293,8 +293,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -318,8 +318,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -343,8 +343,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -368,8 +368,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -396,8 +396,8 @@
                                             <div class="psycho-selectarea">
                                                 <div class="psycho-radio">
                                                   <v-radio-group v-model="answers">
-                                                    <v-radio label="그렇다" :value="2"></v-radio>
-                                                    <v-radio label="아니다" :value="1"></v-radio>
+                                                    <v-radio label="그렇다" :value="1"></v-radio>
+                                                    <v-radio label="아니다" :value="2"></v-radio>
                                                   </v-radio-group>
                                                 </div>
                                             </div>
@@ -454,10 +454,10 @@
         this.tester=this.$route.query.tester
         if(this.answers==1){ 
         this.answer++;
-        this.$router.push('/PsychoTestF?tester='+this.tester+'&answer='+this.answer);
+        this.$router.push('/DtestFtester='+this.tester+'&answer='+this.answer);
       }
         else {
-          this.$router.push('/PsychoTestF?tester='+this.tester+'&answer='+this.answer);
+          this.$router.push('/DtestF?tester='+this.tester+'&answer='+this.answer);
         }
     }
     }

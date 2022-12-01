@@ -21,10 +21,24 @@ import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
 import Dtest from '../views/test/depression/Dtest.vue'
 import Dtest1 from '../views/test/depression/Dtest1.vue'
+import DtestF from '../views/test/depression/DtestF.vue'
+import ss from '../views/test/sangsig/ss.vue'
+import ss1 from '../views/test/sangsig/ss1.vue'
+import ssF from '../views/test/sangsig/ssF.vue'
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
+import cheerTest from '../views/test/cheerleader/cheerTest.vue'
+import cheerStart from '../views/test/cheerleader/cheerStart.vue'
+import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
+import manActorTest from '../views/test/manActor/manActorTest.vue'
+import manActorStart from '../views/test/manActor/manActorStart.vue'
+import manActorEnd from '../views/test/manActor/manActorEnd.vue'
+
+import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
+import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
+import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
 import Movietest from '../views/test/movie/movietest.vue'
 import Movietestgo from '../views/test/movie/movietestgo.vue'
 import Movieresult from '../views/test/movie/movieresult.vue'
@@ -56,6 +70,37 @@ const routes = [
     component: Login
   },
   {
+    path: '/manActorTest',
+    name: 'manActorTest',
+    component: manActorTest
+  },
+  {
+    path: '/manActorStart',
+    name: 'manActorStart',
+    component: manActorStart
+  },
+  {
+    path: '/manActorEnd',
+    name: 'manActorEnd',
+    component: manActorEnd
+  },
+  {
+
+    path: '/girlActorTest',
+    name: 'girlActorTest',
+    component: girlActorTest
+  },
+  {
+    path: '/girlActorStart',
+    name: 'girlActorStart',
+    component: girlActorStart
+  },
+  {
+    path: '/girlActorEnd',
+    name: 'girlActorEnd',
+    component: girlActorEnd
+  },
+  {
     path: '/ramenTest',
     name: 'ramenTest',
     component: ramenTest
@@ -69,6 +114,21 @@ const routes = [
     path: '/ramenEnd',
     name: 'ramenEnd',
     component: ramenEnd
+  },
+  {
+    path: '/cheerTest',
+    name: 'cheerTest',
+    component: cheerTest
+  },
+  {
+    path: '/cheerStart',
+    name: 'cheerStart',
+    component: cheerStart
+  },
+  {
+    path: '/cheerEnd',
+    name: 'cheerEnd',
+    component: cheerEnd
   },
   {
     path: '/GirlsidealtypeStart',
@@ -139,6 +199,26 @@ const routes = [
     path: '/Dtest1',
     name: 'dtest1',
     component: Dtest1
+  },
+  {
+    path: '/DtestF',
+    name: 'dtestf',
+    component: DtestF
+  },
+  {
+    path: '/ss',
+    name: 'ss',
+    component: ss
+  },
+  {
+    path: '/ss1',
+    name: 'ss1',
+    component: ss1
+  },
+  {
+    path: '/ssF',
+    name: 'ssf',
+    component: ssF
   },
   {
     path: '/Lolchang',

@@ -12,31 +12,32 @@
           ></v-text-field>
           {{ keyword }}
           <v-btn type="submit" @click="search">검색</v-btn> -->
+          <v-autocomplete rounded solo></v-autocomplete>
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-        <div class="test1" @click="foodtest">
+        <div id="food" class="test1" @click="foodtest">
           <img class="image1" src="/thumbnail/foodtest.png" />
           쩝쩝박사 테스트
         </div>
         
-        <div class="test1"  @click="psychotest">
+        <div id="psycho" class="test1"  @click="psychotest">
           <img class="image1" src="/image/psycho/main.png"/>
           사이코패스 테스트
         </div>
 
-        <div class="test1" @click="girlsideal">
+        <div id="girl" class="test1" @click="girlsideal">
           <img class="image1" src="/thumbnail/girlsidealTN.png"/>
            여자이상형 월드컵
         </div>
 
-        <div class="test1" @click="Lolchango">
+        <div id="lol1" class="test1" @click="Lolchango">
           <img class="image1" src="/image/lol/kda.png"/>
           롤창 테스트
         </div>
-          <v-btn @click="testStart">테스트 시작하기</v-btn>
+          <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
     </div>
@@ -48,6 +49,12 @@ import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
+  data(){
+    return{
+      searchVal: '',
+      keyword: '',
+    }
+  },
   methods: {
     testStart() {
       this.$router.push("/alltest");
@@ -84,6 +91,9 @@ export default {
 };
 </script>
   <style scoped>
+ @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+ *{font-family: 'Jua', sans-serif;}
+
 .background {
   height: 100%;
   background-color: #e6e6fa;
@@ -104,20 +114,19 @@ export default {
 .text {
   width: 700px;
 }
-.test1{
+.test1 {
   display: inline-block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   margin-right: 35px;
-  font-weight: bold;
-  font-size: 17px;
+  font-size: 21px;
 }
-.test1:hover{
+.test1:hover {
   transform: scale(1.1);
 }
 .image1 {
   margin-bottom: 5px;
-  display:block;
+  display: block;
   width: 135px;
   height: 140px;
   border: solid 1px black;
@@ -126,7 +135,7 @@ export default {
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.v-btn {
+#start {
   margin-top: 30px;
   width: 400px;
   font-size: 35px;

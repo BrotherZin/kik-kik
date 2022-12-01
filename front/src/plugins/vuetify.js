@@ -6,8 +6,6 @@ Vue.use(VueTyperPlugin)
 
 Vue.use(Vuetify);
 
-
-
 export default new Vuetify({
     global: {
         ripples: false
