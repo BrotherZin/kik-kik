@@ -2,13 +2,13 @@
   <v-layout class="background" align-center justify-center>
     <div class="inside">
       <v-layout align-center justify-center>
-        <div>
+        <div class="ideal">
           <div class="bz">여자 아이돌 이상형 월드컵</div>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <img src="/thumbnail/idealTN.png" class="image" />
+          <img src="/thumbnail/girlsidealTN.png" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
@@ -91,6 +91,12 @@ export default {
 @font-face {
   font-family: "bz";
   src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.ideal{
+  margin-top: 120px;
+}
+.v-btn{
+  margin-top:30px;
 }
 </style>
     

@@ -15,6 +15,7 @@ import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
 import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
 import Foodtest from '../views/test/food/Foodtest.vue'
 import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import Foodresult from '../views/test/food/Foodresult.vue'
 import PsychoTest from '../views/test/psycho/PsychoTest.vue'
 import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
 import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
@@ -28,6 +29,16 @@ import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
+import cheerTest from '../views/test/cheerleader/cheerTest.vue'
+import cheerStart from '../views/test/cheerleader/cheerStart.vue'
+import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
+import manActorTest from '../views/test/manActor/manActorTest.vue'
+import manActorStart from '../views/test/manActor/manActorStart.vue'
+import manActorEnd from '../views/test/manActor/manActorEnd.vue'
+
+import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
+import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
+import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
 
 
 Vue.use(VueRouter)
@@ -56,6 +67,37 @@ const routes = [
     component: Login
   },
   {
+    path: '/manActorTest',
+    name: 'manActorTest',
+    component: manActorTest
+  },
+  {
+    path: '/manActorStart',
+    name: 'manActorStart',
+    component: manActorStart
+  },
+  {
+    path: '/manActorEnd',
+    name: 'manActorEnd',
+    component: manActorEnd
+  },
+  {
+
+    path: '/girlActorTest',
+    name: 'girlActorTest',
+    component: girlActorTest
+  },
+  {
+    path: '/girlActorStart',
+    name: 'girlActorStart',
+    component: girlActorStart
+  },
+  {
+    path: '/girlActorEnd',
+    name: 'girlActorEnd',
+    component: girlActorEnd
+  },
+  {
     path: '/ramenTest',
     name: 'ramenTest',
     component: ramenTest
@@ -69,6 +111,21 @@ const routes = [
     path: '/ramenEnd',
     name: 'ramenEnd',
     component: ramenEnd
+  },
+  {
+    path: '/cheerTest',
+    name: 'cheerTest',
+    component: cheerTest
+  },
+  {
+    path: '/cheerStart',
+    name: 'cheerStart',
+    component: cheerStart
+  },
+  {
+    path: '/cheerEnd',
+    name: 'cheerEnd',
+    component: cheerEnd
   },
   {
     path: '/GirlsidealtypeStart',
@@ -109,6 +166,11 @@ const routes = [
     path: '/Foodtestgo',
     name: 'foodtestgo',
     component: Foodtestgo
+  },
+  {
+    path: '/Foodresult',
+    name: 'foodresult',
+    component: Foodresult
   },
   {
     path: '/PsychoTest',
@@ -157,12 +219,12 @@ const routes = [
   },
   {
     path: '/Lolchang',
-    name: 'lolchang',
+    name: 'Lolchang',
     component: Lolchang
   },
   {
     path: '/Lolchanggo2',
-    name: 'lolchanggo',
+    name: 'Lolchanggo',
     component: Lolchanggo2
   },
   {

@@ -399,9 +399,9 @@ methods: {
   background-color: #e6e6fa;
   display: grid;
 }
-.logo{
-  display: flex;
-  margin-right: 100px;
+.logo2{
+  width: 500px;
+  height: 100px;
 }
 .inside {
   background-color: white;

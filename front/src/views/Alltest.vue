@@ -3,36 +3,78 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <v-text-field
-            class="field"
-            v-model="keyword"
-            dense
-            outlined
-            label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult(keyword)"
-          ></v-text-field>
-          {{ keyword }}
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
+          <div>
+            <v-select
+              :items="searchoption"
+              v-model="searchoptionselected"
+              :style="{ width: '140px' }"
+            />
+            <v-text-field
+              class="field"
+              v-model="searchkeyword"
+              dense
+              outlined
+              label="원하는 테스트의 키워드를 검색해보세요!"
+              @keyup.enter="searchresult(keyword)"
+            ></v-text-field>
+            {{ keyword }}
+            <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
 
-          <img class="image1" src="/thumbnail/foodtest.png" @click="foodtest" />
+            <div class="test1" @click="foodtest">
+              <img class="image1" src="/thumbnail/foodtest.png" />
+              쩝쩝박사 테스트
+            </div>
 
-          <img class="image1" src="/image/psycho/main.png" @click="psychotest"/>
+            <div class="test1" @click="psychotest">
+              <img class="image1" src="/image/psycho/main.png" />
+              사이코패스 테스트
+            </div>
 
-          <img class="image1" src="/thumbnail/girlsidealTN.png" @click="girlsideal"/>
+            <div class="test1" @click="girlsideal">
+              <img class="image1" src="/thumbnail/girlsidealTN.png" />
+              여자 아이돌 월드컵
+            </div>
 
-          <img class="image1" src="/image/lol/kda.png" @click="lolchango" />
+            <div class="test1" @click="Lolchango">
+              <img class="image1" src="/image/lol/kda.png" />
+              롤창 테스트
+            </div>
+            <div class="test1" @click="Lolskin">
+              <img class="image1" src="/thumbnail/box.png" />
+              롤 흑우력 테스트
+            </div>
 
-          <img class="image1" src="/thumbnail/box.png" @click="lolskin" />
+            <div class="test1" @click="mansideal">
+              <img class="image1" src="/thumbnail/mansidealTN.png" />
+              남자 아이돌 월드컵
+            </div>
 
-          <img class="image1" src="/thumbnail/mansidealTN.png" @click="mansideal"/>
+            <div class="test1" @click="ramenTest">
+              <img class="image1" src="/thumbnail/ramenTN.png" />
+              라면 월드컵
+            </div>
 
-          <img class="image1" src="/thumbnail/ramenTN.png" @click="ramenTest" />
+            <div class="test1" @click="Dtest">
+              <img class="image1" src="/image/dep/main.png" />
+              우울증 테스트
+            </div>
 
-          <img class="image1" src="/image/dep/main.png" @click="Dtest" />
+            <div class="test1" @click="manactor">
+              <img class="image1" src="/thumbnail/manActorTN.png" />
+              남자 배우 월드컵
+            </div>
 
-          <img class="image1" src="/image/sangsig/main.png" @click="ss" />
-         
+            <div class="test1" @click="cheerleader">
+              <img class="image1" src="/thumbnail/cheerTN.png" />
+              치어리더 월드컵
+            </div>
+
+            <div class="test1" @click="girlActor">
+              <img class="image1" src="/thumbnail/girlActorTN.png" />
+              여자 배우 월드컵
+            </div>
+          </div>
         </div>
       </v-layout>
     </div>
@@ -44,6 +86,15 @@ import HelloWorld from "../components/HelloWorld";
 import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
+  data() {
+    return {
+      searchkeyword: "", //검색어
+      keyword: "",
+      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
+      searchoptionselected: "테스트 제목", //검색옵션 선택
+      searchfinish: false, //검색완료
+    };
+  },
   methods: {
     foodtest() {
       this.$router.push("/foodtest");
@@ -57,20 +108,26 @@ export default {
     mansideal() {
       this.$router.push("/mansidealtypeStart");
     },
-    lolchango() {
-      this.$router.push("/lolchang");
+    Lolchango() {
+      this.$router.push("/Lolchang");
     },
-    lolskin() {
-      this.$router.push("/lolskin");
+    Lolskin() {
+      this.$router.push("/Lolskin");
     },
     ramenTest() {
       this.$router.push("/ramenStart");
     },
-    Dtest(){
+    Dtest() {
       this.$router.push("/Dtest");
-    }, 
-    ss(){
-      this.$router.push("/ss"); 
+    },
+    manactor() {
+      this.$router.push("/manactorStart");
+    },
+    girlActor() {
+      this.$router.push("/girlActorStart");
+    },
+    cheerleader() {
+      this.$router.push("/cheerStart");
     },
   },
   components: {
@@ -88,8 +145,6 @@ export default {
   display: flex;
   margin-right: 100px;
 }
-.logo2 {
-}
 .inside {
   background-color: white;
   width: 1200px;
@@ -99,19 +154,29 @@ export default {
 .text {
   width: 700px;
 }
-.image {
-  display: inline-block;
-  padding: 20px;
-}
 .font {
   margin-top: 50px;
   margin-bottom: 40px;
 }
+.test1 {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 35px;
+  font-weight: bold;
+}
+.test1:hover {
+  transform: scale(1.1);
+}
 .image1 {
+  margin-bottom: 5px;
+  display: block;
   width: 135px;
   height: 140px;
   border: solid 1px black;
-  margin-right: 35px;
+}
+.box {
+  height: 500px;
 }
 .v-text-field {
   padding: 0px;
