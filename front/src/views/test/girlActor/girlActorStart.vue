@@ -3,18 +3,18 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <div class="bz">남자 배우 이상형 월드컵</div>
+          <div class="bz">여자 배우 이상형 월드컵</div>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <img src="/thumbnail/manActorTN.png" class="image" />
+          <img src="/thumbnail/girlActorTN.png" class="image" />
         </div>
       </v-layout>
       <v-layout align-center justify-center>
         <div>
-          <p class="result">남자 배우 이상형 월드컵에 오신것을 환영합니다 !</p>
-          <p class="result">어떤 남자 배우들이 있는지 확인해 보러 가볼까요 ?</p>
+          <p class="result">여자 배우 이상형 월드컵에 오신것을 환영합니다 !</p>
+          <p class="result">어떤 여자 배우들이 있는지 확인해 보러 가볼까요 ?</p>
         </div>
       </v-layout>
 
@@ -24,7 +24,7 @@
 
       <v-layout align-center justify-center>
         <v-btn class="startbtn" @click="start"
-          >▶ 지금 바로 남자 배우 이상형 월드컵 시작하기 ◀</v-btn
+          >▶ 지금 바로 여자 배우 이상형 월드컵 시작하기 ◀</v-btn
         >
       </v-layout>
     </div>
@@ -36,7 +36,7 @@ export default {
   name: "Home",
   methods: {
     start() {
-      this.$router.push("/manactortest");
+      this.$router.push("/girlactortest");
     },
   },
 };

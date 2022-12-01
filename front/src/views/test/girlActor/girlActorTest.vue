@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
-          남자 배우 이상형 월드컵 {{ roundLength }}강
+          여자 배우 이상형 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
@@ -34,7 +34,7 @@
             </v-layout>
           </div>
         </v-flex>
-        <div class="vsimg"><img src="/image/manactor/vs.png" /></div>
+        <div class="vsimg"><img src="/image/girlactor/vs.png" /></div>
       </v-layout>
     </div>
   </v-layout>
@@ -99,7 +99,7 @@ export default {
       console.log("finish", selected);
 
       this.$router.push(
-        "/manactorEnd?name=" + selected.name + "&img=" + selected.img
+        "/girlactorEnd?name=" + selected.name + "&img=" + selected.img
       );
     },
     nextRound() {
@@ -128,98 +128,98 @@ export default {
       roundLength: 1,
       list: [
         {
-          name: "이도현",
-          img: "/image/manactor/1.jpg",
+          name: "배수지",
+          img: "/image/girlactor/1.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이종석",
-          img: "/image/manactor/2.jpg",
+          name: "한소희",
+          img: "/image/girlactor/2.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "남주혁",
-          img: "/image/manactor/3.jpg",
+          name: "신세경",
+          img: "/image/girlactor/3.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "안효섭",
-          img: "/image/manactor/4.jpg",
+          name: "김유정",
+          img: "/image/girlactor/4.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "서강준",
-          img: "/image/manactor/5.jpg",
+          name: "임윤아",
+          img: "/image/girlactor/5.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "송강",
-          img: "/image/manactor/6.jpg",
+          name: "김지수",
+          img: "/image/girlactor/6.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "차은우",
-          img: "/image/manactor/7.jpg",
+          name: "이지은",
+          img: "/image/girlactor/7.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "최현욱",
-          img: "/image/manactor/8.jpg",
+          name: "박은빈",
+          img: "/image/girlactor/8.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "정해인",
-          img: "/image/manactor/9.jpg",
+          name: "전지현",
+          img: "/image/girlactor/9.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "송중기",
-          img: "/image/manactor/10.jpg",
+          name: "김지은",
+          img: "/image/girlactor/10.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "최우식",
-          img: "/image/manactor/11.jpg",
+          name: "이주빈",
+          img: "/image/girlactor/11.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김태형",
-          img: "/image/manactor/12.jpg",
+          name: "설인아",
+          img: "/image/girlactor/12.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "박보검",
-          img: "/image/manactor/13.jpg",
+          name: "이유비",
+          img: "/image/girlactor/13.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "박형식",
-          img: "/image/manactor/14.jpg",
+          name: "고윤정",
+          img: "/image/girlactor/14.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "배인혁",
-          img: "/image/manactor/15.jpg",
+          name: "한지민",
+          img: "/image/girlactor/15.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이수혁",
-          img: "/image/manactor/16.jpg",
+          name: "손예진",
+          img: "/image/girlactor/16.jpg",
           selected: false,
           round: false,
         },

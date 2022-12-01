@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout align-center justify-center>
         <div>
-          <div class="bz">남자 배우 이상형 월드컵 [ 최종 우승 ]</div>
+          <div class="bz">여자 배우 이상형 월드컵 [ 최종 우승 ]</div>
         </div>
       </v-layout>
       <v-layout align-center justify-center>
@@ -39,7 +39,7 @@ export default {
   name: "Home",
   methods: {
     Restart() {
-      this.$router.push("/manactorStart");
+      this.$router.push("/girlactorStart");
     },
     OtherTest() {
       this.$router.push("/alltest");

@@ -4,74 +4,76 @@
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div>
-          <v-select
-            :items="searchoption"
-            v-model="searchoptionselected"
-            :style="{ width: '140px' }"/>
-          <v-text-field
-            class="field"
-            v-model="searchkeyword"
-            dense
-            outlined
-            label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult(keyword)"
-          ></v-text-field>
-          {{ keyword }}
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
+            <v-select
+              :items="searchoption"
+              v-model="searchoptionselected"
+              :style="{ width: '140px' }"
+            />
+            <v-text-field
+              class="field"
+              v-model="searchkeyword"
+              dense
+              outlined
+              label="원하는 테스트의 키워드를 검색해보세요!"
+              @keyup.enter="searchresult(keyword)"
+            ></v-text-field>
+            {{ keyword }}
+            <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
 
-          <div class="test1" @click="foodtest">
-            <img class="image1" src="/thumbnail/foodtest.png" />
-            쩝쩝박사 테스트
-          </div>
+            <div class="test1" @click="foodtest">
+              <img class="image1" src="/thumbnail/foodtest.png" />
+              쩝쩝박사 테스트
+            </div>
 
-          <div class="test1" @click="psychotest">
-            <img class="image1" src="/image/psycho/main.png" />
-            사이코패스 테스트
-          </div>
+            <div class="test1" @click="psychotest">
+              <img class="image1" src="/image/psycho/main.png" />
+              사이코패스 테스트
+            </div>
 
-          <div class="test1" @click="girlsideal">
-            <img class="image1" src="/thumbnail/girlsidealTN.png" />
-            여자 아이돌 월드컵
-          </div>
+            <div class="test1" @click="girlsideal">
+              <img class="image1" src="/thumbnail/girlsidealTN.png" />
+              여자 아이돌 월드컵
+            </div>
 
-          <div class="test1" @click="Lolchango">
-            <img class="image1" src="/image/lol/kda.png" />
-            롤창 테스트
-          </div>
-          <div class="test1" @click="Lolskin">
-            <img class="image1" src="/thumbnail/box.png" />
-            롤 흑우력 테스트
-          </div>
+            <div class="test1" @click="Lolchango">
+              <img class="image1" src="/image/lol/kda.png" />
+              롤창 테스트
+            </div>
+            <div class="test1" @click="Lolskin">
+              <img class="image1" src="/thumbnail/box.png" />
+              롤 흑우력 테스트
+            </div>
 
-          <div class="test1" @click="mansideal">
-            <img class="image1" src="/thumbnail/mansidealTN.png" />
-            남자 아이돌 월드컵
-          </div>
+            <div class="test1" @click="mansideal">
+              <img class="image1" src="/thumbnail/mansidealTN.png" />
+              남자 아이돌 월드컵
+            </div>
 
-          <div class="test1" @click="ramenTest">
-            <img class="image1" src="/thumbnail/ramenTN.png" />
-            라면 월드컵
-          </div>
+            <div class="test1" @click="ramenTest">
+              <img class="image1" src="/thumbnail/ramenTN.png" />
+              라면 월드컵
+            </div>
 
-          <div class="test1" @click="Dtest">
-            <img class="image1" src="/image/dep/main.png" />
-            우울증 테스트
-          </div>
+            <div class="test1" @click="Dtest">
+              <img class="image1" src="/image/dep/main.png" />
+              우울증 테스트
+            </div>
 
-          <div class="test1" @click="manactor">
-            <img class="image1" src="/thumbnail/manActorTN.png" />
-            남자 배우 월드컵
-          </div>
+            <div class="test1" @click="manactor">
+              <img class="image1" src="/thumbnail/manActorTN.png" />
+              남자 배우 월드컵
+            </div>
 
-          <div class="test1" @click="cheerleader">
-            <img class="image1" src="/thumbnail/cheerTN.png" />
-            치어리더 월드컵
-          </div>
+            <div class="test1" @click="cheerleader">
+              <img class="image1" src="/thumbnail/cheerTN.png" />
+              치어리더 월드컵
+            </div>
 
-          <div class="test1" @click="girlActor">
-            <img class="image1" src="/thumbnail/girlActorTN.png" />
-            여자 배우 월드컵
+            <div class="test1" @click="girlActor">
+              <img class="image1" src="/thumbnail/girlActorTN.png" />
+              여자 배우 월드컵
+            </div>
           </div>
         </div>
       </v-layout>
@@ -83,14 +85,14 @@
 import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
-  data(){
-    return{
-      searchkeyword: '',//검색어
-      keyword: '',
-      searchoption: ['테스트 제목', '테스트 설명', '테스트 키워드'],//검색옵션
-      searchoptionselected: '테스트 제목',//검색옵션 선택
-      searchfinish: false,//검색완료
-    }
+  data() {
+    return {
+      searchkeyword: "", //검색어
+      keyword: "",
+      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
+      searchoptionselected: "테스트 제목", //검색옵션 선택
+      searchfinish: false, //검색완료
+    };
   },
   methods: {
     foodtest() {
@@ -179,5 +181,4 @@ export default {
   padding: 0px;
   border: none;
 }
-
 </style>
