@@ -75,9 +75,9 @@
               여자 배우 월드컵
             </div>
           </div>
-        <div class="test1" @click="Dtest">
-          <img class="image1" src="/image/dep/main.png"/>
-          우울증 테스트
+        <div class="test1" @click="sangsig">
+          <img class="image1" src="/image/sangsig/main.png"/>
+          상식 테스트
         </div>
 
         <div class="test1" @click="movietest">
@@ -105,7 +105,7 @@
       
       <script>
 import HelloWorld from "../components/HelloWorld";
-import Ss from "./test/sangsig/ss.vue";
+// import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
   data() {
@@ -150,8 +150,12 @@ export default {
     },
     cheerleader() {
       this.$router.push("/cheerStart");
+    },
     movietest(){
       this.$router.push("/movietest");
+    },
+    sangsig(){
+      this.$router.push("/ss");
     },
     searchresult(){
       if(this.searchkeyword == '') {
