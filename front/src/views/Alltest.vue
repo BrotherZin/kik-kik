@@ -79,6 +79,16 @@
               <img class="image1" src="/thumbnail/gameTN.jpg" />
               추억의 게임 월드컵
             </div>
+
+            <div class="test1" @click="ghost">
+              <img class="image1" src="/thumbnail/ghostTN.png" />
+              가장 무서운 귀신 월드컵
+            </div>
+
+            <div class="test1" @click="cat">
+              <img class="image1" src="/thumbnail/catTN.png" />
+              세계 최강 냥냥 월드컵
+            </div>
           </div>
         </div>
       </v-layout>
@@ -135,6 +145,12 @@ export default {
     },
     gameWorldcup() {
       this.$router.push("/gameStart");
+    },
+    ghost() {
+      this.$router.push("/ghostStart");
+    },
+    cat() {
+      this.$router.push("/catStart");
     },
   },
   components: {

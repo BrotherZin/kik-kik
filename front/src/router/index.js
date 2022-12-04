@@ -41,7 +41,12 @@ import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
 import gameEnd from '../views/test/gameWorldcup/gameEnd.vue'
 import gameStart from '../views/test/gameWorldcup/gameStart.vue'
 import gameTest from '../views/test/gameWorldcup/gameTest.vue'
-
+import ghostEnd from '../views/test/ghost/ghostEnd.vue'
+import ghostStart from '../views/test/ghost/ghostStart.vue'
+import ghostTest from '../views/test/ghost/ghostTest.vue'
+import catEnd from '../views/test/cat/catEnd.vue'
+import catStart from '../views/test/cat/catStart.vue'
+import catTest from '../views/test/cat/catTest.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -66,7 +71,38 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
+  }, {
+    path: '/catTest',
+    name: 'catTest',
+    component: catTest
   },
+  {
+    path: '/catStart',
+    name: 'catStart',
+    component: catStart
+  },
+  {
+    path: '/catEnd',
+    name: 'catEnd',
+    component: catEnd
+  },
+
+  {
+    path: '/ghostTest',
+    name: 'ghostTest',
+    component: ghostTest
+  },
+  {
+    path: '/ghostStart',
+    name: 'ghostStart',
+    component: ghostStart
+  },
+  {
+    path: '/ghostEnd',
+    name: 'ghostEnd',
+    component: ghostEnd
+  },
+
   {
     path: '/manActorTest',
     name: 'manActorTest',

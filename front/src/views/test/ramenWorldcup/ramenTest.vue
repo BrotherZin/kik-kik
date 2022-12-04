@@ -306,7 +306,7 @@ export default {
   left: 60px;
   /* text-align: center;
   text-justify: center; */
-  color: rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
   z-index: 11;
 }
 </style>

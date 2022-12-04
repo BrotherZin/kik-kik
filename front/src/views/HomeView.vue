@@ -3,7 +3,7 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <!-- <v-text-field
+          <v-text-field
             v-model="keyword"
             dense
             outlined
@@ -11,32 +11,46 @@
             @keyup.enter="searchresult(keyword)"
           ></v-text-field>
           {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn> -->
-          <v-autocomplete rounded solo></v-autocomplete>
+          <v-btn type="submit" @click="search">검색</v-btn>
+          <!-- <v-autocomplete rounded solo></v-autocomplete> -->
+          <!-- <v-col>
+            <v-text-field
+              v-model="searchkeyword"
+              dense
+              outlined
+              label="원하는 테스트의 키워드를 검색해보세요!"
+              full-width
+              :style="{ marginTop: '10px' }"
+            />
+            <v-btn @click="searchstart" :style="{ marginTop: '10px' }"
+              >검색</v-btn
+            > -->
+          <!-- </v-col> -->
+
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
           <!--<v-btn type="submit" @click="search">검색</v-btn>
         버튼 추가할거면 넣기-->
-        <div id="food" class="test1" @click="foodtest">
-          <img class="image1" src="/thumbnail/foodtest.png" />
-          쩝쩝박사 테스트
-        </div>
-        
-        <div id="psycho" class="test1"  @click="psychotest">
-          <img class="image1" src="/image/psycho/main.png"/>
-          사이코패스 테스트
-        </div>
+          <div id="food" class="test1" @click="foodtest">
+            <img class="image1" src="/thumbnail/foodtest.png" />
+            쩝쩝박사 테스트
+          </div>
 
-        <div id="girl" class="test1" @click="girlsideal">
-          <img class="image1" src="/thumbnail/girlsidealTN.png"/>
-           여자이상형 월드컵
-        </div>
+          <div id="psycho" class="test1" @click="psychotest">
+            <img class="image1" src="/image/psycho/main.png" />
+            사이코패스 테스트
+          </div>
 
-        <div id="lol1" class="test1" @click="Lolchango">
-          <img class="image1" src="/image/lol/kda.png"/>
-          롤창 테스트
-        </div>
+          <div id="girl" class="test1" @click="girlsideal">
+            <img class="image1" src="/thumbnail/girlsidealTN.png" />
+            여자이상형 월드컵
+          </div>
+
+          <div id="lol1" class="test1" @click="Lolchango">
+            <img class="image1" src="/image/lol/kda.png" />
+            롤창 테스트
+          </div>
           <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
@@ -49,13 +63,18 @@ import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
-  data(){
-    return{
-      searchVal: '',
-      keyword: '',
-    }
+  data() {
+    return {
+      searchVal: "",
+      keyword: "",
+    };
   },
   methods: {
+    search(testname, id) {
+      // 검색된 게시글 클릭시 해당 게시글로 이동
+      window.location.href = "http://localhost:8080/" + id;
+    },
+
     testStart() {
       this.$router.push("/alltest");
     },
@@ -91,8 +110,10 @@ export default {
 };
 </script>
   <style scoped>
- @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
- *{font-family: 'Jua', sans-serif;}
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  font-family: "Jua", sans-serif;
+}
 
 .background {
   height: 100%;
