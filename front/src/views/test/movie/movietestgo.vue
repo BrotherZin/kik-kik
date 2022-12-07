@@ -283,18 +283,15 @@
       // },
       nextpage() {
         var movie = Number(this.movie);
-        console.log(movie);
+        console.log(movie,this.movie,this.number);
+        if (this.movie == "") {
+            return window.alert("영화를 선택해주세요!!๑•‿•๑")
+        }
         if (this.movie == 1) {
-          this.answer++;
-          this.number++;
+            this.answer++;
         }
-        // if (this.movie == ""){
-        //   window.alert("음식을 선택해주세요!!๑•‿•๑")
-        // }
-        else{
           this.number++;
-        }
-      },
+        },
       previous(){ //이전 버튼
         this.number--;
         //this.movie = "";
