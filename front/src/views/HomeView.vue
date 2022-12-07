@@ -3,14 +3,13 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <input type="text" id="searchInput">
+          <!-- <input type="text" id="searchInput">
           <button id="searchBtn">search</button>
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
-          <app-search></app-search>
           <ul id="list">
-            <!-- <li class="test1" @click="foodtest">
+            <li class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
           쩝쩝박사 테스트
             </li>
@@ -28,8 +27,8 @@
             <li class="test1" @click="Lolchango">
               <img class="image1" src="/image/lol/kda.png"/>
           롤창 테스트
-            </li> -->
-          </ul>
+            </li>
+          </ul> -->
           <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
