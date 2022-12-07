@@ -1,23 +1,26 @@
-var { Sequelize } = require("sequelize")
-
-global.User = sequelize.define("User", {
+var { Sequelize, Model, DataTypes } = require('sequelize');
+const User = sequelize.define('User', {
+    // Model attributes are defined here
     id: {
-        type: Sequelize.STRING,
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true
     },
     name: {
-        type: Sequelize.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
-    password: {
-        type: Sequelize.STRING
+    img: {
+        type: DataTypes.STRING
+        // allowNull defaults to true
+    },
+    finish: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     }
-
-})
-
-Board.belongsTo(User, {
-    foreignKey: "userId",
-    as: "writeUser"
-})
+}, {
+    // Other model options go here
+});
 
 sequelize.sync({
     alter: true
