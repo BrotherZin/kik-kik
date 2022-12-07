@@ -4,23 +4,6 @@
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div>
-            <v-select
-              :items="searchoption"
-              v-model="searchoptionselected"
-              :style="{ width: '140px' }"
-            />
-            <v-text-field
-              class="field"
-              v-model="searchkeyword"
-              dense
-              outlined
-              label="원하는 테스트의 키워드를 검색해보세요!"
-              @keyup.enter="searchresult(keyword)"
-            ></v-text-field>
-            {{ keyword }}
-            <!--<v-btn type="submit" @click="search">검색</v-btn>
-          버튼 추가할거면 넣기-->
-
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
               쩝쩝박사 테스트
@@ -33,7 +16,7 @@
 
             <div class="test1" @click="girlsideal">
               <img class="image1" src="/thumbnail/girlsidealTN.png" />
-              여자 아이돌 월드컵
+              여돌 월드컵
             </div>
 
             <div class="test1" @click="Lolchango">
@@ -47,7 +30,7 @@
 
             <div class="test1" @click="mansideal">
               <img class="image1" src="/thumbnail/mansidealTN.png" />
-              남자 아이돌 월드컵
+              남돌 월드컵
             </div>
 
             <div class="test1" @click="ramenTest">

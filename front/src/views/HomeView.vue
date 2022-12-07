@@ -3,30 +3,6 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <v-text-field
-            v-model="keyword"
-            dense
-            outlined
-            label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult(keyword)"
-          ></v-text-field>
-          {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn>
-          <!-- <v-autocomplete rounded solo></v-autocomplete> -->
-          <!-- <v-col>
-            <v-text-field
-              v-model="searchkeyword"
-              dense
-              outlined
-              label="원하는 테스트의 키워드를 검색해보세요!"
-              full-width
-              :style="{ marginTop: '10px' }"
-            />
-            <v-btn @click="searchstart" :style="{ marginTop: '10px' }"
-              >검색</v-btn
-            > -->
-          <!-- </v-col> -->
-
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
@@ -70,11 +46,6 @@ export default {
     };
   },
   methods: {
-    search(testname, id) {
-      // 검색된 게시글 클릭시 해당 게시글로 이동
-      window.location.href = "http://localhost:8080/" + id;
-    },
-
     testStart() {
       this.$router.push("/alltest");
     },
