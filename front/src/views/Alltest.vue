@@ -4,11 +4,6 @@
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div>
-            <v-select
-              :items="searchoption"
-              v-model="searchoptionselected"
-              :style="{ width: '140px' }"
-            />
             <!-- <v-text-field
               class="field"
               v-model="searchkeyword"
@@ -84,19 +79,6 @@
           영화 테스트
         </div>
           </div>
-        <v-row v-if="searchfinish===true">
-          <v-col v-for="item in searchresult" :key="item.id">
-            <v-card>
-              <v-card-title>{{ item.title }}</v-card-title>
-              <v-card-text>{{ item.content }}</v-card-text>
-              <v-card-actions>
-                <v-btn color="primary" @click="testStart(item.id)">
-                  테스트 시작하기
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-        </v-row>
         </div>
       </v-layout>
     </div>
@@ -109,13 +91,6 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
   data() {
-    return {
-      searchkeyword: "", //검색어
-      keyword: "",
-      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
-      searchoptionselected: "테스트 제목", //검색옵션 선택
-      searchfinish: false, //검색완료
-    };
   },
   methods: {
     foodtest() {

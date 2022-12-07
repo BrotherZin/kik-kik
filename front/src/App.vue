@@ -12,7 +12,7 @@ import AppHeader from "@/components/Header"
 export default {
   name: 'App',
   components:{
-    AppHeader
+    AppHeader,
   },
 
   data: () => ({

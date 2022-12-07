@@ -3,42 +3,33 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          <!-- <v-text-field
-            v-model="keyword"
-            dense
-            outlined
-            label="원하는 테스트의 키워드를 검색해보세요!"
-            @keyup.enter="searchresult(keyword)"
-          ></v-text-field>
-          {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn> -->
-          <!-- <v-autocomplete rounded solo></v-autocomplete> -->
-          <input type="text" id="search">
+          <input type="text" id="searchInput">
           <button id="searchBtn">search</button>
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
-        버튼 추가할거면 넣기-->
-        <div id="ttestt" class="test1" @click="foodtest">
-          <img class="image1" src="/thumbnail/foodtest.png" />
+          <app-search></app-search>
+          <ul id="list">
+            <!-- <li class="test1" @click="foodtest">
+              <img class="image1" src="/thumbnail/foodtest.png" />
           쩝쩝박사 테스트
-        </div>
-        
-        <div id="ttestt" class="test1"  @click="psychotest">
-          <img class="image1" src="/image/psycho/main.png"/>
-          사이코패스 테스트
-        </div>
+            </li>
 
-        <div id="ttestt" class="test1" @click="girlsideal">
-          <img class="image1" src="/thumbnail/girlsidealTN.png"/>
-           여자이상형 월드컵
-        </div>
+            <li class="test1" @click="psychotest">
+              <img class="image1" src="/image/psycho/main.png"/>
+          사이코 테스트
+            </li>
 
-        <div id="ttestt" class="test1" @click="Lolchango">
-          <img class="image1" src="/image/lol/kda.png"/>
+            <li class="test1" @click="girlsideal">
+              <img class="image1" src="/thumbnail/girlsidealTN.png"/>
+           아이돌 월드컵
+            </li>
+
+            <li class="test1" @click="Lolchango">
+              <img class="image1" src="/image/lol/kda.png"/>
           롤창 테스트
-        </div>
+            </li> -->
+          </ul>
           <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
       </v-layout>
@@ -79,19 +70,13 @@ export default {
     Lolchango() {
       this.$router.push("/Lolchang");
     },
-    //   search(){
-    //     this.$router.push("");
-    //   }, //검색버튼 클릭 시
-    //   searchresult(keyword){
-    //     this.$router.push("/alltest");
-    //   }, //엔터 누를 시
-    // // 검색 버튼 클릭 or 엔터 시 DB에서 검색 결과 받아와야함
     components: {
       HelloWorld,
     },
   },
 };
 </script>
+
   <style scoped>
  @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
  *{font-family: 'Jua', sans-serif;}
@@ -115,6 +100,9 @@ export default {
 }
 .text {
   width: 700px;
+}
+ul{
+  list-style-type: none;
 }
 .test1 {
   display: inline-block;
