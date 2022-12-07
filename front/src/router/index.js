@@ -4,6 +4,16 @@ import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Join from '../views/Join.vue'
 import Login from '../views/Login.vue'
+
+//민하
+import Foodtest from '../views/test/food/Foodtest.vue'
+import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import Foodresult from '../views/test/food/Foodresult.vue'
+import Movietest from '../views/test/movie/movietest.vue'
+import Movietestgo from '../views/test/movie/movietestgo.vue'
+import Movieresult from '../views/test/movie/movieresult.vue'
+
+//형진
 import GirlsidealtypeStart from '../views/test/Girlsidealtype/GirlsidealtypeStart.vue'
 import GirlsidealtypeEnd from '../views/test/Girlsidealtype/GirlsidealtypeEnd.vue'
 import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
@@ -13,22 +23,6 @@ import Mansidealtest from '../views/test/Mansidealtype/Mansidealtest.vue'
 import ramenTest from '../views/test/ramenWorldcup/ramenTest.vue'
 import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
 import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
-import Foodtest from '../views/test/food/Foodtest.vue'
-import Foodtestgo from '../views/test/food/Foodtestgo.vue'
-import Foodresult from '../views/test/food/Foodresult.vue'
-import PsychoTest from '../views/test/psycho/PsychoTest.vue'
-import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
-import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
-import Dtest from '../views/test/depression/Dtest.vue'
-import Dtest1 from '../views/test/depression/Dtest1.vue'
-import DtestF from '../views/test/depression/DtestF.vue'
-import ss from '../views/test/sangsig/ss.vue'
-import ss1 from '../views/test/sangsig/ss1.vue'
-import ssF from '../views/test/sangsig/ssF.vue'
-import Lolchang from '../views/test/lol/Lolchang.vue'
-import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
-import Lolskin from '../views/test/lolskin/Lolskin.vue'
-import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
 import cheerTest from '../views/test/cheerleader/cheerTest.vue'
 import cheerStart from '../views/test/cheerleader/cheerStart.vue'
 import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
@@ -47,16 +41,32 @@ import ghostTest from '../views/test/ghost/ghostTest.vue'
 import catEnd from '../views/test/cat/catEnd.vue'
 import catStart from '../views/test/cat/catStart.vue'
 import catTest from '../views/test/cat/catTest.vue'
+
+//지원
+import PsychoTest from '../views/test/psycho/PsychoTest.vue'
+import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
+import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
+import Dtest from '../views/test/depression/Dtest.vue'
+import Dtest1 from '../views/test/depression/Dtest1.vue'
+import DtestF from '../views/test/depression/DtestF.vue'
+import ss from '../views/test/sangsig/ss.vue'
+import ss1 from '../views/test/sangsig/ss1.vue'
+import ssF from '../views/test/sangsig/ssF.vue'
+
+//진아
+import Lolchang from '../views/test/lol/Lolchang.vue'
+import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import Lolskin from '../views/test/lolskin/Lolskin.vue'
+import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  //ALL
   {
     path: '/',
     name: 'home',
     component: HomeView
   },
-
-
   {
     path: '/Alltest',
     name: 'testStart',
@@ -71,7 +81,111 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
-  }, {
+  }, 
+  
+  //민하
+  {
+    path: '/Foodtest',
+    name: 'foodtest',
+    component: Foodtest
+  },
+  {
+    path: '/Foodtestgo',
+    name: 'foodtestgo',
+    component: Foodtestgo
+  },
+  {
+    path: '/Foodresult',
+    name: 'foodresult',
+    component: Foodresult
+  },
+  {
+    path: '/Movietest',
+    name: 'movietest',
+    component: Movietest
+  },
+  {
+    path: '/Movietestgo',
+    name: 'movietestgo',
+    component: Movietestgo
+  },
+  {
+    path: '/Movieresult',
+    name: 'Movieresult',
+    component: Movieresult
+  },
+
+  //진아
+  {
+    path: '/Lolchang',
+    name: 'Lolchang',
+    component: Lolchang
+  },
+  {
+    path: '/Lolchanggo2',
+    name: 'Lolchanggo',
+    component: Lolchanggo2
+  },
+  {
+    path: '/Lolskin',
+    name: 'Lolskin',
+    component: Lolskin
+  },
+  {
+    path: '/Lolskin2',
+    name: 'Lolskin2',
+    component: Lolskin2
+  },
+
+  //지원
+  {
+    path: '/PsychoTest',
+    name: 'psychotest',
+    component: PsychoTest
+  },
+  {
+    path: '/PsychoTest1',
+    name: 'psychotest1',
+    component: PsychoTest1
+  },
+  {
+    path: '/PsychoTestF',
+    name: 'psychotestf',
+    component: PsychoTestF
+  },
+  {
+    path: '/Dtest',
+    name: 'dtest',
+    component: Dtest
+  },
+  {
+    path: '/Dtest1',
+    name: 'dtest1',
+    component: Dtest1
+  },
+  {
+    path: '/DtestF',
+    name: 'dtestf',
+    component: DtestF
+  },
+  {
+    path: '/ss',
+    name: 'ss',
+    component: ss
+  },
+  {
+    path: '/ss1',
+    name: 'ss1',
+    component: ss1
+  },
+  {
+    path: '/ssF',
+    name: 'ssf',
+    component: ssF
+  },
+
+  //형진
+  {
     path: '/catTest',
     name: 'catTest',
     component: catTest
@@ -86,7 +200,6 @@ const routes = [
     name: 'catEnd',
     component: catEnd
   },
-
   {
     path: '/ghostTest',
     name: 'ghostTest',
@@ -102,7 +215,6 @@ const routes = [
     name: 'ghostEnd',
     component: ghostEnd
   },
-
   {
     path: '/manActorTest',
     name: 'manActorTest',
@@ -209,86 +321,7 @@ const routes = [
     name: 'Mansidealtest',
     component: Mansidealtest
   },
-  {
-    path: '/Foodtest',
-    name: 'foodtest',
-    component: Foodtest
-  },
-  {
-    path: '/Foodtestgo',
-    name: 'foodtestgo',
-    component: Foodtestgo
-  },
-  {
-    path: '/Foodresult',
-    name: 'foodresult',
-    component: Foodresult
-  },
-  {
-    path: '/PsychoTest',
-    name: 'psychotest',
-    component: PsychoTest
-  },
-  {
-    path: '/PsychoTest1',
-    name: 'psychotest1',
-    component: PsychoTest1
-  },
-  {
-    path: '/PsychoTestF',
-    name: 'psychotestf',
-    component: PsychoTestF
-  },
-  {
-    path: '/Dtest',
-    name: 'dtest',
-    component: Dtest
-  },
-  {
-    path: '/Dtest1',
-    name: 'dtest1',
-    component: Dtest1
-  },
-  {
-    path: '/DtestF',
-    name: 'dtestf',
-    component: DtestF
-  },
-  {
-    path: '/ss',
-    name: 'ss',
-    component: ss
-  },
-  {
-    path: '/ss1',
-    name: 'ss1',
-    component: ss1
-  },
-  {
-    path: '/ssF',
-    name: 'ssf',
-    component: ssF
-  },
-  {
-    path: '/Lolchang',
-    name: 'Lolchang',
-    component: Lolchang
-  },
-  {
-    path: '/Lolchanggo2',
-    name: 'Lolchanggo',
-    component: Lolchanggo2
-  },
-  {
-    path: '/Lolskin',
-    name: 'Lolskin',
-    component: Lolskin
-  },
-  {
-    path: '/Lolskin2',
-    name: 'Lolskin2',
-    component: Lolskin2
-  },
+  
 ]
 
 const router = new VueRouter({

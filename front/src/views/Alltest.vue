@@ -60,17 +60,22 @@
 
             <div class="test1" @click="gameWorldcup">
               <img class="image1" src="/thumbnail/gameTN.jpg" />
-              추억의 게임 월드컵
+               추억게임 월드컵
             </div>
 
             <div class="test1" @click="ghost">
               <img class="image1" src="/thumbnail/ghostTN.png" />
-              가장 무서운 귀신 월드컵
+              호러 귀신 월드컵
             </div>
 
             <div class="test1" @click="cat">
               <img class="image1" src="/thumbnail/catTN.png" />
-              세계 최강 냥냥 월드컵
+              냥냥 월드컵
+            </div>
+
+            <div class="test1" @click="movietest">
+              <img class="image1" src="/thumbnail/movie.jpg"/>
+              영화 테스트
             </div>
           </div>
         </div>
@@ -85,11 +90,6 @@ export default {
   name: "Home",
   data() {
     return {
-      searchkeyword: "", //검색어
-      keyword: "",
-      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
-      searchoptionselected: "테스트 제목", //검색옵션 선택
-      searchfinish: false, //검색완료
     };
   },
   methods: {
@@ -134,6 +134,9 @@ export default {
     },
     cat() {
       this.$router.push("/catStart");
+    },
+    movietest(){
+      this.$router.push("/movietest");
     },
   },
   components: {
