@@ -8,8 +8,7 @@
           </v-layout>
           <div class="lol-text">
             <div class="lolmain"><span>너의 롤창인생 실력은?!</span></div>
-          <span><v-btn class="gu" @click="testStart">(구) 챔피언 보러가기!</v-btn></span>
-          <span><v-btn class="sin" @click="testStart2">(신) 챔피언 보러가기!</v-btn></span>
+          <span><v-btn class="gu" @click="testStart">챔피언 보러가기!</v-btn></span>
         </div>
     </div>
     </v-layout>
@@ -72,7 +71,6 @@
     font-weight: bold;
   }
   .gu{
-    margin-right:30px;
   }
   
   </style>

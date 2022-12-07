@@ -20,7 +20,6 @@
             {{ keyword }} -->
             <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
-
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
               쩝쩝박사 테스트
@@ -74,8 +73,8 @@
               <img class="image1" src="/thumbnail/girlActorTN.png" />
               여자 배우 월드컵
             </div>
-          </div>
-        <div class="test1" @click="sangsig">
+
+            <div class="test1" @click="sangsig">
           <img class="image1" src="/image/sangsig/main.png"/>
           상식 테스트
         </div>
@@ -84,6 +83,7 @@
           <img class="image1" src="/thumbnail/movie.jpg"/>
           영화 테스트
         </div>
+          </div>
         <v-row v-if="searchfinish===true">
           <v-col v-for="item in searchresult" :key="item.id">
             <v-card>
