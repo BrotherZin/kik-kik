@@ -1,93 +1,119 @@
 <template>
-  <div class="search">
-    <input type="text" id="searchInput">
-      <button id="searchBtn">{{search}}</button>
-          <ul id="list">
-            <img :src="tests.image">
-            {{tests}}
-          </ul>
-  </div>
-  </template>
+  <v-layout class="background" align-center justify-center>
+    <div>
+      <v-layout class="inside" fill-height align-center justify-center>
+        <div class="text" style="text-align: center">
+          <v-text-field
+            v-model="keyword"
+            dense
+            outlined
+            label="원하는 테스트의 키워드를 검색해보세요!"
+            @keyup.enter="searchresult(keyword)"
+          ></v-text-field>
+          {{ keyword }}
+          <v-btn type="submit" @click="search">검색</v-btn>
+          <!-- <v-autocomplete rounded solo></v-autocomplete> -->
+          <!-- <v-col>
+            <v-text-field
+              v-model="searchkeyword"
+              dense
+              outlined
+              label="원하는 테스트의 키워드를 검색해보세요!"
+              full-width
+              :style="{ marginTop: '10px' }"
+            />
+            <v-btn @click="searchstart" :style="{ marginTop: '10px' }"
+              >검색</v-btn
+            > -->
+          <!-- </v-col> -->
 
-<script>
+          <div class="font" style="text-align: left">
+            └요즘 유행하는 테스트!
+          </div>
+          <!--<v-btn type="submit" @click="search">검색</v-btn>
+        버튼 추가할거면 넣기-->
+          <div id="food" class="test1" @click="foodtest">
+            <img class="image1" src="/thumbnail/foodtest.png" />
+            쩝쩝박사 테스트
+          </div>
+
+          <div id="psycho" class="test1" @click="psychotest">
+            <img class="image1" src="/image/psycho/main.png" />
+            사이코패스 테스트
+          </div>
+
+          <div id="girl" class="test1" @click="girlsideal">
+            <img class="image1" src="/thumbnail/girlsidealTN.png" />
+            여자이상형 월드컵
+          </div>
+
+          <div id="lol1" class="test1" @click="Lolchango">
+            <img class="image1" src="/image/lol/kda.png" />
+            롤창 테스트
+          </div>
+          <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
+        </div>
+      </v-layout>
+    </div>
+  </v-layout>
+</template>
+  
+  <script>
+import HelloWorld from "../components/HelloWorld";
+
 export default {
-  data:()=>{
-  return{
-    id:"",
-    name:"",
-    tests:[
-  {
-      id: 1,
-      name: '쩝쩝박사 테스트',
-      image: '/thumbnail/foodtest.png'
+  name: "Home",
+  data() {
+    return {
+      searchVal: "",
+      keyword: "",
+    };
   },
-  {
-      id: 2,
-      name: '사이코패스 테스트',
-      image: '/image/psycho/main.png'
+  methods: {
+    search(testname, id) {
+      // 검색된 게시글 클릭시 해당 게시글로 이동
+      window.location.href = "http://localhost:8080/" + id;
+    },
+
+    testStart() {
+      this.$router.push("/alltest");
+    },
+    foodtest() {
+      this.$router.push("/foodtest");
+    },
+    psychotest() {
+      this.$router.push("/psychotest");
+    },
+    girlsideal() {
+      this.$router.push("/girlsidealtypeStart");
+    },
+    mansideal() {
+      this.$router.push("/mansidealtypeStart");
+    },
+    ramenTest() {
+      this.$router.push("/ramenStart");
+    },
+    Lolchango() {
+      this.$router.push("/Lolchang");
+    },
+    //   search(){
+    //     this.$router.push("");
+    //   }, //검색버튼 클릭 시
+    //   searchresult(keyword){
+    //     this.$router.push("/alltest");
+    //   }, //엔터 누를 시
+    // // 검색 버튼 클릭 or 엔터 시 DB에서 검색 결과 받아와야함
+    components: {
+      HelloWorld,
+    },
   },
-  {
-      id: 3,
-      name: '여자 아이돌 테스트',
-      image: '/thumbnail/girlsidealTN.png'
-  },
-  {
-      id: 4,
-      name: '롤창 테스트',
-      image: '/image/lol/kda.png'
-  }
-          ]
-      };
-  },
-  methods:{ 
-      showList(val){
-          list.innerHTML = '';
-          const res = this.tests.forEach(test => {
-              if(test.name.toLowerCase().includes(val.toLowerCase())){
-                  list.innerHTML += `
-                  <li class="test1" @click="foodtest">
-                      <img class="image1" src="${test.url}" />
-                      ${test.name}
-                  </li>
-                  <li class="test1" @click="psychotest">
-                      <img class="image1" src="${test.url}" />
-                      ${test.name}
-                  </li>
-                  <li class="test1" @click="girlsideal">
-                      <img class="image1" src="${test.url}" />
-                      ${test.name}
-                  </li>
-                  <li class="test1" @click="Lolchango">
-                      <img class="image1" src="${test.url}" />
-                      ${test.name}
-                  </li>
-                  `;
-              }
-          });
-      },
-      search(){
-          const input = document.getElementById('searchInput');
-          const btn = document.getElementById('searchBtn');
-          btn.addEventListener('click', () => {
-              showList(input.value);
-          });
-          input.addEventListener('keyup', (e) => {
-              if(e.keyCode === 13){
-                  showList(input.value);
-              }
-          });
-      }
-  }
-}
+};
 </script>
-
-<style>
-
-</style>
-
   <style scoped>
- @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
- *{font-family: 'Jua', sans-serif;}
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  font-family: "Jua", sans-serif;
+}
 
 .background {
   height: 100%;
@@ -108,9 +134,6 @@ export default {
 }
 .text {
   width: 700px;
-}
-ul{
-  list-style-type: none;
 }
 .test1 {
   display: inline-block;

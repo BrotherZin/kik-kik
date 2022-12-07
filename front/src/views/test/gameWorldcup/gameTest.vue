@@ -34,7 +34,7 @@
             </v-layout>
           </div>
         </v-flex>
-        <div class="vsimg"><img src="/image/gameWolrdcup/vs.png" /></div>
+        <div class="vsimg"><img src="/image/gameworldcup/vs.png" /></div>
       </v-layout>
     </div>
   </v-layout>
@@ -99,7 +99,7 @@ export default {
       console.log("finish", selected);
 
       this.$router.push(
-        "/girlActorEnd?name=" + selected.name + "&img=" + selected.img
+        "/gameEnd?name=" + selected.name + "&img=" + selected.img
       );
     },
     nextRound() {
@@ -128,98 +128,98 @@ export default {
       roundLength: 1,
       list: [
         {
-          name: "배수지",
-          img: "/image/girlactor/1.jpg",
+          name: "메이플스토리",
+          img: "/image/gameWorldcup/1.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한소희",
-          img: "/image/girlactor/2.jpg",
+          name: "스타크래프트",
+          img: "/image/gameWorldcup/2.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "신세경",
-          img: "/image/girlactor/3.jpg",
+          name: "피파온라인2",
+          img: "/image/gameWorldcup/3.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김유정",
-          img: "/image/girlactor/4.jpg",
+          name: "서든어택",
+          img: "/image/gameWorldcup/4.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "임윤아",
-          img: "/image/girlactor/5.jpg",
+          name: "크레이지아케이드",
+          img: "/image/gameWorldcup/5.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지수",
-          img: "/image/girlactor/6.jpg",
+          name: "카트라이더",
+          img: "/image/gameWorldcup/6.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이지은",
-          img: "/image/girlactor/7.jpg",
+          name: "던전앤파이터",
+          img: "/image/gameWorldcup/7.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "박은빈",
-          img: "/image/girlactor/8.jpg",
+          name: "바람의나라",
+          img: "/image/gameWorldcup/8.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "전지현",
-          img: "/image/girlactor/9.jpg",
+          name: "마법학교 아스티넬",
+          img: "/image/gameWorldcup/9.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지은",
-          img: "/image/girlactor/10.jpg",
+          name: "그랜드체이스",
+          img: "/image/gameWorldcup/10.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이주빈",
-          img: "/image/girlactor/11.jpg",
+          name: "쥬니버 동물농장",
+          img: "/image/gameWorldcup/11.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "설인아",
-          img: "/image/girlactor/12.jpg",
+          name: "디아블로2",
+          img: "/image/gameWorldcup/12.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이유비",
-          img: "/image/girlactor/13.jpg",
+          name: "테일즈런너",
+          img: "/image/gameWorldcup/13.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "고윤정",
-          img: "/image/girlactor/14.jpg",
+          name: "레이시티",
+          img: "/image/gameWorldcup/14.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한지민",
-          img: "/image/girlactor/15.jpg",
+          name: "월드오브워크래프트(와우)",
+          img: "/image/gameWorldcup/15.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "손예진",
-          img: "/image/girlactor/16.jpg",
+          name: "거상",
+          img: "/image/gameWorldcup/16.jpg",
           selected: false,
           round: false,
         },

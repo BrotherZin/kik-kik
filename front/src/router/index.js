@@ -4,37 +4,6 @@ import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Join from '../views/Join.vue'
 import Login from '../views/Login.vue'
-//민하
-import Movietest from '../views/test/movie/movietest.vue'
-import Movietestgo from '../views/test/movie/movietestgo.vue'
-import Movieresult from '../views/test/movie/movieresult.vue'
-import Foodtest from '../views/test/food/Foodtest.vue'
-import Foodtestgo from '../views/test/food/Foodtestgo.vue'
-import Foodresult from '../views/test/food/Foodresult.vue'
-//지원
-import PsychoTest from '../views/test/psycho/PsychoTest.vue'
-import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
-import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
-import Dtest from '../views/test/depression/Dtest.vue'
-import Dtest1 from '../views/test/depression/Dtest1.vue'
-import DtestF from '../views/test/depression/DtestF.vue'
-import ss from '../views/test/sangsig/ss.vue'
-import ss1 from '../views/test/sangsig/ss1.vue'
-import ssF from '../views/test/sangsig/ssF.vue'
-//진아
-import Lolchang from '../views/test/lol/Lolchang.vue'
-import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
-import LolchangF from '../views/test/lol/LolchangF.vue'
-import Lolskin from '../views/test/lolskin/Lolskin.vue'
-import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
-
-//형진
-import cheerTest from '../views/test/cheerleader/cheerTest.vue'
-import cheerStart from '../views/test/cheerleader/cheerStart.vue'
-import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
-import manActorTest from '../views/test/manActor/manActorTest.vue'
-import manActorStart from '../views/test/manActor/manActorStart.vue'
-import manActorEnd from '../views/test/manActor/manActorEnd.vue'
 import GirlsidealtypeStart from '../views/test/Girlsidealtype/GirlsidealtypeStart.vue'
 import GirlsidealtypeEnd from '../views/test/Girlsidealtype/GirlsidealtypeEnd.vue'
 import Girlsidealtest from '../views/test/Girlsidealtype/Girlsidealtest.vue'
@@ -44,11 +13,40 @@ import Mansidealtest from '../views/test/Mansidealtype/Mansidealtest.vue'
 import ramenTest from '../views/test/ramenWorldcup/ramenTest.vue'
 import ramenStart from '../views/test/ramenWorldcup/ramenStart.vue'
 import ramenEnd from '../views/test/ramenWorldcup/ramenEnd.vue'
+import Foodtest from '../views/test/food/Foodtest.vue'
+import Foodtestgo from '../views/test/food/Foodtestgo.vue'
+import Foodresult from '../views/test/food/Foodresult.vue'
+import PsychoTest from '../views/test/psycho/PsychoTest.vue'
+import PsychoTest1 from '../views/test/psycho/PsychoTest1.vue'
+import PsychoTestF from '../views/test/psycho/PsychoTestF.vue'
+import Dtest from '../views/test/depression/Dtest.vue'
+import Dtest1 from '../views/test/depression/Dtest1.vue'
+import DtestF from '../views/test/depression/DtestF.vue'
+import ss from '../views/test/sangsig/ss.vue'
+import ss1 from '../views/test/sangsig/ss1.vue'
+import ssF from '../views/test/sangsig/ssF.vue'
+import Lolchang from '../views/test/lol/Lolchang.vue'
+import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import Lolskin from '../views/test/lolskin/Lolskin.vue'
+import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
+import cheerTest from '../views/test/cheerleader/cheerTest.vue'
+import cheerStart from '../views/test/cheerleader/cheerStart.vue'
+import cheerEnd from '../views/test/cheerleader/cheerEnd.vue'
+import manActorTest from '../views/test/manActor/manActorTest.vue'
+import manActorStart from '../views/test/manActor/manActorStart.vue'
+import manActorEnd from '../views/test/manActor/manActorEnd.vue'
 import girlActorTest from '../views/test/girlActor/girlActorTest.vue'
 import girlActorStart from '../views/test/girlActor/girlActorStart.vue'
 import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
-
-
+import gameEnd from '../views/test/gameWorldcup/gameEnd.vue'
+import gameStart from '../views/test/gameWorldcup/gameStart.vue'
+import gameTest from '../views/test/gameWorldcup/gameTest.vue'
+import ghostEnd from '../views/test/ghost/ghostEnd.vue'
+import ghostStart from '../views/test/ghost/ghostStart.vue'
+import ghostTest from '../views/test/ghost/ghostTest.vue'
+import catEnd from '../views/test/cat/catEnd.vue'
+import catStart from '../views/test/cat/catStart.vue'
+import catTest from '../views/test/cat/catTest.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -57,6 +55,8 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
+
   {
     path: '/Alltest',
     name: 'testStart',
@@ -71,9 +71,38 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
+  }, {
+    path: '/catTest',
+    name: 'catTest',
+    component: catTest
+  },
+  {
+    path: '/catStart',
+    name: 'catStart',
+    component: catStart
+  },
+  {
+    path: '/catEnd',
+    name: 'catEnd',
+    component: catEnd
   },
 
-  //형진
+  {
+    path: '/ghostTest',
+    name: 'ghostTest',
+    component: ghostTest
+  },
+  {
+    path: '/ghostStart',
+    name: 'ghostStart',
+    component: ghostStart
+  },
+  {
+    path: '/ghostEnd',
+    name: 'ghostEnd',
+    component: ghostEnd
+  },
+
   {
     path: '/manActorTest',
     name: 'manActorTest',
@@ -136,6 +165,21 @@ const routes = [
     component: cheerEnd
   },
   {
+    path: '/gameTest',
+    name: 'gameTest',
+    component: gameTest
+  },
+  {
+    path: '/gameStart',
+    name: 'gameStart',
+    component: gameStart
+  },
+  {
+    path: '/gameEnd',
+    name: 'gameEnd',
+    component: gameEnd
+  },
+  {
     path: '/GirlsidealtypeStart',
     name: 'GirlsidealtypeStart',
     component: GirlsidealtypeStart
@@ -165,8 +209,21 @@ const routes = [
     name: 'Mansidealtest',
     component: Mansidealtest
   },
-
-  //지원
+  {
+    path: '/Foodtest',
+    name: 'foodtest',
+    component: Foodtest
+  },
+  {
+    path: '/Foodtestgo',
+    name: 'foodtestgo',
+    component: Foodtestgo
+  },
+  {
+    path: '/Foodresult',
+    name: 'foodresult',
+    component: Foodresult
+  },
   {
     path: '/PsychoTest',
     name: 'psychotest',
@@ -212,8 +269,6 @@ const routes = [
     name: 'ssf',
     component: ssF
   },
-
-  //진아
   {
     path: '/Lolchang',
     name: 'Lolchang',
@@ -233,43 +288,6 @@ const routes = [
     path: '/Lolskin2',
     name: 'Lolskin2',
     component: Lolskin2
-  },
-  {
-    path: '/LolchangF',
-    name: 'LolchangF',
-    component: LolchangF
-  },
-  
-  //민하
-  {
-    path: '/Foodtest',
-    name: 'foodtest',
-    component: Foodtest
-  },
-  {
-    path: '/Foodtestgo',
-    name: 'foodtestgo',
-    component: Foodtestgo
-  },
-  {
-    path: '/Foodresult',
-    name: 'foodresult',
-    component: Foodresult
-  },
-  {
-    path: '/Movietest',
-    name: 'movietest',
-    component: Movietest
-  },
-  {
-    path: '/Movietestgo',
-    name: 'movietestgo',
-    component: Movietestgo
-  },
-  {
-    path: '/Movieresult',
-    name: 'Movieresult',
-    component: Movieresult
   },
 ]
 

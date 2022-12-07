@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
-          추억의 게임 월드컵 {{ roundLength }}강
+          진짜 무서운 귀신 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
@@ -34,7 +34,7 @@
             </v-layout>
           </div>
         </v-flex>
-        <div class="vsimg"><img src="/image/gameWolrdcup/vs.png" /></div>
+        <div class="vsimg"><img src="/image/ghost/vs.png" /></div>
       </v-layout>
     </div>
   </v-layout>
@@ -99,7 +99,7 @@ export default {
       console.log("finish", selected);
 
       this.$router.push(
-        "/girlActorEnd?name=" + selected.name + "&img=" + selected.img
+        "/ghostEnd?name=" + selected.name + "&img=" + selected.img
       );
     },
     nextRound() {
@@ -128,98 +128,98 @@ export default {
       roundLength: 1,
       list: [
         {
-          name: "배수지",
-          img: "/image/girlactor/1.jpg",
+          name: "곤지암귀신",
+          img: "/image/ghost/1.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한소희",
-          img: "/image/girlactor/2.jpg",
+          name: "모모귀신",
+          img: "/image/ghost/2.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "신세경",
-          img: "/image/girlactor/3.jpg",
+          name: "표정없는 여자",
+          img: "/image/ghost/3.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김유정",
-          img: "/image/girlactor/4.jpg",
+          name: "나는 더이상 신부가 될 수 없습니다.",
+          img: "/image/ghost/4.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "임윤아",
-          img: "/image/girlactor/5.jpg",
+          name: "제프더 킬러",
+          img: "/image/ghost/5.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지수",
-          img: "/image/girlactor/6.jpg",
+          name: "팔척귀신",
+          img: "/image/ghost/6.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이지은",
-          img: "/image/girlactor/7.jpg",
+          name: "핏쨩",
+          img: "/image/ghost/7.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "박은빈",
-          img: "/image/girlactor/8.jpg",
+          name: "쿠네쿠네",
+          img: "/image/ghost/8.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "전지현",
-          img: "/image/girlactor/9.jpg",
+          name: "물구나무 남동생",
+          img: "/image/ghost/9.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지은",
-          img: "/image/girlactor/10.jpg",
+          name: "기담엄마 귀신",
+          img: "/image/ghost/10.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이주빈",
-          img: "/image/girlactor/11.jpg",
+          name: "자유로 귀신",
+          img: "/image/ghost/11.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "설인아",
-          img: "/image/girlactor/12.jpg",
+          name: "란란루",
+          img: "/image/ghost/12.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이유비",
-          img: "/image/girlactor/13.jpg",
+          name: "갓파",
+          img: "/image/ghost/13.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "고윤정",
-          img: "/image/girlactor/14.jpg",
+          name: "사일런트힐 간호사 귀신",
+          img: "/image/ghost/14.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한지민",
-          img: "/image/girlactor/15.jpg",
+          name: "데스포레스트 귀신",
+          img: "/image/ghost/15.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "손예진",
-          img: "/image/girlactor/16.jpg",
+          name: "거울귀신",
+          img: "/image/ghost/16.jpg",
           selected: false,
           round: false,
         },

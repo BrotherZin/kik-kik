@@ -4,7 +4,12 @@
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div>
-            <!-- <v-text-field
+            <v-select
+              :items="searchoption"
+              v-model="searchoptionselected"
+              :style="{ width: '140px' }"
+            />
+            <v-text-field
               class="field"
               v-model="searchkeyword"
               dense
@@ -12,9 +17,10 @@
               label="원하는 테스트의 키워드를 검색해보세요!"
               @keyup.enter="searchresult(keyword)"
             ></v-text-field>
-            {{ keyword }} -->
+            {{ keyword }}
             <!--<v-btn type="submit" @click="search">검색</v-btn>
           버튼 추가할거면 넣기-->
+
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
               쩝쩝박사 테스트
@@ -27,7 +33,7 @@
 
             <div class="test1" @click="girlsideal">
               <img class="image1" src="/thumbnail/girlsidealTN.png" />
-              여자이상형 월드컵
+              여자 아이돌 월드컵
             </div>
 
             <div class="test1" @click="Lolchango">
@@ -41,7 +47,7 @@
 
             <div class="test1" @click="mansideal">
               <img class="image1" src="/thumbnail/mansidealTN.png" />
-              남자이상형 월드컵
+              남자 아이돌 월드컵
             </div>
 
             <div class="test1" @click="ramenTest">
@@ -69,15 +75,20 @@
               여자 배우 월드컵
             </div>
 
-            <div class="test1" @click="sangsig">
-          <img class="image1" src="/image/sangsig/main.png"/>
-          상식 테스트
-        </div>
+            <div class="test1" @click="gameWorldcup">
+              <img class="image1" src="/thumbnail/gameTN.jpg" />
+              추억의 게임 월드컵
+            </div>
 
-        <div class="test1" @click="movietest">
-          <img class="image1" src="/thumbnail/movie.jpg"/>
-          영화 테스트
-        </div>
+            <div class="test1" @click="ghost">
+              <img class="image1" src="/thumbnail/ghostTN.png" />
+              가장 무서운 귀신 월드컵
+            </div>
+
+            <div class="test1" @click="cat">
+              <img class="image1" src="/thumbnail/catTN.png" />
+              세계 최강 냥냥 월드컵
+            </div>
           </div>
         </div>
       </v-layout>
@@ -85,12 +96,18 @@
   </v-layout>
 </template>
       
-<script>
+      <script>
 import HelloWorld from "../components/HelloWorld";
-// import Ss from "./test/sangsig/ss.vue";
 export default {
   name: "Home",
   data() {
+    return {
+      searchkeyword: "", //검색어
+      keyword: "",
+      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
+      searchoptionselected: "테스트 제목", //검색옵션 선택
+      searchfinish: false, //검색완료
+    };
   },
   methods: {
     foodtest() {
@@ -126,35 +143,14 @@ export default {
     cheerleader() {
       this.$router.push("/cheerStart");
     },
-    movietest(){
-      this.$router.push("/movietest");
+    gameWorldcup() {
+      this.$router.push("/gameStart");
     },
-    sangsig(){
-      this.$router.push("/ss");
+    ghost() {
+      this.$router.push("/ghostStart");
     },
-    searchresult(){
-      if(this.searchkeyword == '') {
-        alert('키워드가 입력되지 않았습니다!');
-      } else {
-        axios({
-          url : "http://localhost:8080/search",
-          method: "POST",
-          data: {
-            searchkeyword: this.searchkeyword, //검색어
-            searchoption: this.searchoptionselected //검색옵션
-          },
-        }).then(res => {  
-          if(res.data == 'no') {
-            alert('검색 결과가 없습니다!');
-          } else {
-            alert('검색 결과 입니다!');
-            this.searchkeyword = '';
-            this.searchfinish = true;
-          }
-        }).catch(err => {
-          console.log(err);
-        })
-      }
+    cat() {
+      this.$router.push("/catStart");
     },
   },
   components: {
@@ -187,11 +183,11 @@ export default {
 }
 .test1 {
   display: inline-block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   margin-right: 35px;
   font-size: 21px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 .test1:hover {
   transform: scale(1.1);

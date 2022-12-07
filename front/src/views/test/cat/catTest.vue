@@ -3,7 +3,7 @@
     <div class="inside">
       <v-layout column fill-height class="round">
         <div v-if="roundLength > 4" class="vs">
-          추억의 게임 월드컵 {{ roundLength }}강
+          세계 최강 냥냥 월드컵 {{ roundLength }}강
         </div>
         <div v-else-if="roundLength == 4" class="vs">준결승</div>
         <div v-else-if="roundLength == 2" class="vs">결승</div>
@@ -34,7 +34,7 @@
             </v-layout>
           </div>
         </v-flex>
-        <div class="vsimg"><img src="/image/gameWolrdcup/vs.png" /></div>
+        <div class="vsimg"><img src="/image/cat/vs.png" /></div>
       </v-layout>
     </div>
   </v-layout>
@@ -99,7 +99,7 @@ export default {
       console.log("finish", selected);
 
       this.$router.push(
-        "/girlActorEnd?name=" + selected.name + "&img=" + selected.img
+        "/catEnd?name=" + selected.name + "&img=" + selected.img
       );
     },
     nextRound() {
@@ -128,98 +128,98 @@ export default {
       roundLength: 1,
       list: [
         {
-          name: "배수지",
-          img: "/image/girlactor/1.jpg",
+          name: "젤리다냥",
+          img: "/image/cat/1.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한소희",
-          img: "/image/girlactor/2.jpg",
+          name: "졸리냥",
+          img: "/image/cat/2.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "신세경",
-          img: "/image/girlactor/3.jpg",
+          name: "아니 쥐가 이만했다니까!?!?!",
+          img: "/image/cat/3.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김유정",
-          img: "/image/girlactor/4.jpg",
+          name: "응애냥",
+          img: "/image/cat/4.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "임윤아",
-          img: "/image/girlactor/5.jpg",
+          name: "캣타워는 못보낸다냥",
+          img: "/image/cat/5.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지수",
-          img: "/image/girlactor/6.jpg",
+          name: "여긴어디냥?",
+          img: "/image/cat/6.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이지은",
-          img: "/image/girlactor/7.jpg",
+          name: "새근새근냥",
+          img: "/image/cat/7.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "박은빈",
-          img: "/image/girlactor/8.jpg",
+          name: "치명적 섹시뒷태냥",
+          img: "/image/cat/8.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "전지현",
-          img: "/image/girlactor/9.jpg",
+          name: "정신이 좀 드는가? 냥냥월드에 온 걸을 환영하네",
+          img: "/image/cat/9.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "김지은",
-          img: "/image/girlactor/10.jpg",
+          name: "모아이냥",
+          img: "/image/cat/10.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이주빈",
-          img: "/image/girlactor/11.jpg",
+          name: "괴물이다냥",
+          img: "/image/cat/11.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "설인아",
-          img: "/image/girlactor/12.jpg",
+          name: "제물이냥",
+          img: "/image/cat/12.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "이유비",
-          img: "/image/girlactor/13.jpg",
+          name: "내꿈은 마법사냥",
+          img: "/image/cat/13.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "고윤정",
-          img: "/image/girlactor/14.jpg",
+          name: "냥버거",
+          img: "/image/cat/14.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "한지민",
-          img: "/image/girlactor/15.jpg",
+          name: "우리집 집사가 이렇게 싸던데",
+          img: "/image/cat/15.jpg",
           selected: false,
           round: false,
         },
         {
-          name: "손예진",
-          img: "/image/girlactor/16.jpg",
+          name: "뒤돌아보지마냥",
+          img: "/image/cat/16.jpg",
           selected: false,
           round: false,
         },
