@@ -66,10 +66,22 @@ export default {
       window.alert("이메일을 입력해주세요");
       return;
     }
-      },
+    this.axios.post("/api/users/join", this.form).then((result) => {
+    console.log(result);
+      if (result.data.result == "ok") {
+      //회원가입이 성공한경우
+      window.alert("TalkingMarket에 오신것을 환영합니다.");
+      this.$router.push("/");
+      }
+      if (result.data.result == "fail") {
+      //회원가입이 실패한경우
+      window.alert(result.data.message);
+      }
+    });
+},
     Cancel() {
       this.$router.push("/");
-    },
+    }, 
   },
 };
 </script>

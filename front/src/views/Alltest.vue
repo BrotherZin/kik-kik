@@ -46,7 +46,7 @@
 
             <div class="test1" @click="mansideal">
               <img class="image1" src="/thumbnail/mansidealTN.png" />
-              남자 아이돌 월드컵
+              남자이상형 월드컵
             </div>
 
             <div class="test1" @click="ramenTest">

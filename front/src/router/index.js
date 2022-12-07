@@ -24,8 +24,10 @@ import ssF from '../views/test/sangsig/ssF.vue'
 //진아
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import LolchangF from '../views/test/lol/LolchangF.vue'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
+
 //형진
 import cheerTest from '../views/test/cheerleader/cheerTest.vue'
 import cheerStart from '../views/test/cheerleader/cheerStart.vue'
@@ -50,7 +52,6 @@ import girlActorEnd from '../views/test/girlActor/girlActorEnd.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  
   {
     path: '/',
     name: 'home',
@@ -233,7 +234,12 @@ const routes = [
     name: 'Lolskin2',
     component: Lolskin2
   },
-
+  {
+    path: '/LolchangF',
+    name: 'LolchangF',
+    component: LolchangF
+  },
+  
   //민하
   {
     path: '/Foodtest',
