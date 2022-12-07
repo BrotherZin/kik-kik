@@ -1,80 +1,88 @@
 <template>
-  <v-layout class="background" align-center justify-center>
-    <div>
-      <v-layout class="inside" fill-height align-center justify-center>
-        <div class="text" style="text-align: center">
-          <!-- <input type="text" id="searchInput">
-          <button id="searchBtn">search</button>
-          <div class="font" style="text-align: left">
-            └요즘 유행하는 테스트!
-          </div>
-          <ul id="list">
-            <li class="test1" @click="foodtest">
-              <img class="image1" src="/thumbnail/foodtest.png" />
-          쩝쩝박사 테스트
-            </li>
+  <div class="search">
+    <input type="text" id="searchInput">
+      <button id="searchBtn">{{search}}</button>
+          <ul :src="tests.image" id="list">
+              {{tests}}
+          </ul>
+  </div>
+  </template>
 
-            <li class="test1" @click="psychotest">
-              <img class="image1" src="/image/psycho/main.png"/>
-          사이코 테스트
-            </li>
-
-            <li class="test1" @click="girlsideal">
-              <img class="image1" src="/thumbnail/girlsidealTN.png"/>
-           아이돌 월드컵
-            </li>
-
-            <li class="test1" @click="Lolchango">
-              <img class="image1" src="/image/lol/kda.png"/>
-          롤창 테스트
-            </li>
-          </ul> -->
-          <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
-        </div>
-      </v-layout>
-    </div>
-  </v-layout>
-</template>
-  
-  <script>
-import HelloWorld from "../components/HelloWorld";
-
+<script>
 export default {
-  name: "Home",
   data(){
-    return{
-      searchVal: '',
-      keyword: '',
-    }
+  return{
+    id:"",
+    name:"",
+    tests:[
+  {
+      id: 1,
+      name: '쩝쩝박사 테스트',
+      image: '/thumbnail/foodtest.png'
   },
-  methods: {
-    testStart() {
-      this.$router.push("/alltest");
-    },
-    foodtest() {
-      this.$router.push("/foodtest");
-    },
-    psychotest() {
-      this.$router.push("/psychotest");
-    },
-    girlsideal() {
-      this.$router.push("/girlsidealtypeStart");
-    },
-    mansideal() {
-      this.$router.push("/mansidealtypeStart");
-    },
-    ramenTest() {
-      this.$router.push("/ramenStart");
-    },
-    Lolchango() {
-      this.$router.push("/Lolchang");
-    },
-    components: {
-      HelloWorld,
-    },
+  {
+      id: 2,
+      name: '사이코패스 테스트',
+      image: '/image/psycho/main.png'
   },
-};
+  {
+      id: 3,
+      name: '여자 아이돌 테스트',
+      image: '/thumbnail/girlsidealTN.png'
+  },
+  {
+      id: 4,
+      name: '롤창 테스트',
+      image: '/image/lol/kda.png'
+  }
+          ]
+      };
+  },
+  methods:{ 
+      showList(val){
+          list.innerHTML = '';
+          const res = tests.forEach(test => {
+              if(test.name.toLowerCase().includes(val.toLowerCase())){
+                  list.innerHTML += `
+                  <li class="test1" @click="foodtest">
+                      <img class="image1" src="${test.url}" />
+                      ${test.name}
+                  </li>
+                  <li class="test1" @click="psychotest">
+                      <img class="image1" src="${test.url}" />
+                      ${test.name}
+                  </li>
+                  <li class="test1" @click="girlsideal">
+                      <img class="image1" src="${test.url}" />
+                      ${test.name}
+                  </li>
+                  <li class="test1" @click="Lolchango">
+                      <img class="image1" src="${test.url}" />
+                      ${test.name}
+                  </li>
+                  `;
+              }
+          });
+      },
+      search(){
+          const input = document.getElementById('searchInput');
+          const btn = document.getElementById('searchBtn');
+          btn.addEventListener('click', () => {
+              showList(input.value);
+          });
+          input.addEventListener('keyup', (e) => {
+              if(e.keyCode === 13){
+                  showList(input.value);
+              }
+          });
+      }
+  }
+}
 </script>
+
+<style>
+
+</style>
 
   <style scoped>
  @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
