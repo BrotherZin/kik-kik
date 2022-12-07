@@ -2,15 +2,16 @@
   <div class="search">
     <input type="text" id="searchInput">
       <button id="searchBtn">{{search}}</button>
-          <ul :src="tests.image" id="list">
-              {{tests}}
+          <ul id="list">
+            <img :src="tests.image">
+            {{tests}}
           </ul>
   </div>
   </template>
 
 <script>
 export default {
-  data(){
+  data:()=>{
   return{
     id:"",
     name:"",
@@ -41,7 +42,7 @@ export default {
   methods:{ 
       showList(val){
           list.innerHTML = '';
-          const res = tests.forEach(test => {
+          const res = this.tests.forEach(test => {
               if(test.name.toLowerCase().includes(val.toLowerCase())){
                   list.innerHTML += `
                   <li class="test1" @click="foodtest">
