@@ -56,6 +56,7 @@ import ssF from '../views/test/sangsig/ssF.vue'
 //진아
 import Lolchang from '../views/test/lol/Lolchang.vue'
 import Lolchanggo2 from '../views/test/lol/Lolchanggo2'
+import Lolchanggo3 from '../views/test/lol/Lolchanggo3.vue'
 import Lolskin from '../views/test/lolskin/Lolskin.vue'
 import Lolskin2 from '../views/test/lolskin/Lolskin2.vue'
 Vue.use(VueRouter)
@@ -125,6 +126,11 @@ const routes = [
     path: '/Lolchanggo2',
     name: 'Lolchanggo',
     component: Lolchanggo2
+  },
+  {
+    path: '/Lolchanggo3',
+    name: 'Lolchanggo3',
+    component: Lolchanggo3
   },
   {
     path: '/Lolskin',

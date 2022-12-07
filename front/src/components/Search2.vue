@@ -2,7 +2,7 @@
     <div class="search">
       <input type="text" id="searchInput">
         <button id="searchBtn">{{search}}</button>
-            <ul id="list">
+            <ul :src="tests.image" id="list">
                 {{tests}}
             </ul>
     </div>
@@ -12,6 +12,8 @@
 export default {
     data(){
     return{
+        id:"",
+        name:"",
         tests:[
     {
         id: 1,
@@ -69,7 +71,7 @@ export default {
                 showList(input.value);
             });
             input.addEventListener('keyup', (e) => {
-                if(e.keyCode === 13){
+                if(e){
                     showList(input.value);
                 }
             });
