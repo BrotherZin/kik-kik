@@ -10,8 +10,9 @@
             label="원하는 테스트의 키워드를 검색해보세요!"
             @keyup.enter="searchresult(keyword)"
           ></v-text-field>
-          {{ keyword }}
-          <v-btn type="submit" @click="search">검색</v-btn>
+          <!-- <input type="text" v-model="search" /> -->
+          <v-btn @click="search">검색</v-btn>
+          <!-- <div>{{ value1 }}</div> -->
           <!-- <v-autocomplete rounded solo></v-autocomplete> -->
           <!-- <v-col>
             <v-text-field
@@ -44,7 +45,7 @@
 
           <div id="girl" class="test1" @click="girlsideal">
             <img class="image1" src="/thumbnail/girlsidealTN.png" />
-            여자이상형 월드컵
+            여자아이돌 월드컵
           </div>
 
           <div id="lol1" class="test1" @click="Lolchango">
@@ -59,21 +60,33 @@
 </template>
   
   <script>
+import axios from "axios";
 import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
   data() {
     return {
-      searchVal: "",
-      keyword: "",
+      search: "",
+      value1: "",
     };
   },
   methods: {
-    search(testname, id) {
-      // 검색된 게시글 클릭시 해당 게시글로 이동
-      window.location.href = "http://localhost:8080/" + id;
+    search() {
+      //키워드에 맞는 게시물로 이동
+      window.location.href = "http://localhost:8080/" + this.search;
     },
+    // search(testname, id) {
+    //   // 검색된 게시글 클릭시 해당 게시글로 이동
+    //   window.location.href = "http://localhost:8080/" + id;
+    // },
+    // search() {
+    //   if (this.search[0] == "여") {
+    //     this.value1 = "여자 아이돌 월드컵";
+    //   } else {
+    //     this.value1 = "테스트를 못찾았어요.. 다시 입력해주세요 !";
+    //   }
+    // },
 
     testStart() {
       this.$router.push("/alltest");

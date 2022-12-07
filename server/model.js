@@ -1,28 +1,22 @@
+var { Sequelize } = require("sequelize")
 
-var { Sequelize, Model, DataTypes } = require('sequelize');
-const User = sequelize.define('User', {
-    // Model attributes are defined here
+global.User = sequelize.define("user", {
     id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
+        type: Sequelize.STRING,
         primaryKey: true
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: Sequelize.STRING
     },
-    img: {
-        type: DataTypes.STRING
-        // allowNull defaults to true
+    password: {
+        type: Sequelize.STRING
     },
-    finish: {
-        type: DataTypes.INTEGER,
-        defaultValue: 0
-    }
-}, {
-    // Other model options go here
-});
+    email: {
+        type: Sequelize.STRING
 
+    }
+
+})
 sequelize.sync({
     alter: true
 })
