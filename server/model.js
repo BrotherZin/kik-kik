@@ -8,7 +8,10 @@ global.User = sequelize.define('User', {
     name: {
         type: Sequelize.STRING
     },
-    password: {
+    pw: {
+        type: Sequelize.STRING
+    },
+    pwConfirm: {
         type: Sequelize.STRING
     },
     email: {

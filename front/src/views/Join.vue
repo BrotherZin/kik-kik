@@ -23,7 +23,7 @@
               style="width: 100px"
             />
             <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
-            <select v-model="input.selected">
+            <!-- <select v-model="input.selected">
               <option
                 v-for="(item, index) in selectList"
                 :key="index"
@@ -35,20 +35,13 @@
             <span>{{ selected }}</span>
             <v-snackbar v-model="snackbarFlag" :timeout="timeout">{{
               text
-            }}</v-snackbar>
+            }}</v-snackbar> -->
           </div>
-          <v-text-field v-model="input.pw" type="password" label="PW"></v-text-field>
-          <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field>
-              <div id="email">
+          <!-- <v-text-field v-model="input.pw" type="password" label="PW"></v-text-field>
+          <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field> -->
+              <!-- <div id="email">
               <v-text-field v-model="input.email" label="Email" maxlength="18" style="width:100px;"/>
-              <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
-              <!-- <select v-model="input.selected">
-                  <option v-for="(item, index) in selectList"
-                  :key="index" :value="item.value">{{ item.name }}</option>
-              </select>
-                  <span>{{ selected }}</span>
-                  <v-snackbar v-model="input.snackbarFlag" :timeout="timeout">{{ text }}</v-snackbar> -->
-              </div>
+              </div> -->
           <v-btn @click="join">가입하기</v-btn>
           <v-btn class="cancel" @click="Cancel">취소하기</v-btn>
         </div>
@@ -70,14 +63,6 @@ export default {
         email: "",
       
       },
-      // selectList: [
-      //   { name: "@naver.com", value: "naver.com" },
-      //   { name: "@gmail.com", value: "gmail.com" },
-      //   { name: "@hanmail.net", value: "hanmail.net" },
-      //   { name: "@nate.com", value: "nate.com" },
-      //   { name: "@daum.net", value: "daum.net" },
-      //   { name: "직접입력", value: "직접입력" },
-      // ],
     };
   },
   methods: {
