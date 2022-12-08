@@ -1,5 +1,6 @@
 <template>
   <v-layout class="background" align-center justify-center>
+    <div class="back"><img class="back1" src="/image/background.png"><img class="back2" src="/image/background.png"></div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
@@ -110,12 +111,24 @@ export default {
   background-color: #e6e6fa;
   display: grid;
 }
+.back1{
+  position: absolute;
+  margin-top:150px;
+  margin-left:-1000px;
+  transform: scaleX(-1);
+}
+.back2{
+  position: absolute;
+  margin-top:150px;
+  margin-left:500px;
+}
 .logo2 {
   margin-left: 300px;
   width: 500px;
   height: 100px;
 }
 .inside {
+  position: relative;
   background-color: white;
   width: 1200px;
   height: 750px;
