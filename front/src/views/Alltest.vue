@@ -16,7 +16,7 @@
 
             <div class="test1" @click="girlsideal">
               <img class="image1" src="/thumbnail/girlsidealTN.png" />
-              여돌 월드컵
+              여자 가수 월드컵
             </div>
 
             <div class="test1" @click="Lolchango">
@@ -30,7 +30,7 @@
 
             <div class="test1" @click="mansideal">
               <img class="image1" src="/thumbnail/mansidealTN.png" />
-              남돌 월드컵
+              남자 가수 월드컵
             </div>
 
             <div class="test1" @click="ramenTest">
@@ -60,7 +60,7 @@
 
             <div class="test1" @click="gameWorldcup">
               <img class="image1" src="/thumbnail/gameTN.jpg" />
-               추억게임 월드컵
+              추억의게임 월드컵
             </div>
 
             <div class="test1" @click="ghost">
@@ -74,7 +74,7 @@
             </div>
 
             <div class="test1" @click="movietest">
-              <img class="image1" src="/thumbnail/movie.jpg"/>
+              <img class="image1" src="/thumbnail/movie.jpg" />
               영화 테스트
             </div>
           </div>
@@ -89,8 +89,7 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   name: "Home",
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     foodtest() {
@@ -135,7 +134,7 @@ export default {
     cat() {
       this.$router.push("/catStart");
     },
-    movietest(){
+    movietest() {
       this.$router.push("/movietest");
     },
   },
