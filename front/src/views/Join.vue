@@ -51,12 +51,7 @@ export default {
   methods: {
     Cancel() {
       this.$router.push("/");
-    },
-    text(){
-      if (this.input.selected == "직접입력") {
-        this.input.email = "";
-      }
-    },
+    }, 
     join() {
       if (this.input.id == "") {
       window.alert("아이디를 입력해주세요");
@@ -64,6 +59,10 @@ export default {
     }
     if (this.input.name == "") {
       window.alert("이름을 입력해주세요");
+      return;
+    }
+    if (this.input.pw == "") {
+      window.alert("비밀번호를 입력해주세요");
       return;
     }
     if (this.input.pw != this.input.pwConfirm) {
@@ -89,9 +88,6 @@ export default {
       
     });
 },
-    Cancel() {
-      this.$router.push("/");
-    }, 
   },
 };
 </script>

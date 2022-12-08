@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import Join from '../views/Join.vue'
+import Join from '../views/join.vue'
 import Login from '../views/Login.vue'
 
 //민하
@@ -74,7 +74,7 @@ const routes = [
     component: Alltest
   },
   {
-    path: '/Join',
+    path: '/join',
     name: 'Join',
     component: Join
   },

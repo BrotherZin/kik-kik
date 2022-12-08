@@ -6,7 +6,9 @@ import vuetify from './plugins/vuetify'
 import axios from 'axios'
 // import Search from './components/Search2.js'
 
+Vue.prototype.axios = axios
 Vue.config.productionTip = false
+
 // Vue.use(Search)
 
 new Vue({
