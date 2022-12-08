@@ -7,7 +7,21 @@
           </div>
           </v-layout>
           <div class="lol-text">
-            <div class="lolmain"><span>너의 롤창인생 실력은?!</span></div>
+            <div>
+              <vue-typer class="lolmain"
+                   :text='["너의 롤창인생 실력은?"]'
+                   :repeat='Infinity'
+                   initial-action='typing'
+                   :pre-type-delay='1000'
+                   :type-delay='100'
+                   :pre-erase-delay='5000'
+                   :erase-delay='0'
+                   erase-style='select-back'
+                   :erase-on-complete='test'
+                   caret-animation='smooth'
+        ></vue-typer>
+            </div>
+            <v-btn class="re" @click="re">이전</v-btn>
           <span><v-btn class="gu" @click="testStart">(구) 챔피언 보러가기!</v-btn></span>
           <span><v-btn class="sin" @click="testStart2">(신) 챔피언 보러가기!</v-btn></span>
         </div>
@@ -27,6 +41,9 @@
       },
       testStart2() {
         this.$router.push("/Lolchanggo3");
+      },
+      re(){
+        this.$router.push("/Alltest");
       }
     },
   };
@@ -73,6 +90,11 @@
   }
   .gu{
     margin-right: 50px;
+  }
+  .re{
+    width:80px;
+    position: relative;
+    transform: translate(-300px, 0);
   }
   
   </style>
