@@ -4,7 +4,7 @@
       v-model="keyword"
       type="text"
       id="searchInput"
-      placeholder="                                플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
+      placeholder="플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
     />
     <div id="test" v-show="keyword">
       {{ keyword }}
@@ -158,7 +158,6 @@ export default {
 }
 input[type="text"] {
   appearance: none;
-  background: #fff;
   border-radius: 4px;
   height: 50px;
   padding: 8px 16px;
