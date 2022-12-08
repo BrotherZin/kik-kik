@@ -4,7 +4,7 @@
       v-model="keyword"
       type="text"
       id="searchInput"
-      placeholder="                                     플레이 하고 싶은 테스트를 검색해보세요 !"
+      placeholder="                                플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
     />
     {{ keyword }}
     <div>
