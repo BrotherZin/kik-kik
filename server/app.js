@@ -4,19 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
 
-var app = express();
+// var app = express();
 
 var session = require("express-session")
 var MysqlStore = require("express-mysql-session")(session)
 var options = {
-  host: 'localhost',
+  host: '15.165.63.155',
   port: 3306,
-  user: 'root',
-  password: 'itc801',
-  database: 'board'
+  user: 'kikkik',
+  password: '123qwe123!',
 };
 var sessionStore = new MysqlStore(options)
 
@@ -35,7 +34,7 @@ require("./model.js")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var boardRouter = require('./routes/board');
+// var boardRouter = require('./routes/board');
 
 var app = express();
 

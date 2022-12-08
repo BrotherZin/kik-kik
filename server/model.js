@@ -1,5 +1,5 @@
 var { Sequelize, Model, DataTypes } = require('sequelize');
-const User = sequelize.define('User', {
+global.User = sequelize.define('User', {
     // Model attributes are defined here
     id: {
         type: DataTypes.INTEGER,
