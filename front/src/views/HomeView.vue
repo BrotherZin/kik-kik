@@ -35,7 +35,7 @@
 </template>
   
   <script>
-import HelloWorld from "../components/HelloWorld";
+//import HelloWorld from "../components/HelloWorld";
 
 export default {
   name: "Home",
@@ -74,9 +74,9 @@ export default {
     //     this.$router.push("/alltest");
     //   }, //엔터 누를 시
     // // 검색 버튼 클릭 or 엔터 시 DB에서 검색 결과 받아와야함
-    components: {
-      HelloWorld,
-    },
+    // components: {
+    //   HelloWorld,
+    // },
   },
 };
 </script>
