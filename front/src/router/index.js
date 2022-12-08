@@ -52,6 +52,9 @@ import DtestF from '../views/test/depression/DtestF.vue'
 import ss from '../views/test/sangsig/ss.vue'
 import ss1 from '../views/test/sangsig/ss1.vue'
 import ssF from '../views/test/sangsig/ssF.vue'
+import sp1 from '../views/test/phone/sp1.vue'
+import sp2 from '../views/test/phone/sp2.vue'
+import spF from '../views/test/phone/spF.vue'
 
 //진아
 import Lolchang from '../views/test/lol/Lolchang.vue'
@@ -82,8 +85,8 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
-  }, 
-  
+  },
+
   //민하
   {
     path: '/Foodtest',
@@ -188,6 +191,21 @@ const routes = [
     path: '/ssF',
     name: 'ssf',
     component: ssF
+  },
+  {
+    path: '/sp1',
+    name: 'sp1',
+    component: sp1
+  },
+  {
+    path: '/sp2',
+    name: 'sp2',
+    component: sp2
+  },
+  {
+    path: '/spF',
+    name: 'spf',
+    component: spF
   },
 
   //형진
@@ -327,7 +345,7 @@ const routes = [
     name: 'Mansidealtest',
     component: Mansidealtest
   },
-  
+
 ]
 
 const router = new VueRouter({
