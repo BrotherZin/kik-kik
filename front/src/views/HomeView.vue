@@ -1,13 +1,12 @@
 <template>
   <v-layout class="background" align-center justify-center>
+    <div class="back"><img class="back1" src="/image/background.png"><img class="back2" src="/image/background.png"></div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
           </div>
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
-        버튼 추가할거면 넣기-->
           <div id="food" class="test1" @click="foodtest">
             <img class="image1" src="/thumbnail/foodtest.png" />
             쩝쩝박사 테스트
@@ -91,12 +90,24 @@ export default {
   background-color: #e6e6fa;
   display: grid;
 }
+.back1{
+  position: absolute;
+  margin-top:150px;
+  margin-left:-1000px;
+  transform: scaleX(-1);
+}
+.back2{
+  position: absolute;
+  margin-top:150px;
+  margin-left:500px;
+}
 .logo2 {
   margin-left: 300px;
   width: 500px;
   height: 100px;
 }
 .inside {
+  position: relative;
   background-color: white;
   width: 1200px;
   height: 750px;
