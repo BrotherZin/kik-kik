@@ -7,7 +7,8 @@
           </div>
           </v-layout>
           <div class="lol-text">
-            <vue-typer class="lolskin"
+            <div>
+              <vue-typer class="lolskin"
                    :text='["너의 지갑을 얼마나 바쳤는지 테스트 해보자!"]'
                    :repeat='Infinity'
                    initial-action='typing'
@@ -19,7 +20,8 @@
                    :erase-on-complete='test'
                    caret-animation='smooth'
         ></vue-typer>
-          <div><v-btn @click="testStart">Ready? Go!</v-btn></div>
+            </div>
+          <div><v-btn class="re" @click="re">이전</v-btn><v-btn @click="testStart">Ready? Go!</v-btn></div>
         </div>
     </div>
     </v-layout>
@@ -35,6 +37,9 @@
       testStart() {
         this.$router.push("/Lolskin2");
       },
+      re(){
+        this.$router.push("/Alltest");
+      }
     },
   };
   </script>
@@ -80,6 +85,11 @@
     width:500px;
     font-size:30px;
     font-weight: bold;
+  }
+  .re{
+    width:80px;
+    position: relative;
+    transform: translate(-300px, 0);
   }
 
   </style>

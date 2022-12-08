@@ -5,27 +5,7 @@
         <div class="text" style="text-align: center">
           <div class="font" style="text-align: left">
             └요즘 유행하는 테스트!
-          </div>
-          <!--<v-btn type="submit" @click="search">검색</v-btn>
-        버튼 추가할거면 넣기-->
-          <div id="food" class="test1" @click="foodtest">
-            <img class="image1" src="/thumbnail/foodtest.png" />
-            쩝쩝박사 테스트
-          </div>
-
-          <div id="psycho" class="test1" @click="psychotest">
-            <img class="image1" src="/image/psycho/main.png" />
-            사이코패스 테스트
-          </div>
-
-          <div id="girl" class="test1" @click="girlsideal">
-            <img class="image1" src="/thumbnail/girlsidealTN.png" />
-            여자아이돌 월드컵
-          </div>
-
-          <div id="lol1" class="test1" @click="Lolchango">
-            <img class="image1" src="/image/lol/kda.png" />
-            롤창 테스트
+            <search2></search2>
           </div>
           <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
@@ -37,13 +17,38 @@
   <script>
 import axios from "axios";
 import HelloWorld from "../components/HelloWorld";
-
+import Search2 from "@/components/Search2"
 export default {
   name: "Home",
+  components: {
+        Search2
+      },
   data() {
     return {
-      search: "",
-      value1: "",
+      id:"",
+          name:"",
+          tests:[
+      {
+          id: 1,
+          name: '쩝쩝박사 테스트',
+          image: '/thumbnail/foodtest.png'
+      },
+      {
+          id: 2,
+          name: '사이코패스 테스트',
+          image: '/image/psycho/main.png'
+      },
+      {
+          id: 3,
+          name: '여자 아이돌 테스트',
+          image: '/thumbnail/girlsidealTN.png'
+      },
+      {
+          id: 4,
+          name: '롤창 테스트',
+          image: '/image/lol/kda.png'
+      }
+              ]
     };
   },
   methods: {
@@ -86,7 +91,6 @@ export default {
 * {
   font-family: "Jua", sans-serif;
 }
-
 .background {
   height: 100%;
   background-color: #e6e6fa;
@@ -134,4 +138,3 @@ export default {
   font-size: 35px;
 }
 </style>
-  

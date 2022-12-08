@@ -1,12 +1,18 @@
 <template>
-    <div class="search">
-      <input type="text" id="searchInput">
-        <button id="searchBtn">{{search}}</button>
-            <ul :src="tests.image" id="list">
-                {{tests}}
-            </ul>
-    </div>
-    </template>
+<div class="search">
+    <input v-model="keyword" type="text" id="searchInput">
+    {{keyword}}
+        <div>
+            <ul>
+            <li v-for="(test,key) in showList()" :key="key">
+                <img :src='test.image' :alt='test.name'>
+                <p>{{test.name}}</p>
+            </li>
+        </ul>
+        </div>
+        
+</div>
+</template>
 
 <script>
 export default {
@@ -14,72 +20,49 @@ export default {
     return{
         id:"",
         name:"",
+        keyword:"",
         tests:[
-    {
-        id: 1,
-        name: '쩝쩝박사 테스트',
-        url: '/thumbnail/foodtest.png'
-    },
-    {
-        id: 2,
-        name: '사이코패스 테스트',
-        url: '/image/psycho/main.png'
-    },
-    {
-        id: 3,
-        name: '여자 아이돌 테스트',
-        url: '/thumbnail/girlsidealTN.png'
-    },
-    {
-        id: 4,
-        name: '롤창 테스트',
-        url: '/image/lol/kda.png'
-    }
+                {
+                    id: 1,
+                    name: '쩝쩝박사 테스트2',
+                    image: '/thumbnail/foodtest.png'
+                },
+                {
+                    id: 2,
+                    name: '사이코패스 테스트',
+                    image: '/image/psycho/main.png'
+                },
+                {
+                    id: 3,
+                    name: '여자 아이돌 테스트',
+                    image: '/thumbnail/girlsidealTN.png'
+                },
+                {
+                    id: 4,
+                    name: '롤창 테스트',
+                    image: '/image/lol/kda.png'
+                }
             ]
         };
     },
     methods:{ 
-        showList(val){
-            list.innerHTML = '';
-            const res = tests.forEach(test => {
-                if(test.name.toLowerCase().includes(val.toLowerCase())){
-                    list.innerHTML += `
-                    <li class="test1" @click="foodtest">
-                        <img class="image1" src="${test.url}" />
-                        ${test.name}
-                    </li>
-                    <li class="test1" @click="psychotest">
-                        <img class="image1" src="${test.url}" />
-                        ${test.name}
-                    </li>
-                    <li class="test1" @click="girlsideal">
-                        <img class="image1" src="${test.url}" />
-                        ${test.name}
-                    </li>
-                    <li class="test1" @click="Lolchango">
-                        <img class="image1" src="${test.url}" />
-                        ${test.name}
-                    </li>
-                    `;
+        showList(){
+            var resturnList = [];
+            for(var i=0; i<this.tests.length; i++){
+                if(this.tests[i].name.indexOf(this.keyword) > -1){
+                    resturnList.push(this.tests[i]);
                 }
-            });
+            }
+
+            return resturnList;
         },
-        search(){
-            const input = document.getElementById('searchInput');
-            const btn = document.getElementById('searchBtn');
-            btn.addEventListener('click', () => {
-                showList(input.value);
-            });
-            input.addEventListener('keyup', (e) => {
-                if(e){
-                    showList(input.value);
-                }
-            });
-        }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    li img{
+        width:150px;
+        height:150px;
+    }
 </style>

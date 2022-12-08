@@ -157,7 +157,7 @@ export default {
 .inside {
   background-color: white;
   width: 1200px;
-  height: 750px;
+  height: 800px;
   border-radius: 100px 100px 100px 100px;
 }
 .text {
@@ -172,6 +172,7 @@ export default {
   margin: auto;
   text-align: center;
   margin-right: 35px;
+  margin-bottom: 5px;
   font-size: 21px;
   font-family: "Jua", sans-serif;
 }
