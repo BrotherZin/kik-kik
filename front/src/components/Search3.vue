@@ -24,7 +24,7 @@
             tests:[
                     {
                         id: 1,
-                        name: '쩝쩝박사 테스트2',
+                        name: '쩝쩝박사 테스트',
                         image: '/thumbnail/foodtest.png'
                     },
                     {
@@ -119,14 +119,23 @@
     li img{
         width:150px;
         height:150px;
+        border:1px solid black;
+    }
+    li:hover{
+        transform: scale(1.1);
     }
     input{
+        width:700px;
         border:1px solid black
     }
     .main{
         width:500px;
     }
     ul{
-        width:500px;
+        width:600px;
+    }
+    p{
+        font-size:20px;
+        position: relative;
     }
 </style>

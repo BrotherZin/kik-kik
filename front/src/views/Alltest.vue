@@ -5,6 +5,26 @@
         <div class="text" style="text-align: center">
           <div class="font" style="text-align: left">
             <search3></search3>
+            <div class="test1" @click="foodtest">
+              <img class="image1" src="/thumbnail/foodtest.png" />
+              쩝쩝박사 테스트
+            </div>
+
+            <div class="test1" @click="psychotest">
+              <img class="image1" src="/image/psycho/main.png" />
+              사이코패스 테스트
+            </div>
+
+            <div class="test1" @click="girlsideal">
+              <img class="image1" src="/thumbnail/girlsidealTN.png" />
+              여돌 월드컵
+            </div>
+
+            <div class="test1" @click="Lolchango">
+              <img class="image1" src="/image/lol/kda.png" />
+              롤창 테스트
+            </div>
+
           </div>
         </div>
       </v-layout>
