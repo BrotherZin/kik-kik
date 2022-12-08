@@ -32,6 +32,10 @@ global.sequelize = new Sequelize('kikkik', 'kikkik', '123qwe123!', {
 // });
 require("./model.js")
 
+var usersRouter = require('./routes/users');
+
+var app = express();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // var boardRouter = require('./routes/board');
