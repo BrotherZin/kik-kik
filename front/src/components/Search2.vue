@@ -10,7 +10,10 @@
     <div>
       <ul>
         <li v-if="keyword" v-for="(test, key) in showList()" :key="key">
-          <img :src="test.image" :alt="test.name" @click="Movetest" />
+          <router-link :to="test.url">
+            <img :src="test.image" :alt="test.name" />
+          </router-link>
+          <!-- <img :src="test.image" :alt="test.name" @click="Movetest" /> -->
           <p>{{ test.name }}</p>
         </li>
       </ul>
