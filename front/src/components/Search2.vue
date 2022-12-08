@@ -4,7 +4,7 @@
       v-model="keyword"
       type="text"
       id="searchInput"
-      placeholder="                                플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
+      placeholder="플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
     />
     {{ keyword }}
     <div>
@@ -13,7 +13,6 @@
           <router-link :to="test.url">
             <img :src="test.image" :alt="test.name" />
           </router-link>
-          <!-- <img :src="test.image" :alt="test.name" @click="Movetest" /> -->
           <p>{{ test.name }}</p>
         </li>
       </ul>
@@ -152,7 +151,6 @@ li img {
 }
 input[type="text"] {
   appearance: none;
-  background: #fff;
   border-radius: 4px;
   height: 50px;
   padding: 8px 16px;
@@ -164,5 +162,14 @@ input[type="text"] {
   box-sizing: border-box;
   transition: border-color 0.2s ease-in-out;
   margin-bottom: 16px;
+}
+li{
+  margin-right:20px;
+}
+img{
+  border:1px solid black;
+}
+li:hover{
+  transform: scale(1.1);
 }
 </style>
