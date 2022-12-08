@@ -6,25 +6,6 @@
           <div class="font" style="text-align: left">
             요즘 유행하는 테스트!
             <search2></search2>
-            <div id="food" class="test1" @click="foodtest">
-            <img class="image1" src="/thumbnail/foodtest.png" />
-            쩝쩝박사 테스트
-          </div>
-
-          <div id="psycho" class="test1" @click="psychotest">
-            <img class="image1" src="/image/psycho/main.png" />
-            사이코패스 테스트
-          </div>
-
-          <div id="girl" class="test1" @click="girlsideal">
-            <img class="image1" src="/thumbnail/girlsidealTN.png" />
-            여자이상형 월드컵
-          </div>
-
-          <div id="lol1" class="test1" @click="Lolchango">
-            <img class="image1" src="/image/lol/kda.png" />
-            롤창 테스트
-          </div>
           </div>
           <v-btn id="start" @click="testStart">테스트 시작하기</v-btn>
         </div>
