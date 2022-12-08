@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
+// import Search from './components/Search2.js'
 
 Vue.config.productionTip = false
+// Vue.use(Search)
 
 new Vue({
   router,

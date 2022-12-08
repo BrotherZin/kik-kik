@@ -117,4 +117,10 @@ img{
                  0 50px 25px rgba(#db469f 0%, #2188ff 100%);
   }
 }
+.login{
+    font-size:30px;
+}
+.join{
+    font-size:30px;
+}
 </style>

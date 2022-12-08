@@ -4,23 +4,6 @@
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
           <div>
-            <v-select
-              :items="searchoption"
-              v-model="searchoptionselected"
-              :style="{ width: '140px' }"
-            />
-            <v-text-field
-              class="field"
-              v-model="searchkeyword"
-              dense
-              outlined
-              label="원하는 테스트의 키워드를 검색해보세요!"
-              @keyup.enter="searchresult(keyword)"
-            ></v-text-field>
-            {{ keyword }}
-            <!--<v-btn type="submit" @click="search">검색</v-btn>
-          버튼 추가할거면 넣기-->
-
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
               쩝쩝박사 테스트
@@ -33,7 +16,7 @@
 
             <div class="test1" @click="girlsideal">
               <img class="image1" src="/thumbnail/girlsidealTN.png" />
-              여자 아이돌 월드컵
+              여돌 월드컵
             </div>
 
             <div class="test1" @click="Lolchango">
@@ -47,7 +30,7 @@
 
             <div class="test1" @click="mansideal">
               <img class="image1" src="/thumbnail/mansidealTN.png" />
-              남자 아이돌 월드컵
+              남돌 월드컵
             </div>
 
             <div class="test1" @click="ramenTest">
@@ -77,17 +60,22 @@
 
             <div class="test1" @click="gameWorldcup">
               <img class="image1" src="/thumbnail/gameTN.jpg" />
-              추억의게임 월드컵
+               추억게임 월드컵
             </div>
 
             <div class="test1" @click="ghost">
               <img class="image1" src="/thumbnail/ghostTN.png" />
-              무서운귀신 월드컵
+              호러 귀신 월드컵
             </div>
 
             <div class="test1" @click="cat">
               <img class="image1" src="/thumbnail/catTN.png" />
-              최강 냥냥 월드컵
+              냥냥 월드컵
+            </div>
+
+            <div class="test1" @click="movietest">
+              <img class="image1" src="/thumbnail/movie.jpg"/>
+              영화 테스트
             </div>
           </div>
         </div>
@@ -102,11 +90,6 @@ export default {
   name: "Home",
   data() {
     return {
-      searchkeyword: "", //검색어
-      keyword: "",
-      searchoption: ["테스트 제목", "테스트 설명", "테스트 키워드"], //검색옵션
-      searchoptionselected: "테스트 제목", //검색옵션 선택
-      searchfinish: false, //검색완료
     };
   },
   methods: {
@@ -151,6 +134,9 @@ export default {
     },
     cat() {
       this.$router.push("/catStart");
+    },
+    movietest(){
+      this.$router.push("/movietest");
     },
   },
   components: {

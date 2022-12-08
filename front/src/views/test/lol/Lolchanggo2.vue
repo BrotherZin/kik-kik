@@ -91,22 +91,22 @@ export default {
       },
       {
         score: 10,
-        video: "/videos/yone.mp4",
+        video: "/videos/lux.mp4",
         answers: [
           {
-            text: '최후의 숨결',
+            text: '광휘의 특이점',
             isCorrect: false,
           },
           {
-            text: '일제 사격',
+            text: '마지막 광채',
             isCorrect: false,
           },
           {
-            text: '운명봉인',
+            text: '최후의 섬광',
             isCorrect: true,
           },
           {
-            text: '영혼 가르기',
+            text: '빛의 일격',
             isCorrect: false,
           },
         ],
@@ -178,45 +178,45 @@ export default {
         ],
       },
       {
-        video: "/videos/xayha.mp4",
+        video: "/videos/riven.mp4",
         score: 10,
         answers: [
           {
-            text: '관통상',
+            text: '용맹의 일격',
             isCorrect: false,
           },
           {
-            text: '저항의 비상',
+            text: '추방자의 검',
             isCorrect: true,
           },
           {
-            text: '깃부르미',
+            text: '부러진 일격',
             isCorrect: false,
           },
           {
-            text: '죽음의 깃',
+            text: '검의 날개',
             isCorrect: false,
           },
         ],
       },
       {
-        video: "/videos/kaisa.mp4",
+        video: "/videos/jax.mp4",
         score: 10,
         answers: [
           {
-            text: '이케시아 폭우',
+            text: '가로등 돌리기',
             isCorrect: false,
           },
           {
-            text: '공허추적자',
+            text: '반격',
             isCorrect: true,
           },
           {
-            text: '공허의 습격',
+            text: '무기 집중',
             isCorrect: false,
           },
           {
-            text: '공허의 부름',
+            text: '반란',
             isCorrect: false,
           },
         ],

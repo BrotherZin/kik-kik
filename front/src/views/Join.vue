@@ -71,39 +71,37 @@ export default {
   methods: {
     join() {
       if (this.input.id == "") {
-        window.alert("아이디를 입력해주세요");
-        return;
-      }
-      if (this.input.name == "") {
-        window.alert("이름을 입력해주세요");
-        return;
-      }
-      if (this.form.password != this.form.passwordConfirm) {
-        window.alert("패스워드가 일치하지 않습니다");
-        return;
-      }
-      if (this.form.email == "") {
-        window.alert("이메일을 입력해주세요");
-        return;
-      }
-
-      this.axios.post("/api/users/join", this.form).then((result) => {
-        console.log(result);
-        if (result.data.result == "ok") {
-          //회원가입이 성공한경우
-          window.alert("Kik-Kik에 오신것을 환영합니다.");
-          this.$router.push("/");
-        }
-        if (result.data.result == "fail") {
-          //회원가입이 실패한경우
-          window.alert(result.data.message);
-        }
-      });
+      window.alert("아이디를 입력해주세요");
+      return;
+    }
+    if (this.input.name == "") {
+      window.alert("이름을 입력해주세요");
+      return;
+    }
+    if (this.form.password != this.form.passwordConfirm) {
+      window.alert("패스워드가 일치하지 않습니다");
+      return;
+    }
+    if (this.form.email == "") {
+      window.alert("이메일을 입력해주세요");
+      return;
+    }
+    this.axios.post("/api/users/join", this.form).then((result) => {
+    console.log(result);
+      if (result.data.result == "ok") {
+      //회원가입이 성공한경우
+      window.alert("TalkingMarket에 오신것을 환영합니다.");
       this.$router.push("/");
-    },
+      }
+      if (result.data.result == "fail") {
+      //회원가입이 실패한경우
+      window.alert(result.data.message);
+      }
+    });
+},
     Cancel() {
       this.$router.push("/");
-    },
+    }, 
   },
 };
 </script>

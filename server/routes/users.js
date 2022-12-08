@@ -15,13 +15,6 @@ router.post("/join", async function (req, res) {
       id: body.id
     }
   })
-  if (alreadyUser != null) {
-    res.json({
-      result: "fail",
-      message: "이미 존재하는 아이디입니다."
-    })
-    return
-  }
   console.log(alreadyUser)
 
   var result = await User.create(body)
@@ -37,18 +30,10 @@ router.post("/login", async function (req, res) {
       password: req.body.password
     }
   })
-  if (user == null) {
-    res.json({
-      result: "fail",
-      message: "아이디 또는 비밀번호가 잘못되었습니다."
-    })
-    return
-  }
   req.session.user = user
   res.json({
     result: "ok"
   })
 })
-
 
 module.exports = router;

@@ -1,6 +1,6 @@
-var { Sequelize } = require("sequelize")
-
-global.User = sequelize.define("user", {
+var { Sequelize, Model, DataTypes } = require('sequelize');
+const User = sequelize.define('User', {
+    // Model attributes are defined here
     id: {
         type: Sequelize.STRING,
         primaryKey: true

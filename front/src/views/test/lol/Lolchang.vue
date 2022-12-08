@@ -72,7 +72,7 @@
     font-weight: bold;
   }
   .gu{
-    margin-right:30px;
+    margin-right: 50px;
   }
   
   </style>
