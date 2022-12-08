@@ -5,7 +5,7 @@
         <div>
             <ul>
             <li v-for="(test,key) in showList()" :key="key">
-                <img :src='test.image' :alt='test.name'>
+                <img :src='test.image' :alt='test.name' @click="">
                 <p>{{test.name}}</p>
             </li>
         </ul>
@@ -65,4 +65,7 @@ export default {
         width:150px;
         height:150px;
     }
+    input{
+  border:1px solid black
+}
 </style>

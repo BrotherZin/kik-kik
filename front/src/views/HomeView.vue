@@ -136,4 +136,7 @@ export default {
   width: 400px;
   font-size: 35px;
 }
+.search2{
+  border:1px solid black
+}
 </style>
