@@ -1,5 +1,5 @@
 var { Sequelize, Model, DataTypes } = require('sequelize');
-const User = sequelize.define('User', {
+global.User = sequelize.define('User', {
     // Model attributes are defined here
     id: {
         type: Sequelize.STRING,
@@ -8,7 +8,10 @@ const User = sequelize.define('User', {
     name: {
         type: Sequelize.STRING
     },
-    password: {
+    pw: {
+        type: Sequelize.STRING
+    },
+    pwConfirm: {
         type: Sequelize.STRING
     },
     email: {

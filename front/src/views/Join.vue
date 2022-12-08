@@ -23,7 +23,7 @@
               style="width: 100px"
             />
             <!-- <v-text-field id="email2" v-model="form.email" label="이메일2" maxlength="18"/> -->
-            <select v-model="input.selected">
+            <!-- <select v-model="input.selected">
               <option
                 v-for="(item, index) in selectList"
                 :key="index"
@@ -35,8 +35,13 @@
             <span>{{ selected }}</span>
             <v-snackbar v-model="snackbarFlag" :timeout="timeout">{{
               text
-            }}</v-snackbar>
+            }}</v-snackbar> -->
           </div>
+          <!-- <v-text-field v-model="input.pw" type="password" label="PW"></v-text-field>
+          <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field> -->
+              <!-- <div id="email">
+              <v-text-field v-model="input.email" label="Email" maxlength="18" style="width:100px;"/>
+              </div> -->
           <v-btn @click="join">가입하기</v-btn>
           <v-btn class="cancel" @click="Cancel">취소하기</v-btn>
         </div>
@@ -56,19 +61,14 @@ export default {
         pw: "",
         pwConfirm: "",
         email: "",
-        selected: "",
+      
       },
-      selectList: [
-        { name: "@naver.com", value: "naver.com" },
-        { name: "@gmail.com", value: "gmail.com" },
-        { name: "@hanmail.net", value: "hanmail.net" },
-        { name: "@nate.com", value: "nate.com" },
-        { name: "@daum.net", value: "daum.net" },
-        { name: "직접입력", value: "직접입력" },
-      ],
     };
   },
   methods: {
+    Cancel() {
+      this.$router.push("/");
+    }, 
     join() {
       if (this.input.id == "") {
       window.alert("아이디를 입력해주세요");
@@ -78,30 +78,33 @@ export default {
       window.alert("이름을 입력해주세요");
       return;
     }
-    if (this.form.password != this.form.passwordConfirm) {
+    if (this.input.pw == "") {
+      window.alert("비밀번호를 입력해주세요");
+      return;
+    }
+    if (this.input.pw != this.input.pwConfirm) {
       window.alert("패스워드가 일치하지 않습니다");
       return;
     }
-    if (this.form.email == "") {
+    if (this.input.email == "") {
       window.alert("이메일을 입력해주세요");
       return;
     }
-    this.axios.post("/api/users/join", this.form).then((result) => {
+
+    this.axios.post("/api/users/join", this.input).then((result) => {
     console.log(result);
       if (result.data.result == "ok") {
       //회원가입이 성공한경우
-      window.alert("TalkingMarket에 오신것을 환영합니다.");
+      window.alert("KIKKIK 사이트에 가입되셨습니다 축하드립니다.");
       this.$router.push("/");
       }
       if (result.data.result == "fail") {
       //회원가입이 실패한경우
       window.alert(result.data.message);
       }
+      
     });
 },
-    Cancel() {
-      this.$router.push("/");
-    }, 
   },
 };
 </script>
