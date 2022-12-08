@@ -4,7 +4,7 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          ↘ 요즘 유행하는 테스트 ! ↙
+          <p>↘ 요즘 유행하는 테스트 ! ↙</p>
           <div class="font" style="text-align: left">
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
@@ -163,5 +163,8 @@ export default {
   margin-top: 30px;
   width: 400px;
   font-size: 35px;
+}
+p{
+  font-size:40px;
 }
 </style>
