@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
 import Join from '../views/join.vue'
-import Login from '../views/Login.vue'
+import Login from '../views/login.vue'
 
 //민하
 import Foodtest from '../views/test/food/Foodtest.vue'

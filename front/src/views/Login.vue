@@ -4,9 +4,9 @@
       <v-layout class="inside" align-center justify-center>
           <div>
           <v-text-field v-model="input.id" label="ID"/>
-          <v-text-field v-model="input.pw" label="PW"/>
+          <v-text-field v-model="input.password" label="PW"/>
               <div id="find">
-                  <v-btn class="Login" @click="Login">로그인</v-btn>
+                  <v-btn class="Login" @click="login">로그인</v-btn>
                   <div class="btn">
                       <v-btn class="find-id" @click="find">아이디 찾기</v-btn><br>
                       <v-btn class="find-pw" @click="find">비밀번호 찾기</v-btn>
@@ -24,20 +24,29 @@ export default {
       return {
           input: {
               id: "",
-              pw: "",
+              password: "",
           },
       };
   },
   methods:{
-      Login() {
+      login() {
           if (this.input.id == "") {
           window.alert("아이디를 입력하셔야 해요!");
           return;
           }
-          if (this.input.pw == "") {
+          if (this.input.password == "") {
           window.alert("비밀번호를 입력하셔야 해요!");
           return;
           }
+          this.axios.post("/api/users/login",this.input)
+          .then(result=>{
+              // if(result.data.result){
+              //     window.alert("로그인 성공!");
+              //     this.$router.push("/main");
+              // }else{
+              //     window.alert("로그인 실패!");
+              // }
+          })
       },
   }
 };
