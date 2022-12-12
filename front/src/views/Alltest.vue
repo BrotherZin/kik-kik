@@ -3,16 +3,15 @@
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          ↘ 요즘 유행하는 테스트 ! ↙
+          <search3></search3>
           <div class="font" style="text-align: left">
-            <search3></search3>
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
               쩝쩝박사 테스트
             </div>
 
             <div class="test1" @click="psychotest">
-              <img class="image1" src="/image/psycho/main.png" />
+              <img class="image1" src="/thumbnail/main.png" />
               사이코패스 테스트
             </div>
 
@@ -42,7 +41,7 @@
             </div>
 
             <div class="test1" @click="Dtest">
-              <img class="image1" src="/image/dep/main.png" />
+              <img class="image1" src="/thumbnail/main2.png" />
               우울증 테스트
             </div>
 
@@ -115,7 +114,7 @@ export default {
           {
             id: 2,
             name: "사이코패스 테스트",
-            image: "/image/psycho/main.png",
+            image: "/thumbnail/main.png",
             url: "/psychotest",
           },
           {
@@ -157,7 +156,7 @@ export default {
           {
             id: 9,
             name: "우울증 테스트",
-            image: "/image/dep/main.png",
+            image: "/thumbnail/main2.png",
             url: "/Dtest",
           },
           {
@@ -274,7 +273,6 @@ export default {
   background-color: white;
   width: 1200px;
   height: 750px;
-  margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
 }
 .text {
@@ -298,7 +296,6 @@ export default {
   border: solid 1px black;
 }
 .font {
-  margin-top: 50px;
   margin-bottom: 40px;
 }
 #start {

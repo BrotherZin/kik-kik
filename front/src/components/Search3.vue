@@ -92,7 +92,7 @@
             id: 11,
             name: "치어리더 월드컵",
             image: "/thumbnail/cheerTN.png",
-            url: "/cheerleaderStart",
+            url: "/cheerStart",
           },
   
           {
@@ -168,7 +168,6 @@
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.2s ease-in-out;
-    margin-bottom: 16px;
   }
   li{
   margin-right:20px;

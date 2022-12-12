@@ -12,7 +12,7 @@
             </div>
 
             <div class="test1" @click="psychotest">
-              <img class="image1" src="/image/psycho/main.png" />
+              <img class="image1" src="/thumbnail/main.png" />
               사이코패스 테스트
             </div>
 
@@ -58,7 +58,7 @@ export default {
         {
           id: 2,
           name: "사이코패스 테스트",
-          image: "/image/psycho/main.png",
+          image: "/thumbnail/main.png",
         },
         {
           id: 3,

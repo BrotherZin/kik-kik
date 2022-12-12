@@ -92,7 +92,7 @@ export default {
           id: 11,
           name: "치어리더 월드컵",
           image: "/thumbnail/cheerTN.png",
-          url: "/cheerleaderStart",
+          url: "/cheerStart",
         },
 
         {
