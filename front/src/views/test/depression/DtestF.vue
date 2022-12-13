@@ -65,7 +65,7 @@
         content: {
           title: "우울증 테스트 결과",
           description:
-            "나의 우울증 농도가 궁금하신가요..? 이리오세요",
+            "나의 우울증 농도가 궁금하신가요..? 그렇다면 이리오세요",
           imageUrl: "frontpublic\thumbnail\main.png",
           link: {
             mobileWebUrl: "http://localhost:8000",

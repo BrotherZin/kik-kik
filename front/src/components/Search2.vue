@@ -37,7 +37,7 @@ export default {
         {
           id: 2,
           name: "사이코패스 테스트",
-          image: "/image/psycho/main.png",
+          image: "/thumbnail/main.png",
           url: "/psychotest",
         },
         {
@@ -79,7 +79,7 @@ export default {
         {
           id: 9,
           name: "우울증 테스트",
-          image: "/image/dep/main.png",
+          image: "/thumbnail/main2.png",
           url: "/Dtest",
         },
         {
