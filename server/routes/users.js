@@ -33,6 +33,7 @@ router.post("/join", async function (req, res) {
 router.post("/login", async function (req, res) {
   console.log(req.body)
   var user = await User.findOne({
+    attributes: ["id", "name", "email"],
     where: {
       id: req.body.id,
       pw: req.body.pw
@@ -46,6 +47,17 @@ router.post("/login", async function (req, res) {
     return
   }
   req.session.user = user
+  res.json({
+    result: "ok",
+    user: user
+  })
+})
+
+router.post('')
+
+//로그아웃
+router.post("/logout", async (req, res) => {
+  req.session.destroy()
   res.json({
     result: "ok"
   })

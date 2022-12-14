@@ -6,17 +6,23 @@
         id="searchInput"
         placeholder="플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
       />
+      <div id="test" v-show="keyword">
       {{ keyword }}
-      <div>
-        <ul>
-          <li v-if="keyword" v-for="(test, key) in showList()" :key="key">
-            <router-link :to="test.url">
-              <img :src="test.image" :alt="test.name" />
-            </router-link>
-            <p>{{ test.name }}</p>
-          </li>
-        </ul>
+    </div>
+    <div>
+      <div
+        class="search-item"
+        v-show="keyword"
+        v-for="(test, key) in showList()"
+        :key="key"
+      >
+        <router-link :to="test.url">
+          <img :src="test.image" :alt="test.name" />
+        </router-link>
+        <!-- <img :src="test.image" :alt="test.name" @click="Movetest" /> -->
+        <p>{{ test.name }}</p>
       </div>
+    </div>
     </div>
   </template>
   
@@ -144,10 +150,10 @@
   </script>
   
   <style scoped>
-  li img {
-    width: 150px;
-    height: 150px;
-  }
+  .search-item img {
+  width: 150px;
+  height: 150px;
+}
   .search input:focus {
     border-color: #009dffc9;
     outline: rgb(0, 0, 0);
@@ -166,13 +172,12 @@
     box-sizing: border-box;
     transition: border-color 0.2s ease-in-out;
   }
-  li{
-  margin-right:20px;
+  .search-item {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-img{
-  border:1px solid black;
-}
-li:hover{
+.search-item:hover{
   transform: scale(1.1);
 }
   </style>

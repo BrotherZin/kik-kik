@@ -140,9 +140,6 @@ export default {
 
       return resturnList;
     },
-    Movetest() {
-      this.$router.push("/" + test.url);
-    },
   },
 };
 </script>
@@ -173,5 +170,9 @@ input[type="text"] {
 .search-item {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+.search-item:hover{
+  transform: scale(1.1);
 }
 </style>

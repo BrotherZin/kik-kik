@@ -11,6 +11,7 @@
         </v-layout>
         <div class="main"  style="float: right;">
             <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
+            <v-btn @click="logout" class="logout">로그아웃</v-btn>
             <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
         </div>
     </div>
@@ -27,6 +28,9 @@ export default{
         },
         Join(){
             this.$router.push("/Join");
+        },
+        logout(){
+            this.$router.push("/");
         }
     }
 }
@@ -117,10 +121,7 @@ img{
                  0 50px 25px rgba(#db469f 0%, #2188ff 100%);
   }
 }
-.login{
-    font-size:30px;
-}
-.join{
+.login, .logout, .join{
     font-size:30px;
 }
 </style>
