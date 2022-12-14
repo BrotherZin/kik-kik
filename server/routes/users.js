@@ -50,5 +50,54 @@ router.post("/login", async function (req, res) {
     result: "ok"
   })
 })
+//아이디 찾기
+router.post("/find_id", async function (req, res) {
+  console.log(req.body)
+  var user = await User.findOne({
+    where: {
+      name: req.body.name,
+      email: req.body.email
+    }
+  })
+  if (user == null) {
+    res.json({
+      result: "fail",
+      message: "이름 또는 이메일의 정보를 찾을 수 없습니다."
+    })
+    return
+  }
+  else {
+    res.json({
+      id: user.id,
+      result: "ok"
+    })
+    return
+  }
+})
+//비번 찾기
+router.post("/find_pw", async function (req, res) {
+  console.log(req.body)
+  var user = await User.findOne({
+    where: {
+      id: req.body.id,
+      email: req.body.email
+    }
+  })
+  if (user == null) {
+    res.json({
+      result: "fail",
+      message: "이름또는 아이디의 정보를 찾을 수 없습니다."
+    })
+    return
+  }
+  else {
+    res.json({
+      pw: user.pw,
+      result: "ok"
+    })
+    return
+  }
+})
+
 
 module.exports = router;
