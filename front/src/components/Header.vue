@@ -10,13 +10,14 @@
         </div>
         </v-layout>
         <div class="main"  style="float: right;">
+           <div class="info">
+            <h1>{{result.data.id + "님 안녕하세요"}}</h1></div>
             <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
             <v-btn @click="logout" class="logout">로그아웃</v-btn>
             <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
         </div>
     </div>
 </template>
-
 <script>
 
 export default{
@@ -30,7 +31,11 @@ export default{
             this.$router.push("/Join");
         },
         logout(){
-            this.$router.push("/");
+            //this.$router.push("/");
+            window.alert("로그아웃이 완료되었습니다");
+        },
+        info(){
+            
         }
     }
 }

@@ -110,6 +110,20 @@ router.post("/find_pw", async function (req, res) {
     return
   }
 })
-
+//사용자정보
+// router.post("/main", async function (req, res) {
+//   console.log(req.body)
+//   var user = await User.findOne({
+//     where: {
+//       name: user.name
+//     }
+//   })
+//   if (user == null) {
+//     res.json({
+//       name: user.name,
+//       result: "ok"
+//     })
+//   }
+// })
 
 module.exports = router;
