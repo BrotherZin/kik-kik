@@ -10,11 +10,17 @@
         </div>
         </v-layout>
         <div class="main"  style="float: right;">
-           <div class="info">
-            <h1>{{result.data.id + "님 안녕하세요"}}</h1></div>
-            <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
-            <v-btn @click="logout" class="logout">로그아웃</v-btn>
-            <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
+            <v-btn text v-if="$store.state.user" @click="logout" class="logout"><span>로그아웃</span></v-btn>
+            <v-btn text v-if="!$store.state.user" @click="Login" class="login"><span>로그인</span></v-btn>
+        <div v-if="$store.state.user">
+            {{ $store.state.user.name}}
+        </div>
+            <!-- <div class="info">
+                <v-btn text v-if="$store.state.user" class="logout"><span>{{ $store.state.user.name}}</span></v-btn>
+            </div>
+                <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
+                <v-btn @click="logout" class="logout">로그아웃</v-btn>
+                <v-btn @click="Join" class="join"><span>회원가입</span></v-btn> -->
         </div>
     </div>
 </template>
@@ -22,6 +28,11 @@
 
 export default{
     mounted(){
+        this.axios.post("/api/users/info").then((result) => {
+            if(result.data.result == "ok"){
+            this.$store.commit("setUser", result.data.user);
+            }
+        });
     },
     methods:{
         Login(){
@@ -33,10 +44,13 @@ export default{
         logout(){
             //this.$router.push("/");
             window.alert("로그아웃이 완료되었습니다");
+            this.axios.post("/api/users/info").then((result) => {
+                if(result.data.result == "ok"){
+                    this.$store.commit("setUser", null);
+                    this.$router.push("/");
+                }
+            });
         },
-        info(){
-            
-        }
     }
 }
 
