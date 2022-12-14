@@ -284,9 +284,12 @@ export default {
   position: relative;
   background-color: white;
   width: 1200px;
-  height: 750px;
+  height: 900px;
   margin-top: 50px;
   border-radius: 100px 100px 100px 100px;
+}
+.search3{
+  margin-bottom: 20px;
 }
 .text {
   width: 700px;

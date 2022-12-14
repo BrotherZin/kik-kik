@@ -111,6 +111,21 @@ router.post("/find_pw", async function (req, res) {
   }
 })
 //사용자정보
+// router.post("/info", async function (req, res) {
+//   console.log(req.body)
+//   var user = await User.findOne({
+//     where: {
+//       name: user.name
+//     }
+//   })
+//   if (user == null) {
+//     res.json({
+//       name: user.name,
+//       result: "ok"
+//     })
+//   }
+// })
+//사용자정보
 // router.post("/main", async function (req, res) {
 //   console.log(req.body)
 //   var user = await User.findOne({
@@ -125,5 +140,27 @@ router.post("/find_pw", async function (req, res) {
 //     })
 //   }
 // })
+router.post('/info', async (req, res) => {
+  //로그인이 되어있을때
+  if (req.session.user) {
+    res.json({
+      result: "ok",
+      user: req.session.user
+    })
+  }
+  //로그인이 되지않았을때
+  else {
+    res.json({
+      rewult: "fail"
+    })
+  }
+})
+
+router.post("/logout", async (req, res) => {
+  req.session.destroy()
+  res.json({
+    result: "ok"
+  })
+})
 
 module.exports = router;

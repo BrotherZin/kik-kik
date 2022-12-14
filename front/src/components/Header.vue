@@ -3,18 +3,24 @@
         <v-layout>
             <div class="kik">
             <a href="/">
-                    <img class="one" src="/image/logo.png">
-                    <span class="logo" >KIK KIK</span>
-                    <img class="two" src="/image/logo.png">
+                <img class="one" src="/image/logo.png">
+                <span class="logo" >KIK KIK</span>
+                <img class="two" src="/image/logo.png">
             </a>
         </div>
         </v-layout>
         <div class="main"  style="float: right;">
-           <div class="info">
-            <h1>{{result.data.id + "님 안녕하세요"}}</h1></div>
-            <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
-            <v-btn @click="logout" class="logout">로그아웃</v-btn>
-            <v-btn @click="Join" class="join"><span>회원가입</span></v-btn>
+            <v-btn text v-if="$store.state.user" @click="logout" class="logout"><span>로그아웃</span></v-btn>
+            <v-btn text v-if="!$store.state.user" @click="Login" class="login"><span>로그인</span></v-btn>
+        <div v-if="$store.state.user">
+            {{ $store.state.user.name}}
+        </div>
+            <!-- <div class="info">
+                <v-btn text v-if="$store.state.user" class="logout"><span>{{ $store.state.user.name}}</span></v-btn>
+            </div>
+                <v-btn @click="Login" class="login"><span>로그인</span></v-btn>
+                <v-btn @click="logout" class="logout">로그아웃</v-btn>
+                <v-btn @click="Join" class="join"><span>회원가입</span></v-btn> -->
         </div>
     </div>
 </template>
@@ -22,6 +28,11 @@
 
 export default{
     mounted(){
+        this.axios.post("/api/users/info").then((result) => {
+            if(result.data.result == "ok"){
+            this.$store.commit("setUser", result.data.user);
+            }
+        });
     },
     methods:{
         Login(){
@@ -33,10 +44,14 @@ export default{
         logout(){
             //this.$router.push("/");
             window.alert("로그아웃이 완료되었습니다");
+            this.axios.post("/api/users/info").then((result) => {
+                if(result.data.result == "ok"){
+                    this.$store.commit("setUser", null);
+                    this.$router.push("/");
+                }
+            });
         },
-        info(){
-            
-        }
+    }
 }
     }
 
@@ -90,17 +105,17 @@ img{
   display: flex;
 }
 .one:hover {
-				transform: rotate( 180deg );
-			}
-            .two:hover {
-                transform: rotate( -180deg );
-            }
-            .one{
-                margin-left:40px;
-            }
-            .two{
-                margin-left:10px;
-            }
+transform: rotate( 180deg );
+}
+.two:hover {
+    transform: rotate( -180deg );
+}
+.one{
+    margin-left:40px;
+}
+.two{
+    margin-left:10px;
+}
 .logo {
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
     -webkit-background-clip: text;
@@ -122,8 +137,7 @@ img{
 @keyframes bounce {
   100% {
     top: -20px;
-    text-shadow:
-                 0 50px 25px rgba(#db469f 0%, #2188ff 100%);
+    text-shadow: 0 50px 25px rgba(#db469f 0%, #2188ff 100%);
   }
 }
 .login, .logout, .join{
