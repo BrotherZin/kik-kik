@@ -2,8 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import Join from '../views/join.vue'
+import Join from '../views/Join.vue'
 import Login from '../views/Login.vue'
+import Find_id from '../views/find/find_id.vue'
+import Find_pw from '../views/find/find_pw.vue'
 
 //민하
 import Foodtest from '../views/test/food/Foodtest.vue'
@@ -74,7 +76,7 @@ const routes = [
     component: Alltest
   },
   {
-    path: '/join',
+    path: '/Join',
     name: 'Join',
     component: Join
   },
@@ -82,8 +84,23 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
-  }, 
-  
+  },
+  {
+    path: '/Find_id',
+    name: 'find_id',
+    component: Find_id
+  },
+  {
+    path: '/Find_pw',
+    name: 'find_pw',
+    component: Find_pw
+  },
+  {
+    path: '/Join',
+    name: 'Join',
+    component: Join
+  },
+
   //민하
   {
     path: '/Foodtest',
@@ -327,7 +344,7 @@ const routes = [
     name: 'Mansidealtest',
     component: Mansidealtest
   },
-  
+
 ]
 
 const router = new VueRouter({
