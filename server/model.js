@@ -18,8 +18,8 @@ global.User = sequelize.define('User', {
         type: Sequelize.STRING
 
     }
-
 })
+
 sequelize.sync({
     alter: true
 })

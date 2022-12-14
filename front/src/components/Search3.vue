@@ -180,4 +180,7 @@
 .search-item:hover{
   transform: scale(1.1);
 }
+p{
+  font-size:20px;
+}
   </style>

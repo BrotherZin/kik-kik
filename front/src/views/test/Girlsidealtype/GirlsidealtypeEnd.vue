@@ -27,14 +27,11 @@
       </div>
 
       <v-layout align-center justify-center>
-        <v-btn class="mr-2 pink white--text" @click="Restart"
-          ><v-icon dark> mdi-arrow-u-right-top-bold </v-icon> 한번 더
-          하기</v-btn
-        >
-        <v-btn class="ml-2 blue white--text" @click="OtherTest"
-          ><v-icon dark> mdi-home-circle-outline </v-icon> 메인으로
-          이동하기</v-btn
-        >
+        <v-btn class="mr-2 pink white--text" @click="Restart"><v-icon dark> mdi-arrow-u-right-top-bold </v-icon> 한번 더
+          하기</v-btn>
+        <v-btn class="ml-2 blue white--text" @click="OtherTest"><v-icon dark> mdi-home-circle-outline </v-icon> 메인으로
+          이동하기</v-btn>
+        <v-btn class="next-write" @click="write">댓글 보러가기</v-btn>
       </v-layout>
     </div>
   </v-layout>
@@ -80,6 +77,9 @@ export default {
     },
     Rank() {
       this.$router.push("/");
+    },
+    write() {
+      this.$router.push("/GirlsidealWrite");
     },
   },
   data() {
