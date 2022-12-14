@@ -50,10 +50,10 @@ export default {
       });
       },
       findid() {
-        this.$router.push("/find/find_id");
+        this.$router.push("/find_id");
       },
       findpw() {
-        this.$router.push("/find/find_pw");
+        this.$router.push("/find_pw");
       },
   }
 };
