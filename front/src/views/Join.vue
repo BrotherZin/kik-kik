@@ -39,7 +39,7 @@
           </div>
           <!-- <v-text-field v-model="input.pw" type="password" label="PW"></v-text-field>
           <v-text-field v-model="input.pwConfirm" type="password" label="Confirm PW"></v-text-field> -->
-              <!-- <div id="email">
+          <!-- <div id="email">
               <v-text-field v-model="input.email" label="Email" maxlength="18" style="width:100px;"/>
               </div> -->
           <v-btn @click="join">가입하기</v-btn>
@@ -61,50 +61,48 @@ export default {
         pw: "",
         pwConfirm: "",
         email: "",
-      
       },
     };
   },
   methods: {
     Cancel() {
       this.$router.push("/");
-    }, 
+    },
     join() {
       if (this.input.id == "") {
-      window.alert("아이디를 입력해주세요");
-      return;
-    }
-    if (this.input.name == "") {
-      window.alert("이름을 입력해주세요");
-      return;
-    }
-    if (this.input.pw == "") {
-      window.alert("비밀번호를 입력해주세요");
-      return;
-    }
-    if (this.input.pw != this.input.pwConfirm) {
-      window.alert("패스워드가 일치하지 않습니다");
-      return;
-    }
-    if (this.input.email == "") {
-      window.alert("이메일을 입력해주세요");
-      return;
-    }
+        window.alert("아이디를 입력해주세요");
+        return;
+      }
+      if (this.input.name == "") {
+        window.alert("이름을 입력해주세요");
+        return;
+      }
+      if (this.input.pw == "") {
+        window.alert("비밀번호를 입력해주세요");
+        return;
+      }
+      if (this.input.pw != this.input.pwConfirm) {
+        window.alert("패스워드가 일치하지 않습니다");
+        return;
+      }
+      if (this.input.email == "") {
+        window.alert("이메일을 입력해주세요");
+        return;
+      }
 
-    this.axios.post("/api/users/join", this.input).then((result) => {
-    console.log(result);
-      if (result.data.result == "ok") {
-      //회원가입이 성공한경우
-      window.alert("KIKKIK 사이트에 가입되셨습니다 축하드립니다.");
-      this.$router.push("/");
-      }
-      if (result.data.result == "fail") {
-      //회원가입이 실패한경우
-      window.alert(result.data.message);
-      }
-      
-    });
-},
+      this.axios.post("/api/users/join", this.input).then((result) => {
+        console.log(result);
+        if (result.data.result == "ok") {
+          //회원가입이 성공한경우
+          window.alert("KIKKIK 사이트에 가입되셨습니다 축하드립니다.");
+          this.$router.push("/");
+        }
+        if (result.data.result == "fail") {
+          //회원가입이 실패한경우
+          window.alert(result.data.message);
+        }
+      });
+    },
   },
 };
 </script>
