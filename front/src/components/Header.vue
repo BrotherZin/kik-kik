@@ -3,9 +3,9 @@
         <v-layout>
             <div class="kik">
             <a href="/">
-                    <img class="one" src="/image/logo.png">
-                    <span class="logo" >KIK KIK</span>
-                    <img class="two" src="/image/logo.png">
+                <img class="one" src="/image/logo.png">
+                <span class="logo" >KIK KIK</span>
+                <img class="two" src="/image/logo.png">
             </a>
         </div>
         </v-layout>
@@ -85,17 +85,17 @@ img{
   display: flex;
 }
 .one:hover {
-				transform: rotate( 180deg );
-			}
-            .two:hover {
-                transform: rotate( -180deg );
-            }
-            .one{
-                margin-left:40px;
-            }
-            .two{
-                margin-left:10px;
-            }
+transform: rotate( 180deg );
+}
+.two:hover {
+    transform: rotate( -180deg );
+}
+.one{
+    margin-left:40px;
+}
+.two{
+    margin-left:10px;
+}
 .logo {
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
     -webkit-background-clip: text;
@@ -117,8 +117,7 @@ img{
 @keyframes bounce {
   100% {
     top: -20px;
-    text-shadow:
-                 0 50px 25px rgba(#db469f 0%, #2188ff 100%);
+    text-shadow: 0 50px 25px rgba(#db469f 0%, #2188ff 100%);
   }
 }
 .login, .logout, .join{
