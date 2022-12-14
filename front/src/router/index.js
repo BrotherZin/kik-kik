@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Alltest from '../views/Alltest.vue'
-import Join from '../views/join.vue'
-import Login from '../views/login.vue'
+import Join from '../views/Join.vue'
+import Login from '../views/Login.vue'
 
 //민하
 import Foodtest from '../views/test/food/Foodtest.vue'
@@ -74,7 +74,7 @@ const routes = [
     component: Alltest
   },
   {
-    path: '/join',
+    path: '/Join',
     name: 'Join',
     component: Join
   },
@@ -82,8 +82,8 @@ const routes = [
     path: '/Login',
     name: 'Login',
     component: Login
-  }, 
-  
+  },
+
   //민하
   {
     path: '/Foodtest',
@@ -327,7 +327,7 @@ const routes = [
     name: 'Mansidealtest',
     component: Mansidealtest
   },
-  
+
 ]
 
 const router = new VueRouter({

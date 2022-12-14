@@ -6,7 +6,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
-
+//회원가입
 router.post("/join", async function (req, res) {
   var body = req.body
   console.log(body)
@@ -29,15 +29,22 @@ router.post("/join", async function (req, res) {
     result: "ok"
   })
 })
-
+//로그인
 router.post("/login", async function (req, res) {
   console.log(req.body)
   var user = await User.findOne({
     where: {
       id: req.body.id,
-      password: req.body.password
+      pw: req.body.pw
     }
   })
+  if (user == null) {
+    res.json({
+      result: "fail",
+      message: "아이디 또는 비밀번호가 잘못되었습니다."
+    })
+    return
+  }
   req.session.user = user
   res.json({
     result: "ok"

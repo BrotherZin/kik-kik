@@ -4,12 +4,12 @@
       <v-layout class="inside" align-center justify-center>
           <div>
           <v-text-field v-model="input.id" label="ID"/>
-          <v-text-field v-model="input.password" label="PW"/>
+          <v-text-field v-model="input.pw" label="PW"/>
               <div id="find">
-                  <v-btn class="Login" @click="login">로그인</v-btn>
+                  <v-btn class="Login" @click="Login">로그인</v-btn>
                   <div class="btn">
-                      <v-btn class="find-id" @click="find">아이디 찾기</v-btn><br>
-                      <v-btn class="find-pw" @click="find">비밀번호 찾기</v-btn>
+                      <v-btn class="find-id" @click="findid">아이디 찾기</v-btn><br>
+                      <v-btn class="find-pw" @click="findpw">비밀번호 찾기</v-btn>
                   </div>
               </div>
           </div>
@@ -24,29 +24,36 @@ export default {
       return {
           input: {
               id: "",
-              password: "",
+              pw: "",
           },
       };
   },
   methods:{
-      login() {
+      Login() {
           if (this.input.id == "") {
           window.alert("아이디를 입력하셔야 해요!");
           return;
           }
-          if (this.input.password == "") {
+          if (this.input.pw == "") {
           window.alert("비밀번호를 입력하셔야 해요!");
           return;
           }
-          this.axios.post("/api/users/login",this.input)
-          .then(result=>{
-              // if(result.data.result){
-              //     window.alert("로그인 성공!");
-              //     this.$router.push("/main");
-              // }else{
-              //     window.alert("로그인 실패!");
-              // }
-          })
+
+        this.axios.post("/api/users/login", this.input).then((result) => {
+        if (result.data.result == "ok") {
+          window.alert("로그인이 완료되었습니다! 즐거운 테스트 하세요~!")
+          this.$router.push("/");
+        }
+        if (result.data.result == "fail") {
+          window.alert(result.data.message);
+        }
+      });
+      },
+      findid() {
+        this.$router.push("/find/find_id");
+      },
+      findpw() {
+        this.$router.push("/find/find_pw");
       },
   }
 };

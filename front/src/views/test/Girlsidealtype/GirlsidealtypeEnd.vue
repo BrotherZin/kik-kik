@@ -17,8 +17,14 @@
       <v-layout align-center justify-center>
         <div class="result">최종 우승은 {{ $route.query.name }} 입니다 !!</div>
       </v-layout>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
+      <div class="sharebutton">
+        친구들에게 공유하기<br />
+        <img
+          class="new-result-btn"
+          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          @click="sendkakao"
+        />
+      </div>
 
       <v-layout align-center justify-center>
         <v-btn class="mr-2 pink white--text" @click="Restart"
@@ -38,6 +44,34 @@
 export default {
   name: "Home",
   methods: {
+    sendkakao: function () {
+      if (!Kakao.isInitialized()) {
+        Kakao.init("ebb31377a38a9106e262ae447eba1643");
+      }
+      // Kakao.init('ebb31377a38a9106e262ae447eba1643');
+      Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "여자 아이돌 월드컵 결과",
+          description:
+            "나의 여자 아이돌 월드컵 결과가 궁금하신가요? 테스트 하러 오세요!",
+          imageUrl: "frontpublic\thumbnailgirlsidealTN.png",
+          link: {
+            mobileWebUrl: "http://localhost:8000",
+            webUrl: "http://localhost:8000",
+          },
+        },
+        buttons: [
+          {
+            title: "웹으로 보기",
+            link: {
+              mobileWebUrl: "http://localhost:8000",
+              webUrl: "http://localhost:8000",
+            },
+          },
+        ],
+      });
+    },
     Restart() {
       this.$router.push("/GirlsidealtypeStart");
     },
@@ -95,6 +129,10 @@ export default {
 @font-face {
   font-family: "bz";
   src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.sharebutton {
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 </style>
     
