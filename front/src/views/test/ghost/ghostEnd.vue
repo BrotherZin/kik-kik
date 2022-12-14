@@ -18,7 +18,14 @@
         <div class="result">최종 우승은 {{ $route.query.name }} 입니다 !!</div>
       </v-layout>
       <div>&nbsp;</div>
-      <div>&nbsp;</div>
+      <div class="sharebutton">
+        ↘ 카카오톡으로 친구들에게 공유하기 ↙<br />
+        <img
+          class="new-result-btn"
+          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          @click="sendkakao"
+        />
+      </div>
 
       <v-layout align-center justify-center>
         <v-btn class="mr-2 pink white--text" @click="Restart"
@@ -36,8 +43,45 @@
     
     <script>
 export default {
+  head() {
+    return {
+      script: [
+        {
+          src: "https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.story.min.js",
+        },
+      ],
+    };
+  },
   name: "Home",
   methods: {
+    sendkakao: function () {
+      if (!Kakao.isInitialized()) {
+        Kakao.init("134ef0b6fc4db9ca3f6b61bf9521cc81");
+      }
+      // Kakao.init('ebb31377a38a9106e262ae447eba1643');
+      Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "공포 귀신 월드컵 결과",
+          description:
+            "나의 공포 귀신 월드컵 결과가 궁금하신가요? 테스트 하러 오세요!",
+          imageUrl: "frontpublic\thumbnailgirlsidealTN.png",
+          link: {
+            mobileWebUrl: "http://localhost:8000",
+            webUrl: "http://localhost:8000",
+          },
+        },
+        buttons: [
+          {
+            title: "웹으로 보기",
+            link: {
+              mobileWebUrl: "http://localhost:8000",
+              webUrl: "http://localhost:8000",
+            },
+          },
+        ],
+      });
+    },
     Restart() {
       this.$router.push("/ghostStart");
     },
@@ -95,6 +139,16 @@ export default {
 @font-face {
   font-family: "bz";
   src: url("/public/fonts/BMDOHYEON_ttf.ttf");
+}
+.sharebutton {
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+.new-result-btn {
+  width: 50px;
+  height: 42px;
+  border-radius: 10px;
+  border: 2px solid #636366;
 }
 </style>
     
