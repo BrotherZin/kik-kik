@@ -58,16 +58,15 @@ methods: {
   },
   sendkakao: function () {
       if (!Kakao.isInitialized()) {
-        Kakao.init("ebb31377a38a9106e262ae447eba1643");
+        Kakao.init("84755c16371e61e8fa3e4253e0665240");
       }
-      // Kakao.init('ebb31377a38a9106e262ae447eba1643');
       Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
           title: "사이코패스 테스트 결과",
           description:
             "나의 사이코패스 테스트 결과가 궁금하신가요? 테스트 하러 오세요!",
-          imageUrl: "frontpublic\thumbnail\foodtest.png",
+          imageUrl: "frontpublic\thumbnail\main.png",
           link: {
             mobileWebUrl: "http://localhost:8000",
             webUrl: "http://localhost:8000",

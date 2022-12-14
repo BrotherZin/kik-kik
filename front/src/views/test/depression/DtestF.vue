@@ -58,16 +58,15 @@
     },
     sendkakao: function () {
       if (!Kakao.isInitialized()) {
-        Kakao.init("ebb31377a38a9106e262ae447eba1643");
+        Kakao.init("778f1c2557ba8a2f21da7eee441e7a0f");
       }
-      // Kakao.init('ebb31377a38a9106e262ae447eba1643');
       Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
-          title: "사이코패스 테스트 결과",
+          title: "우울증 테스트 결과",
           description:
-            "나의 사이코패스 테스트 결과가 궁금하신가요? 테스트 하러 오세요!",
-          imageUrl: "frontpublic\thumbnail\foodtest.png",
+            "나의 우울증 농도가 궁금하신가요..? 그렇다면 이리오세요",
+          imageUrl: "frontpublic\thumbnail\main.png",
           link: {
             mobileWebUrl: "http://localhost:8000",
             webUrl: "http://localhost:8000",

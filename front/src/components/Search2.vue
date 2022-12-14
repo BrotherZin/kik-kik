@@ -44,7 +44,7 @@ export default {
         {
           id: 2,
           name: "사이코패스 테스트",
-          image: "/image/psycho/main.png",
+          image: "/thumbnail/main.png",
           url: "/psychotest",
         },
         {
@@ -86,7 +86,7 @@ export default {
         {
           id: 9,
           name: "우울증 테스트",
-          image: "/image/dep/main.png",
+          image: "/thumbnail/main2.png",
           url: "/Dtest",
         },
         {
@@ -99,7 +99,7 @@ export default {
           id: 11,
           name: "치어리더 월드컵",
           image: "/thumbnail/cheerTN.png",
-          url: "/cheerleaderStart",
+          url: "/cheerStart",
         },
 
         {
@@ -140,9 +140,6 @@ export default {
 
       return resturnList;
     },
-    Movetest() {
-      this.$router.push("/" + test.url);
-    },
   },
 };
 </script>
@@ -173,5 +170,9 @@ input[type="text"] {
 .search-item {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+.search-item:hover{
+  transform: scale(1.1);
 }
 </style>

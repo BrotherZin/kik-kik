@@ -1,9 +1,10 @@
 <template>
   <v-layout class="background" align-center justify-center>
+    <div class="back"><img class="back1" src="/image/background.png"><img class="back2" src="/image/background.png"></div>
     <div>
       <v-layout class="inside" fill-height align-center justify-center>
         <div class="text" style="text-align: center">
-          ↘ 요즘 유행하는 테스트 ! ↙
+          <p>↘ 요즘 유행하는 테스트 ! ↙</p>
           <div class="font" style="text-align: left">
             <div class="test1" @click="foodtest">
               <img class="image1" src="/thumbnail/foodtest.png" />
@@ -11,7 +12,7 @@
             </div>
 
             <div class="test1" @click="psychotest">
-              <img class="image1" src="/image/psycho/main.png" />
+              <img class="image1" src="/thumbnail/main.png" />
               사이코패스 테스트
             </div>
 
@@ -57,7 +58,7 @@ export default {
         {
           id: 2,
           name: "사이코패스 테스트",
-          image: "/image/psycho/main.png",
+          image: "/thumbnail/main.png",
         },
         {
           id: 3,
@@ -110,12 +111,24 @@ export default {
   background-color: #e6e6fa;
   display: grid;
 }
+.back1{
+  position: absolute;
+  margin-top:150px;
+  margin-left:-1000px;
+  transform: scaleX(-1);
+}
+.back2{
+  position: absolute;
+  margin-top:150px;
+  margin-left:500px;
+}
 .logo2 {
   margin-left: 300px;
   width: 500px;
   height: 100px;
 }
 .inside {
+  position: relative;
   background-color: white;
   width: 1200px;
   height: 750px;
@@ -150,5 +163,8 @@ export default {
   margin-top: 30px;
   width: 400px;
   font-size: 35px;
+}
+p{
+  font-size:40px;
 }
 </style>

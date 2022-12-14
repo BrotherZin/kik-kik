@@ -6,17 +6,23 @@
         id="searchInput"
         placeholder="플레이 하고 싶은 테스트를 검색 후 클릭해보세요 !"
       />
+      <div id="test" v-show="keyword">
       {{ keyword }}
-      <div>
-        <ul>
-          <li v-if="keyword" v-for="(test, key) in showList()" :key="key">
-            <router-link :to="test.url">
-              <img :src="test.image" :alt="test.name" />
-            </router-link>
-            <p>{{ test.name }}</p>
-          </li>
-        </ul>
+    </div>
+    <div>
+      <div
+        class="search-item"
+        v-show="keyword"
+        v-for="(test, key) in showList()"
+        :key="key"
+      >
+        <router-link :to="test.url">
+          <img :src="test.image" :alt="test.name" />
+        </router-link>
+        <!-- <img :src="test.image" :alt="test.name" @click="Movetest" /> -->
+        <p>{{ test.name }}</p>
       </div>
+    </div>
     </div>
   </template>
   
@@ -37,7 +43,7 @@
           {
             id: 2,
             name: "사이코패스 테스트",
-            image: "/image/psycho/main.png",
+            image: "/thumbnail/main.png",
             url: "/psychotest",
           },
           {
@@ -79,7 +85,7 @@
           {
             id: 9,
             name: "우울증 테스트",
-            image: "/image/dep/main.png",
+            image: "/thumbnail/main2.png",
             url: "/Dtest",
           },
           {
@@ -92,7 +98,7 @@
             id: 11,
             name: "치어리더 월드컵",
             image: "/thumbnail/cheerTN.png",
-            url: "/cheerleaderStart",
+            url: "/cheerStart",
           },
   
           {
@@ -139,18 +145,15 @@
   
         return resturnList;
       },
-      Movetest() {
-        this.$router.push("/" + test.url);
-      },
     },
   };
   </script>
   
   <style scoped>
-  li img {
-    width: 150px;
-    height: 150px;
-  }
+  .search-item img {
+  width: 150px;
+  height: 150px;
+}
   .search input:focus {
     border-color: #009dffc9;
     outline: rgb(0, 0, 0);
@@ -168,15 +171,13 @@
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.2s ease-in-out;
-    margin-bottom: 16px;
   }
-  li{
-  margin-right:20px;
+  .search-item {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-img{
-  border:1px solid black;
-}
-li:hover{
+.search-item:hover{
   transform: scale(1.1);
 }
   </style>
